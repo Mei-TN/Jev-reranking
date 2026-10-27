@@ -80,7 +80,7 @@ class PredictionWorkerContracts(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.folder = Path(temporary.name)
+        self.folder = Path(temporary.name).resolve()
         self.dependencies = self.folder / "fixture-dependencies"
         self.dependencies.mkdir()
         (self.dependencies / "torch.py").write_text(FAKE_TORCH, encoding="utf-8")

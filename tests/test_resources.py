@@ -36,7 +36,7 @@ class ResourceCacheTests(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory(dir=resources._long_path(Path(tempfile.gettempdir())))
         self.addCleanup(temporary.cleanup)
-        self.folder = Path(temporary.name)
+        self.folder = Path(temporary.name).resolve()
         self.environment = patch.dict(os.environ, {"JEV_RESOURCE_CACHE": str(self.folder / "cache")})
         self.environment.start()
         self.addCleanup(self.environment.stop)

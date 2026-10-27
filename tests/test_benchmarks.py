@@ -85,7 +85,7 @@ class BenchmarkAdapterContracts(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.folder = Path(temporary.name)
+        self.folder = Path(temporary.name).resolve()
         self.output = self.folder / "new-benchmark"
         self.source = root() / "vendor/e12"
         self.checkpoint = self.folder / "checkpoint"

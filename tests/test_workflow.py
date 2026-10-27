@@ -23,7 +23,7 @@ class WorkflowContracts(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.folder = Path(temporary.name)
+        self.folder = Path(temporary.name).resolve()
         self.site = dict(schema="jev.site.v1", work_root=str(self.folder / "work"),
             base_model=str(self.folder / "base"), data_root=str(self.folder / "data"),
             python={"training": sys.executable, "serving": sys.executable},

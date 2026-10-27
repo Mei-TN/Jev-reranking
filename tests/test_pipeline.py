@@ -18,7 +18,7 @@ class PipelineContracts(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.folder = Path(temporary.name)
+        self.folder = Path(temporary.name).resolve()
         self.source = self.folder / "selected-source"
         (self.source / "kev").mkdir(parents=True)
         (self.source / "kev/train.py").write_text("# orchestration fixture\n", encoding="utf-8")
