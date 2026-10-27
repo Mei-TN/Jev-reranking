@@ -1,0 +1,3 @@
+[
+  {"id":"format-001","request":{"state":"The customer says: I was charged twice for my order.","questions":{"category":{"type":"choice","instructions":"Choose the category of the customer request.","criteria":{"billing":"A payment or charge issue","delivery":"A shipping or delivery issue"}},"urgent":{"type":"noul","instructions":"Does the message mention immediate physical danger?"}}}}
+]

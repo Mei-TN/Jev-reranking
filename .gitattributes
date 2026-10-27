@@ -1,0 +1,6 @@
+# Source/configuration manifests identify exact bytes, including line endings.
+* -text
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary

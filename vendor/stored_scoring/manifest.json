@@ -1,0 +1,112 @@
+{
+  "format": "JEV-local-stored-score-supplement-v1",
+  "unique_checkpoint_models": 72,
+  "execution_modules": 96,
+  "coverage": {
+    "raw_core_models": 56,
+    "raw_qwen_models": 8,
+    "raw_social_models": 16,
+    "raw_fixed_interface_models": 8,
+    "raw_original_piqa_models": 8,
+    "core_model_task_scores": 1152,
+    "auxiliary_condition_scores": 200,
+    "eligible_question_occurrences": 3722928,
+    "excluded_raw_scope": [
+      "other historical core models",
+      "other external-source cells",
+      "portable pair"
+    ],
+    "summary_views_layer": "summary-arithmetic-verified with explicit raw links where available"
+  },
+  "external_publication": false,
+  "files": {
+    "modules/core56_stored_score_supplement.zip": {
+      "bytes": 159881448,
+      "sha256": "a44e861bd4f14af45bb1c0c6de5360e845de33b1c63c0ab7a1214fdc342852b9"
+    },
+    "modules/qwen8_stored_score_supplement.zip": {
+      "bytes": 31753229,
+      "sha256": "d0c81f3edcf4911b766a1f3d2c44790c128e94e861f8f35160a24ecb484e077c"
+    },
+    "modules/auxiliary_stored_score_supplement.zip": {
+      "bytes": 9056548,
+      "sha256": "293da2c1c7c8351734bf68a0931eed093c8021f594292ff732687d2f4fc37933"
+    },
+    "expected_aggregates.json": {
+      "bytes": 159992,
+      "sha256": "ddbde9abdbd90752d92c262d8f9bf300ce45f4e1ed060a37e09d055da8010338"
+    },
+    "model_registry.json": {
+      "bytes": 152411,
+      "sha256": "2e8003b3684db63515cdea51043707dddfb7636497ecb68c5d873cb9339d6c81"
+    },
+    "execution_registry.json": {
+      "bytes": 38411,
+      "sha256": "4d7d3c23aacb977bbe615ea8f90ba74b6647c067d34100021d988d72fb947271"
+    },
+    "summary_views/appendix_paired_contrasts.csv": {
+      "bytes": 161486,
+      "sha256": "19d6b4b5e2dd701c69478cbdee87e146e3210b5d9bac80098bbd81578d4e2884"
+    },
+    "summary_views/appendix_loso_complete.csv": {
+      "bytes": 93039,
+      "sha256": "43a74476750730d238b93489ee5adc947707d2a4f0821a3a168cabda2dac21c2"
+    },
+    "summary_views/appendix_contrast_coefficients.csv": {
+      "bytes": 2243,
+      "sha256": "ec1e7b166185f3355a0fed36ac5c889500cab7067ebe625bd20e99b1af4bc2e9"
+    },
+    "summary_views/appendix_source_mapping.csv": {
+      "bytes": 286,
+      "sha256": "2c367d3529b9f7b9174d0e97dafd1c32b52ace1422d3dfa0b3f2b8b8d8d8bec9"
+    },
+    "summary_views/appendix_cohort_models.csv": {
+      "bytes": 28663,
+      "sha256": "53757d55c0f246b8659cf5700aa6d84786e84124ce944427c08596ab829a9ba0"
+    },
+    "summary_views/appendix_budget_task_means.csv": {
+      "bytes": 3464,
+      "sha256": "69f8926874c938a7c104c2b135fc97b4e0956473cea26670c8d8f91e00c803ca"
+    },
+    "summary_views/appendix_budget_task_settings.csv": {
+      "bytes": 25487,
+      "sha256": "3a3d916f087b7cd506dc17a6155bbbd2248701584187cfed5465807f5636d206"
+    },
+    "summary_views/appendix_budget_absolute_settings.csv": {
+      "bytes": 5012,
+      "sha256": "219dd83fca772bde5be8e62378f025ef1a9195851813a5d8e13c48713b73533f"
+    },
+    "summary_views/README.md": {
+      "bytes": 3158,
+      "sha256": "dac8afa18efd1021ef4631ddfd2fcb6173c7428010c5bdd682a59f973833f8a3"
+    },
+    "coverage.csv": {
+      "bytes": 232042,
+      "sha256": "56f5c0a4baadd77cf9ee97f69aee91108a22a4ffca12c99bad0d26dc6c4fdbb0"
+    },
+    "scorers/score_compact_records.py": {
+      "bytes": 6959,
+      "sha256": "8d8bea77931e177d483cdb3118b2e5d5899af98ac9465554cb630fab0356d324"
+    },
+    "scorers/score_auxiliary_records.py": {
+      "bytes": 7498,
+      "sha256": "42323502b46bdd46b1e972cd055267a72e7d2dbbbd7195dab897167d8d78e2b7"
+    },
+    "scorers/check_score_boundaries.py": {
+      "bytes": 2293,
+      "sha256": "d167176291a0e4f667fad0e5b437417e9951bfd3becf1e614d0d65bb4d49ba98"
+    },
+    "scorers/verify_appendix_from_reconstructed.py": {
+      "bytes": 10603,
+      "sha256": "3939c13befb9d4b5d6b9f9f875e6d25541598910d3055694040225d133b04749"
+    },
+    "score_all.py": {
+      "bytes": 4318,
+      "sha256": "63c0d3181a56d6937d05ad2d6781b5e6e04274fdc41e5597c9e339ae1a09642c"
+    },
+    "README.md": {
+      "bytes": 3883,
+      "sha256": "5d62c28ac6ac6860b683ec7f23da712bfe4876057bb3d41ebc4b67ca9835f321"
+    }
+  }
+}

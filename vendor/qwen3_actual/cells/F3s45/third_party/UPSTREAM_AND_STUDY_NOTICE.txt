@@ -1,0 +1,27 @@
+JEV trick study — release candidate (not public)
+
+This product includes software derived from the NeoHorse "kev" training package, distributed under the Apache License,
+Version 2.0 (see THIRD_PARTY/kev-LICENSE).
+
+Modifications to kev contained in trees/ (each tree is byte-identical to the code that trained the corresponding runs and
+is pinned by SHA256 in trees/MANIFEST.json):
+
+- original28: the design-space (DSE) modifications of the study's predecessor phase (trick options in dse_options.py,
+  dse_curriculum.py, dse_ema.py, dse_restart.py, dse_surface.py, dse_surface_training.py, dse_views.py and their
+  wiring in train.py, model.py, data.py).
+- e5_l1: original28 + teacher-ensemble distillation (dse_distillation.py; E5).
+- c11_l1: original28 + pooled-readout mixup with fixed per-cell pairs (dse_mixup.py; C11).
+- unified_v1: e5_l1 + two argument-validation relaxations (E5 with loss/dropout/freezing/EMA options; EMA with B-type
+  losses). No change to any tensor computation.
+- unified_v2: unified_v1 + E5 accepts the confirmation seeds 46/47. No change to any tensor computation.
+- s5_v2: unified_v2 + EMA consistency and E5 accepted together with two supervised views, and a provenance block. No
+  change to any tensor computation.
+- head1_v1: original28 + alternative classification heads (kev/heads.py) and a --head_config option passed through
+  model, training and evaluation.
+
+The release candidate omits the kev modules that training never imports (research tooling, serving and publishing
+helpers, and an API-key provisioning helper); see trees/README.md.
+
+The base model (NeoHorse-1-4B) is distributed under its own license (Apache-2.0) and is not included.
+Evaluation dependencies (OpenCompass fork, RunWeaver/OpenJev, the official serving script and runtime) are not included;
+their license status is listed in docs/RELEASE_CHECKLIST.md.

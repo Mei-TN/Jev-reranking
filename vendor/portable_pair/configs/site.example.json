@@ -1,0 +1,13 @@
+{
+  "asset_root": "assets",
+  "work_root": "work",
+  "cuda_visible_devices": "0",
+  "ports": [
+    38100,
+    38101,
+    38102,
+    38103
+  ],
+  "checkpoint_mode": "train",
+  "phase_timeout_seconds": 28800
+}

@@ -1,0 +1,41 @@
+{
+  "jevbench": {
+    "revision": "75e6224ed8103bbc3485ca74820a2eaf7ce8abe0",
+    "repository": "https://github.com/fstandhartinger/jevbench",
+    "files": {
+      "jevbench/__init__.py": "64c28dc1534502c429a3b67eee79ab7909fab995b7d116c9b089f0f3bb8652f7",
+      "jevbench/tasks.py": "b9c2f8ba9a7301519656d79d47c31b8ab0542a5545498ce3b339d5e93b976812",
+      "jevbench/scoring.py": "6aa17d212ea20a3eeb6876149367842e8462c11dcb54d73df062fb406368331e",
+      "jevbench/metrics.py": "4038c8423ad1cf28601afb6babe777b71f08e379b9ca125b09b52c0ac7d60515",
+      "jevbench/summarize.py": "aa5f24da407d004cd80bad1cd957b6987aba152591084c096d1de51dd9775cbe",
+      "jevbench/adapters/__init__.py": "5080cd3048d864c30be10f38fe8f368796f9201ecfda46a7beeaec88eb87d705",
+      "jevbench/adapters/base.py": "fdddc42e4f71d774096f806c4ee844cc4c4b428385f01a017cb64153d7c089f4",
+      "jevbench/adapters/openai_compat.py": "5f0450ef2db2743db05bdf756cd50db951654533e33cdfd23002709ca485c95e"
+    },
+    "datasets": {
+      "datasets/public/easy.jsonl": "231df3c2c8e88a1a8c137ebe85de96ba70fabd330849098ac7b3c52c70b7172b",
+      "datasets/public/original.jsonl": "5c2414edb3006b8bfcb70fda433f0f9ca015759433849f8d3104328a1f7c4180",
+      "datasets/public/hard.jsonl": "89e9e6becb33ed88c1de7d42dcc87531b2fb64cfaef4e1986faf7c37b3f80ebb"
+    },
+    "integration_notes": "adapters/__init__.py contains no eager optional adapter imports; other vendored files are byte-identical. Chat prompts and per-item strict JSON schema use native build_request; native decision endpoints return head probabilities directly."
+  },
+  "kev": {
+    "revision": "90990a5fac2995b9faa3190f7d437e84f2067768",
+    "repository": "https://github.com/jaredpalmer/kev",
+    "files": {
+      "kev/api.py": "620a7eaeb7379d157ecbca1c284d33d5a54a99958b97897b7f2f5d90164a4b6f",
+      "kev/contrastive.py": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+      "kev/benchmark.py": "341f2616be759f1a7764fead5de1b2875d139cf5bfce3f83cbd0d84a685470f1",
+      "kev/metrics.py": "cbba1235d8abad018a02910a59f14c148c9e6ef48ff3d936ce9b4fdd4c399237"
+    },
+    "datasets": {
+      "evals/v7/decision-v7/development.jsonl": "8d5765d7aec4d08c61854f4664ca79ec2ba44ed092e9b967eaf61ed86c496d9c",
+      "evals/v7/decision-v7/test.jsonl": "cd7d129a84232e0c7a4e92b4840a6dfe14c8bb93c5d1904b526fa8c085325d2d",
+      "evals/v4/transfer-v4/development.jsonl": "ff374c49c6c9f15f8a56fb274b4a4857d20497eb8dd1ac07ce01560e682a5f2e",
+      "evals/v4/transfer-v4/test.jsonl": "c30a91274f9b483aac9e4f02ada5dea953b3f1a2829456e0bc07806c4e73b517",
+      "evals/v9/transfer-v9/development.jsonl": "53872ba045564315cf3c3dd8fb656e76441c6c514b1a7ff985ff0db3955710cf",
+      "evals/v9/transfer-v9/test.jsonl": "048abea5e12c73c3a622ce5836898c00fa43766e0bf48fb2459e77ee9873497f"
+    },
+    "integration_notes": "kev_scoring.py contains exact function source extracted from api.py, contrastive.py and benchmark.py; only imports are narrowed to avoid loading training/model dependencies. kev_metrics.py is byte-identical."
+  }
+}

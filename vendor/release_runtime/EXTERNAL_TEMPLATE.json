@@ -1,0 +1,14 @@
+{
+  "schema": "jev.release-template-input.v1",
+  "provided": false,
+  "required_argument": "--template-bundle",
+  "original_release_name": "neohorse4b-bestcombo-merged-bf16-20260923",
+  "required_files": [
+    "load_merged.py",
+    "verify_bundle.py",
+    "verification_examples.json",
+    "example_request.json"
+  ],
+  "source": "Original official merged-BF16 release bundle used by the recorded half-rate evaluation exporter.",
+  "scope": "The original official release template is an external input. Its bytes and exact identity are not included in this repository."
+}

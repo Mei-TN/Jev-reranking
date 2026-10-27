@@ -1,0 +1,43 @@
+{
+  "schema": "jev-e10-e11-prescore-decisions-v1",
+  "frozen_at_utc": "2026-10-13T20:20:17.6810688Z",
+  "decision_document": "E10_E11_PROSPECTIVE_FREEZE.md",
+  "decision_sha256": "b138a7fadd94b1c185c62f2bcb9bdfda23ed617d86b0abcbf0071dd2ae274ffb",
+  "new_full_model_scores_observed": false,
+  "consultation": "https://chatgpt.com/c/6ace79b9-9928-83ee-ab5f-0c06765ce4eb",
+  "e10": {
+    "interpretation": "prospectively specified additional-source evaluation; not sealed confirmation",
+    "models": [
+      "E12_F2s44_LL_A",
+      "E12_F2s45_LL_A",
+      "E12_F3s44_LL_A",
+      "E12_F3s45_LL_A",
+      "E458_F2s44_POOL_ALL",
+      "E458_F2s45_POOL_ALL",
+      "E458_F3s44_POOL_ALL",
+      "E458_F3s45_POOL_ALL"
+    ],
+    "split_rule": "complete official publicly labelled validation/dev; verify actual asset before scoring",
+    "asset_registry": "PENDING_ACTUAL_READ",
+    "source": "SocialIQA"
+  },
+  "e11": {
+    "interpretation": "budget and corresponding OneCycle schedule sensitivity",
+    "models": [
+      "E11_F2s44_POINTER_2EP",
+      "E11_F2s44_POOL_2EP",
+      "E11_F2s45_POINTER_2EP",
+      "E11_F2s45_POOL_2EP",
+      "E11_F3s44_POINTER_2EP",
+      "E11_F3s44_POOL_2EP",
+      "E11_F3s45_POINTER_2EP",
+      "E11_F3s45_POOL_2EP"
+    ],
+    "expected_steps": {
+      "F3": 3862,
+      "F2": 3864
+    },
+    "epochs": 2,
+    "scheduling": "after already committed blocks; selection independent of score direction"
+  }
+}

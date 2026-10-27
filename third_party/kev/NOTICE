@@ -1,0 +1,14 @@
+kev / NeoHorse-derived research implementations
+
+This repository includes research implementations derived from the NeoHorse
+kev training package, originally distributed under Apache License 2.0.
+The retained original license text is in this directory's LICENSE file.
+
+The JEV study modifies training recipes, classification heads, adapter scopes,
+initialization/reference handling, export/runtime interfaces and evaluation
+controls. The repository's source map identifies the selected study variants.
+These modifications are project code; the original attribution and applicable
+upstream license continue to apply to the derived implementations.
+
+NeoHorse model weights and tokenizer payloads are separate external assets.
+Upstream model reference: https://huggingface.co/TokenRhythm/NeoHorse-1-4B

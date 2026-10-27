@@ -1,0 +1,2987 @@
+{
+  "schema": "jev.public-source-changes.v1",
+  "files": {
+    "vendor/evaluation/run_evaluation.py": {
+      "original": {
+        "sha256": "670e46dc59ba9a41dffe4cfc19270a1369b985c903398f78bfd45400657c6f4b",
+        "bytes": 33762
+      },
+      "public": {
+        "sha256": "2960be8ea6921784d3842257e6d06dce4061571f9328452a1ff639df9230369c",
+        "bytes": 33738
+      },
+      "reason": "Public deployment defaults: replace author host and installation paths with environment-configurable placeholders; scientific evaluation unchanged. Comments and documentation simplified."
+    },
+    "vendor/evaluation/followup/evaluation/run_evaluation.py": {
+      "original": {
+        "sha256": "7cabc9fd616e1d2677fc1422e76cb70838d9b35dfe9f44c93e533806e5c7820d",
+        "bytes": 36009
+      },
+      "public": {
+        "sha256": "7e2a4bdc97647b54fc0e0b775eb7699a6db2c229ecaf42af76dd3305eae211a2",
+        "bytes": 35715
+      },
+      "reason": "Public deployment defaults: replace author host and installation paths with environment-configurable placeholders; scientific evaluation unchanged. Comments and documentation simplified."
+    },
+    "vendor/evaluation/EXPECTED_MC_POPULATION_V2.json": {
+      "original": {
+        "sha256": "4579749f959577c7b3cca502d7eaadd2a5f5b6035ef8927206ad1c57f880e2a1",
+        "bytes": 37237
+      },
+      "public": {
+        "sha256": "7ebea86fc1e69f7eab3e80df4dcfb41871381fbd67ccbb232690ef6b66b2ebf6",
+        "bytes": 10882
+      },
+      "reason": "Remove machine-side read/stat/timing receipts; retain all task population, request/token/order identities and scientific normalization."
+    },
+    "vendor/evaluation/followup/evaluation/EXPECTED_MC_POPULATION_V2.json": {
+      "original": {
+        "sha256": "4579749f959577c7b3cca502d7eaadd2a5f5b6035ef8927206ad1c57f880e2a1",
+        "bytes": 37237
+      },
+      "public": {
+        "sha256": "7ebea86fc1e69f7eab3e80df4dcfb41871381fbd67ccbb232690ef6b66b2ebf6",
+        "bytes": 10882
+      },
+      "reason": "Remove machine-side read/stat/timing receipts; retain all task population, request/token/order identities and scientific normalization."
+    },
+    "vendor/inference/checkpoint_pins_v2.json": {
+      "original": {
+        "sha256": "f844cafaa5925baa9f4a09c487cc885360177d50bcef9c264f591bea7daac63a",
+        "bytes": 8154
+      },
+      "public": {
+        "sha256": "51b95a3de99127fcd37aac1425c2b9a4b7851f65b3765d183ee3126c31f29f18",
+        "bytes": 8001
+      },
+      "reason": "Remove original storage locations; retain every historical checkpoint artifact identity."
+    },
+    "vendor/grading/checkpoint_pins_v2.json": {
+      "original": {
+        "sha256": "f844cafaa5925baa9f4a09c487cc885360177d50bcef9c264f591bea7daac63a",
+        "bytes": 8154
+      },
+      "public": {
+        "sha256": "51b95a3de99127fcd37aac1425c2b9a4b7851f65b3765d183ee3126c31f29f18",
+        "bytes": 8001
+      },
+      "reason": "Remove original storage locations; retain every historical checkpoint artifact identity."
+    },
+    "vendor/inference/run_inference.py": {
+      "original": {
+        "sha256": "66c8080c867889fb2361140ff17fc88860911e9f77778d7f3878ee9c4e4821f6",
+        "bytes": 33806
+      },
+      "public": {
+        "sha256": "4553078a91afc48925de19c38c62e893cb432619b82e2b8f0c294aaac195b533",
+        "bytes": 33313
+      },
+      "reason": "Public local paths/defaults and lifecycle pin follow the public evaluator; scientific requests, checkpoint tensors, population and scoring unchanged. Comments and documentation simplified."
+    },
+    "vendor/socialiqa/run_e10.py": {
+      "original": {
+        "sha256": "ab7d5bcc4bf88a37df914561998fea897295adbbd237246ada84d0042ad07b64",
+        "bytes": 31281
+      },
+      "public": {
+        "sha256": "93c1e11f14c204653a1740ebd18b91dac00bc679d1f3558fd9c006a8262306a0",
+        "bytes": 30539
+      },
+      "reason": "Public sibling evaluator location and lifecycle pin; native SocialIQA protocol unchanged. Comments and documentation simplified."
+    },
+    "vendor/socialiqa/e10_models.py": {
+      "original": {
+        "sha256": "066dc3fc9ec13546c255341f88fb33b408005bcd4c7f15e45518a3400ae58343",
+        "bytes": 22291
+      },
+      "public": {
+        "sha256": "b8b26255d57eb870f36051a64ed4dfee19353899d374ccbb3cc65d51e129e7f0",
+        "bytes": 22157
+      },
+      "reason": "Replace author campaign defaults with explicit placeholders; --campaign-plan/--code-tree remain operator inputs. Comments and documentation simplified."
+    },
+    "vendor/inference/inference_worker.py": {
+      "original": {
+        "sha256": "1e3523a95a0992f3126dfb6623d52dbedf3787820ce795633a3566882362f7ca",
+        "bytes": 14003
+      },
+      "public": {
+        "sha256": "4118f74905ef915b88523185c0be951757b6d28b4a938d9a8faad5e9c8780893",
+        "bytes": 14083
+      },
+      "reason": "Parameterize historical host/uid deployment guard; fixed scientific population/model/protocol identity checks unchanged. Comments and documentation simplified."
+    },
+    "vendor/inference/token_preflight.py": {
+      "original": {
+        "sha256": "ed74f9590f6aea534c6cd70f25eff5238f8fd7e4614111960df8d1c43ee4a5e0",
+        "bytes": 21970
+      },
+      "public": {
+        "sha256": "f137aff6a7d6481694bd6f24d908591cdc303c35cee0a7cf71cb8aecee62b879",
+        "bytes": 21940
+      },
+      "reason": "Parameterize historical host/uid deployment guard; fixed scientific population/model/protocol identity checks unchanged. Comments and documentation simplified."
+    },
+    "vendor/socialiqa/e10_worker.py": {
+      "original": {
+        "sha256": "6deecc93089d8ba9dee8af2bdc803678219688ee2e222f11e3b5f06d31cdb43c",
+        "bytes": 12200
+      },
+      "public": {
+        "sha256": "313bb1c7cfe169b51f6cefbcf7bc19af7ee5219130e642262723cec788a9e585",
+        "bytes": 12280
+      },
+      "reason": "Parameterize historical host/uid deployment guard; fixed scientific population/model/protocol identity checks unchanged."
+    },
+    "vendor/socialiqa/aggregate_e10.py": {
+      "original": {
+        "sha256": "aa732d4f647e8866bc5fccac2281e802f679831afecff54fa64bdebe94d437a7",
+        "bytes": 38994
+      },
+      "public": {
+        "sha256": "b446f6a1bb4308c627d2075fb17cf058aeb0349445c52738cc5a74d4c4fae514",
+        "bytes": 38164
+      },
+      "reason": "Parameterize historical host/uid deployment guard with explicit stdlib imports; fixed scientific population/model/protocol identity checks unchanged. Comments and documentation simplified."
+    },
+    "vendor/socialiqa/source/socialiqa_encoder_witness.py": {
+      "original": {
+        "sha256": "db46440ef62ca1660a7eca182138a8bb4023dad6253296da66d5a51da8ab396f",
+        "bytes": 7630
+      },
+      "public": {
+        "sha256": "2a10512fb20ac759c1892a6370d8587edccddf0c85338dbe246fb9cc4a5311d9",
+        "bytes": 7443
+      },
+      "reason": "Parameterize historical host/uid deployment guard; fixed scientific population/model/protocol identity checks unchanged. Comments and documentation simplified."
+    },
+    "vendor/socialiqa/source/socialiqa_token_preflight.py": {
+      "original": {
+        "sha256": "10c153e791d606584c11d1e6c0c1b917b9b352543dafe176879379ea757ad5c2",
+        "bytes": 21370
+      },
+      "public": {
+        "sha256": "91f46c981767d6dc77e520c7e0ac0f75093d6a453fe3111fa77bd77f9c5cd6ee",
+        "bytes": 21201
+      },
+      "reason": "Parameterize historical host/uid deployment guard; fixed scientific population/model/protocol identity checks unchanged. Comments and documentation simplified."
+    },
+    "vendor/grading/token_preflight.py": {
+      "original": {
+        "sha256": "ed74f9590f6aea534c6cd70f25eff5238f8fd7e4614111960df8d1c43ee4a5e0",
+        "bytes": 21970
+      },
+      "public": {
+        "sha256": "f137aff6a7d6481694bd6f24d908591cdc303c35cee0a7cf71cb8aecee62b879",
+        "bytes": 21940
+      },
+      "reason": "Parameterize historical host/uid guard; grading builders and scoring unchanged. Comments and documentation simplified."
+    },
+    "vendor/portable_pair/PACKAGE_MANIFEST.json": {
+      "original": {
+        "sha256": "d474fec1c3104844a728974118d4cd0323ca7470de8b524a15bb9e2fc52acb96",
+        "bytes": 7468
+      },
+      "public": {
+        "sha256": "9760c97ab066c109fa3d7ef7cd06514e9c821d2302f19aafebc8b00aa6fc6b79",
+        "bytes": 6252
+      },
+      "reason": "Public source/configuration selection omits machine binding and execution receipts; configure_runtime adds a fresh exact role binding explicitly. Comments and documentation simplified."
+    },
+    "vendor/qwen3_actual/cells/F2s44/PACKAGE_MANIFEST.json": {
+      "original": {
+        "sha256": "1f992d70ec66fa81c91b20245b00632ed6492d657832de69de9e3ae717106275",
+        "bytes": 7613
+      },
+      "public": {
+        "sha256": "9f7160842eb2cfd78c5799f205cd99a075209e4cd65f6c2f68c64e4bc85f47f5",
+        "bytes": 6671
+      },
+      "reason": "Public source/configuration selection omits machine binding and execution receipts; configure_runtime adds a fresh exact role binding explicitly. Comments and documentation simplified."
+    },
+    "vendor/qwen3_actual/cells/F2s45/PACKAGE_MANIFEST.json": {
+      "original": {
+        "sha256": "586379a49c5c17746a4a67bdad7422f37cfd8b08aa8b19d4a1485d9feefae009",
+        "bytes": 7613
+      },
+      "public": {
+        "sha256": "1f9d1d5ddcb7dad3fabe6accea4a2f77690f60626297aec040bdfd346ea2b07c",
+        "bytes": 6671
+      },
+      "reason": "Public source/configuration selection omits machine binding and execution receipts; configure_runtime adds a fresh exact role binding explicitly. Comments and documentation simplified."
+    },
+    "vendor/qwen3_actual/cells/F3s44/PACKAGE_MANIFEST.json": {
+      "original": {
+        "sha256": "840d82c160d6dc58fd9c05955ac674bc834f2ae7fd04c0a99700703dff201d97",
+        "bytes": 7613
+      },
+      "public": {
+        "sha256": "a890cd666ca61c6c1c68ff4ef04de54e9694da41866209831023ac2f8f766b6e",
+        "bytes": 6671
+      },
+      "reason": "Public source/configuration selection omits machine binding and execution receipts; configure_runtime adds a fresh exact role binding explicitly. Comments and documentation simplified."
+    },
+    "vendor/qwen3_actual/cells/F3s45/PACKAGE_MANIFEST.json": {
+      "original": {
+        "sha256": "fec8d010bfc4084a3b96fca327073ab1cb6e7fe0cc6b365cac7cd64807c3beb3",
+        "bytes": 7613
+      },
+      "public": {
+        "sha256": "598fd4a09fbcd93039b99767029c3e68cfd5be2ddc6de35ebd7e4b1e7248f40c",
+        "bytes": 6671
+      },
+      "reason": "Public source/configuration selection omits machine binding and execution receipts; configure_runtime adds a fresh exact role binding explicitly. Comments and documentation simplified."
+    },
+    "vendor/r3_trace/PROTOCOL.md": {
+      "original": {
+        "sha256": "90886d7861fe79244054aa97cd93145ccd617026c00c2de0d5aec205265dd2a7",
+        "bytes": 3326
+      },
+      "public": {
+        "sha256": "aca3462321b65f27793515aa1d5d3e88eebdc6e9f522aab5023132e0b985b8ed",
+        "bytes": 1138
+      },
+      "reason": "Public scientific protocol: retain the native diagnostic design and arguments; omit historical launch deadlines, project scheduling and execution-result narrative."
+    },
+    "vendor/r3_trace/pointer_repeat/PROTOCOL.md": {
+      "original": {
+        "sha256": "d0286f12e8c3fb35f27b54a24e66ecba21bc65f742b6298cdc5bc77e10161839",
+        "bytes": 1562
+      },
+      "public": {
+        "sha256": "84480e45a12bf66ce32d220ea89b8fa6cf7aaef0723e463aea1293ce87a5992a",
+        "bytes": 741
+      },
+      "reason": "Public scientific protocol: retain the native diagnostic design and arguments; omit historical launch deadlines, project scheduling and execution-result narrative."
+    },
+    "vendor/e11/DIAGNOSTICS_CONTRACT.md": {
+      "original": {
+        "sha256": "8bf57b53b7dd6ec505bd94a833444957a6de9a8fbe6db22eea27ac2e1c2c21e8",
+        "bytes": 3457
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "50852587db2297148fe31dfa6147abeb747c9c42bb87b6b920a8cb7ccf3d96e3",
+        "bytes": 1860
+      }
+    },
+    "vendor/e11/kev/anchors.py": {
+      "original": {
+        "sha256": "089d8a5493502bb26f540eb1c5e681780ca0bb01276073d4e1733211f15d0e10",
+        "bytes": 3986
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "af7c9748b95920b625ea8a83b6359cf4d45394f5f305a00cea438f3d8baf4f7c",
+        "bytes": 3941
+      }
+    },
+    "vendor/e11/kev/benchmark.py": {
+      "original": {
+        "sha256": "4192ec3b26b065452f84bde38a091e6854a28fe185d2e0f39a0c91b2efe69df7",
+        "bytes": 19930
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "d77610149348a97db9c0dc819df0360379d19c5f47e99aa45343da778f8b1865",
+        "bytes": 19896
+      }
+    },
+    "vendor/e11/kev/campaign_diagnostics.py": {
+      "original": {
+        "sha256": "6fa955a2fca81e2391e6bf3cc69b8ea0eb37d6da1b735e8a38dffff5385ab9ae",
+        "bytes": 26926
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "7a9c1381c3b85451088cffc534d9464c1c0f7806c3b762eca910d0d6525663b3",
+        "bytes": 26643
+      }
+    },
+    "vendor/e11/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/e11/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/e11/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/e11/kev/dse_ema_eval.py": {
+      "original": {
+        "sha256": "f05c2d5b962da0ac1e4a2512296c0caa4b1ff71d4e95a9819405133bbbc0e289",
+        "bytes": 11160
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cd3bd7daf6fbfebd034d3434a3a2676bd56e8f5ce0cbfe366417ef67671f0b62",
+        "bytes": 10939
+      }
+    },
+    "vendor/e11/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/e11/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/e11/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/e11/kev/e11_arms.py": {
+      "original": {
+        "sha256": "fd2bcad51b74e6cb205861506c0b8c3abed4441f394a12f4660f6cafd5380c80",
+        "bytes": 3414
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "f9f674972570b6d6903520e0a4a049385bffafac2f03cf0875c0c49a32adf21d",
+        "bytes": 3112
+      }
+    },
+    "vendor/e11/kev/e11_reference.py": {
+      "original": {
+        "sha256": "ec3ae53562cb28740c82e259fb5a2e134808b0429e700ffd2b665fa6e6f9b677",
+        "bytes": 19799
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "d0422d4b15d79a5ca6dc8c3554c5202939a095411af1ef4cd82764e37dd0d483",
+        "bytes": 18521
+      }
+    },
+    "vendor/e11/kev/e458_arms.py": {
+      "original": {
+        "sha256": "8845fef975ba4a503a31b5744acd10b679787098c0c518de258f912705b7c89f",
+        "bytes": 4450
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "29c8f53a3a52a6ebecfa51bc67828d99bf683f433c738906af8c7a3039e6db43",
+        "bytes": 4261
+      }
+    },
+    "vendor/e11/kev/e458_reference.py": {
+      "original": {
+        "sha256": "a555c9f9247c483f0b37be67654410a90872c5f7dedffa3d9cfba86eecb01f75",
+        "bytes": 28747
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "db3e446b29e1b77e169648779da0858dadbc82a0d201a75b3349051024f6a843",
+        "bytes": 27826
+      }
+    },
+    "vendor/e11/kev/heads.py": {
+      "original": {
+        "sha256": "c752ea073ef5541a7ee563b9d12fd9ba0ea0281b86702d99e818358c78a24412",
+        "bytes": 8737
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "b2777b3de16068aee77053fa4cf9907d99f135596a5c004c066c5fddc6407270",
+        "bytes": 8641
+      }
+    },
+    "vendor/e11/kev/r3_control_diagnostics.py": {
+      "original": {
+        "sha256": "35f84c0c720ec8467e47e4ae7785e99acd7c80831e0e2775d222b4da10625ed2",
+        "bytes": 15679
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cccb2fb7812af069fa64fa3a5bbc458a7cb4e4339c92ba393225321376644eb7",
+        "bytes": 15605
+      }
+    },
+    "vendor/e11/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/e11/kev/train.py": {
+      "original": {
+        "sha256": "b623eddbed4ae025797f12622d68086b8041fb223a37c2afd4977e388a924d5b",
+        "bytes": 54438
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e224e8677dd87de40d541fa81bfcb9cc3ccfd7df224e5f01993a9d8270c67056",
+        "bytes": 54371
+      }
+    },
+    "vendor/e11/runtime/mc_worker.py": {
+      "original": {
+        "sha256": "214dbc936d12e429d8d15f60397700bc4131f72b792e0b3790db2f342313abde",
+        "bytes": 6115
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "9b7d559ff1f0399b257f3e3fd9bfad3e8204f0754ca14146a84205b07dd47633",
+        "bytes": 6031
+      }
+    },
+    "vendor/e11/tests/heads_original_reference.py": {
+      "original": {
+        "sha256": "c46830834839d1e31180496cf04a871d2c915afbb32fd8768827ca3de0aacb55",
+        "bytes": 7925
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0933f03783a0ed56bf109322f8a91f21719a27f202369c70ca6f2e224f205339",
+        "bytes": 7829
+      }
+    },
+    "vendor/e11/tests/test_campaign_diagnostics.py": {
+      "original": {
+        "sha256": "b821bf8302e029539f5ac1a62743e3e2c8aa203b83ac15dfc0f438a4505d9873",
+        "bytes": 23303
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "5cfa3c033599b90ba2f2c096cd7c90bebca85cb5f9b5ae8e8f6566d078ac9df3",
+        "bytes": 23272
+      }
+    },
+    "vendor/e11/tests/test_e11_two_epochs.py": {
+      "original": {
+        "sha256": "5722de2464850f7609ccb7b400fa5a1b1d5deae8c6bd7099cae74551688d269a",
+        "bytes": 47610
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "91b6b96de68ca1b97f0626c189ce647f737861c937bc963120d5d1b1fed5a8cd",
+        "bytes": 47616
+      }
+    },
+    "vendor/e11/tests/test_e458_reference.py": {
+      "original": {
+        "sha256": "3ca5f2ad498d89c9904aecd4a4e0d92c2f716eb788873c787e81d418b1366738",
+        "bytes": 28964
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e9641282f82bf7454cef32832b3af4a203d605cbb2ec80726b17b8db2c600812",
+        "bytes": 28894
+      }
+    },
+    "vendor/e11/tests/test_last_span_readout.py": {
+      "original": {
+        "sha256": "f17c04b8966e740bfd966cb4080399ede0b48346d6c49b1f23667f64d33d4287",
+        "bytes": 18830
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "bd700ab10d6ed1251a89865fab79dad2d715229b401ce81ac58b0e0469e524ff",
+        "bytes": 18805
+      }
+    },
+    "vendor/e12/DIAGNOSTICS_CONTRACT.md": {
+      "original": {
+        "sha256": "8bf57b53b7dd6ec505bd94a833444957a6de9a8fbe6db22eea27ac2e1c2c21e8",
+        "bytes": 3457
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "50852587db2297148fe31dfa6147abeb747c9c42bb87b6b920a8cb7ccf3d96e3",
+        "bytes": 1860
+      }
+    },
+    "vendor/e12/kev/anchors.py": {
+      "original": {
+        "sha256": "089d8a5493502bb26f540eb1c5e681780ca0bb01276073d4e1733211f15d0e10",
+        "bytes": 3986
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "af7c9748b95920b625ea8a83b6359cf4d45394f5f305a00cea438f3d8baf4f7c",
+        "bytes": 3941
+      }
+    },
+    "vendor/e12/kev/benchmark.py": {
+      "original": {
+        "sha256": "4192ec3b26b065452f84bde38a091e6854a28fe185d2e0f39a0c91b2efe69df7",
+        "bytes": 19930
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "d77610149348a97db9c0dc819df0360379d19c5f47e99aa45343da778f8b1865",
+        "bytes": 19896
+      }
+    },
+    "vendor/e12/kev/campaign_diagnostics.py": {
+      "original": {
+        "sha256": "6fa955a2fca81e2391e6bf3cc69b8ea0eb37d6da1b735e8a38dffff5385ab9ae",
+        "bytes": 26926
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "7a9c1381c3b85451088cffc534d9464c1c0f7806c3b762eca910d0d6525663b3",
+        "bytes": 26643
+      }
+    },
+    "vendor/e12/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/e12/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/e12/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/e12/kev/dse_ema_eval.py": {
+      "original": {
+        "sha256": "f05c2d5b962da0ac1e4a2512296c0caa4b1ff71d4e95a9819405133bbbc0e289",
+        "bytes": 11160
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cd3bd7daf6fbfebd034d3434a3a2676bd56e8f5ce0cbfe366417ef67671f0b62",
+        "bytes": 10939
+      }
+    },
+    "vendor/e12/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/e12/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/e12/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/e12/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/e12/kev/r3_control_diagnostics.py": {
+      "original": {
+        "sha256": "35f84c0c720ec8467e47e4ae7785e99acd7c80831e0e2775d222b4da10625ed2",
+        "bytes": 15679
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cccb2fb7812af069fa64fa3a5bbc458a7cb4e4339c92ba393225321376644eb7",
+        "bytes": 15605
+      }
+    },
+    "vendor/e12/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/e12/kev/train.py": {
+      "original": {
+        "sha256": "314eea703264d55c0dead1234fcb496843f0f62a6c0f158574d6f515b034424a",
+        "bytes": 51176
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "383a80b8bb3e482cd12a442b676c96daaea302d6e1a3237542b6926c09facea4",
+        "bytes": 51147
+      }
+    },
+    "vendor/e12/runtime/mc_worker.py": {
+      "original": {
+        "sha256": "214dbc936d12e429d8d15f60397700bc4131f72b792e0b3790db2f342313abde",
+        "bytes": 6115
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "9b7d559ff1f0399b257f3e3fd9bfad3e8204f0754ca14146a84205b07dd47633",
+        "bytes": 6031
+      }
+    },
+    "vendor/e12/tests/heads_original_reference.py": {
+      "original": {
+        "sha256": "c46830834839d1e31180496cf04a871d2c915afbb32fd8768827ca3de0aacb55",
+        "bytes": 7925
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0933f03783a0ed56bf109322f8a91f21719a27f202369c70ca6f2e224f205339",
+        "bytes": 7829
+      }
+    },
+    "vendor/e12/tests/test_campaign_diagnostics.py": {
+      "original": {
+        "sha256": "b821bf8302e029539f5ac1a62743e3e2c8aa203b83ac15dfc0f438a4505d9873",
+        "bytes": 23303
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "5cfa3c033599b90ba2f2c096cd7c90bebca85cb5f9b5ae8e8f6566d078ac9df3",
+        "bytes": 23272
+      }
+    },
+    "vendor/e458/DIAGNOSTICS_CONTRACT.md": {
+      "original": {
+        "sha256": "8bf57b53b7dd6ec505bd94a833444957a6de9a8fbe6db22eea27ac2e1c2c21e8",
+        "bytes": 3457
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "50852587db2297148fe31dfa6147abeb747c9c42bb87b6b920a8cb7ccf3d96e3",
+        "bytes": 1860
+      }
+    },
+    "vendor/e458/kev/anchors.py": {
+      "original": {
+        "sha256": "089d8a5493502bb26f540eb1c5e681780ca0bb01276073d4e1733211f15d0e10",
+        "bytes": 3986
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "af7c9748b95920b625ea8a83b6359cf4d45394f5f305a00cea438f3d8baf4f7c",
+        "bytes": 3941
+      }
+    },
+    "vendor/e458/kev/benchmark.py": {
+      "original": {
+        "sha256": "4192ec3b26b065452f84bde38a091e6854a28fe185d2e0f39a0c91b2efe69df7",
+        "bytes": 19930
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "d77610149348a97db9c0dc819df0360379d19c5f47e99aa45343da778f8b1865",
+        "bytes": 19896
+      }
+    },
+    "vendor/e458/kev/campaign_diagnostics.py": {
+      "original": {
+        "sha256": "6fa955a2fca81e2391e6bf3cc69b8ea0eb37d6da1b735e8a38dffff5385ab9ae",
+        "bytes": 26926
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "7a9c1381c3b85451088cffc534d9464c1c0f7806c3b762eca910d0d6525663b3",
+        "bytes": 26643
+      }
+    },
+    "vendor/e458/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/e458/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/e458/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/e458/kev/dse_ema_eval.py": {
+      "original": {
+        "sha256": "f05c2d5b962da0ac1e4a2512296c0caa4b1ff71d4e95a9819405133bbbc0e289",
+        "bytes": 11160
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cd3bd7daf6fbfebd034d3434a3a2676bd56e8f5ce0cbfe366417ef67671f0b62",
+        "bytes": 10939
+      }
+    },
+    "vendor/e458/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/e458/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/e458/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/e458/kev/e458_arms.py": {
+      "original": {
+        "sha256": "8845fef975ba4a503a31b5744acd10b679787098c0c518de258f912705b7c89f",
+        "bytes": 4450
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "29c8f53a3a52a6ebecfa51bc67828d99bf683f433c738906af8c7a3039e6db43",
+        "bytes": 4261
+      }
+    },
+    "vendor/e458/kev/e458_reference.py": {
+      "original": {
+        "sha256": "a555c9f9247c483f0b37be67654410a90872c5f7dedffa3d9cfba86eecb01f75",
+        "bytes": 28747
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "db3e446b29e1b77e169648779da0858dadbc82a0d201a75b3349051024f6a843",
+        "bytes": 27826
+      }
+    },
+    "vendor/e458/kev/heads.py": {
+      "original": {
+        "sha256": "c752ea073ef5541a7ee563b9d12fd9ba0ea0281b86702d99e818358c78a24412",
+        "bytes": 8737
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "b2777b3de16068aee77053fa4cf9907d99f135596a5c004c066c5fddc6407270",
+        "bytes": 8641
+      }
+    },
+    "vendor/e458/kev/r3_control_diagnostics.py": {
+      "original": {
+        "sha256": "35f84c0c720ec8467e47e4ae7785e99acd7c80831e0e2775d222b4da10625ed2",
+        "bytes": 15679
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cccb2fb7812af069fa64fa3a5bbc458a7cb4e4339c92ba393225321376644eb7",
+        "bytes": 15605
+      }
+    },
+    "vendor/e458/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/e458/kev/train.py": {
+      "original": {
+        "sha256": "5131e21e2f4162e13c1702dbb6635f101fa64b4ddb2ef62208a1d9395f26be30",
+        "bytes": 52619
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0a5b2a731f879b5edc25784749375e2b6f4b3697d42b2cb5e816b0edac7cfac2",
+        "bytes": 52552
+      }
+    },
+    "vendor/e458/runtime/mc_worker.py": {
+      "original": {
+        "sha256": "214dbc936d12e429d8d15f60397700bc4131f72b792e0b3790db2f342313abde",
+        "bytes": 6115
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "9b7d559ff1f0399b257f3e3fd9bfad3e8204f0754ca14146a84205b07dd47633",
+        "bytes": 6031
+      }
+    },
+    "vendor/e458/tests/heads_original_reference.py": {
+      "original": {
+        "sha256": "c46830834839d1e31180496cf04a871d2c915afbb32fd8768827ca3de0aacb55",
+        "bytes": 7925
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0933f03783a0ed56bf109322f8a91f21719a27f202369c70ca6f2e224f205339",
+        "bytes": 7829
+      }
+    },
+    "vendor/e458/tests/test_campaign_diagnostics.py": {
+      "original": {
+        "sha256": "b821bf8302e029539f5ac1a62743e3e2c8aa203b83ac15dfc0f438a4505d9873",
+        "bytes": 23303
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "5cfa3c033599b90ba2f2c096cd7c90bebca85cb5f9b5ae8e8f6566d078ac9df3",
+        "bytes": 23272
+      }
+    },
+    "vendor/e458/tests/test_e458_reference.py": {
+      "original": {
+        "sha256": "3ca5f2ad498d89c9904aecd4a4e0d92c2f716eb788873c787e81d418b1366738",
+        "bytes": 28964
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e9641282f82bf7454cef32832b3af4a203d605cbb2ec80726b17b8db2c600812",
+        "bytes": 28894
+      }
+    },
+    "vendor/e458/tests/test_last_span_readout.py": {
+      "original": {
+        "sha256": "f17c04b8966e740bfd966cb4080399ede0b48346d6c49b1f23667f64d33d4287",
+        "bytes": 18830
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "bd700ab10d6ed1251a89865fab79dad2d715229b401ce81ac58b0e0469e524ff",
+        "bytes": 18805
+      }
+    },
+    "vendor/evaluation/followup/evaluation/scores.py": {
+      "original": {
+        "sha256": "ddaef8761cda2fdef5277fd99229be4009ad8f5365718ced6333009a6f5cee99",
+        "bytes": 6501
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e30681e46427e00b32447f7edfc42dc57213e5ecd30b4d3ea0d7cee5245431af",
+        "bytes": 6476
+      }
+    },
+    "vendor/evaluation/scores.py": {
+      "original": {
+        "sha256": "ddaef8761cda2fdef5277fd99229be4009ad8f5365718ced6333009a6f5cee99",
+        "bytes": 6501
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e30681e46427e00b32447f7edfc42dc57213e5ecd30b4d3ea0d7cee5245431af",
+        "bytes": 6476
+      }
+    },
+    "vendor/grading/prepare_inputs.py": {
+      "original": {
+        "sha256": "56f7f10b83f43fa47c8dbda4c2d7694bca3fd0aaef41e702f3d9f44112aae02a",
+        "bytes": 17038
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "9e58f51d9885e378f54fa65af9687ef71cf046c5c5482ef41a15db2a6464fe76",
+        "bytes": 16873
+      }
+    },
+    "vendor/head1_v1/kev/anchors.py": {
+      "original": {
+        "sha256": "089d8a5493502bb26f540eb1c5e681780ca0bb01276073d4e1733211f15d0e10",
+        "bytes": 3986
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "af7c9748b95920b625ea8a83b6359cf4d45394f5f305a00cea438f3d8baf4f7c",
+        "bytes": 3941
+      }
+    },
+    "vendor/head1_v1/kev/benchmark.py": {
+      "original": {
+        "sha256": "4192ec3b26b065452f84bde38a091e6854a28fe185d2e0f39a0c91b2efe69df7",
+        "bytes": 19930
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "d77610149348a97db9c0dc819df0360379d19c5f47e99aa45343da778f8b1865",
+        "bytes": 19896
+      }
+    },
+    "vendor/head1_v1/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/head1_v1/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/head1_v1/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/head1_v1/kev/dse_ema_eval.py": {
+      "original": {
+        "sha256": "f05c2d5b962da0ac1e4a2512296c0caa4b1ff71d4e95a9819405133bbbc0e289",
+        "bytes": 11160
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cd3bd7daf6fbfebd034d3434a3a2676bd56e8f5ce0cbfe366417ef67671f0b62",
+        "bytes": 10939
+      }
+    },
+    "vendor/head1_v1/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/head1_v1/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/head1_v1/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/head1_v1/kev/heads.py": {
+      "original": {
+        "sha256": "c46830834839d1e31180496cf04a871d2c915afbb32fd8768827ca3de0aacb55",
+        "bytes": 7925
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0933f03783a0ed56bf109322f8a91f21719a27f202369c70ca6f2e224f205339",
+        "bytes": 7829
+      }
+    },
+    "vendor/head1_v1/runtime/mc_worker.py": {
+      "original": {
+        "sha256": "214dbc936d12e429d8d15f60397700bc4131f72b792e0b3790db2f342313abde",
+        "bytes": 6115
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "9b7d559ff1f0399b257f3e3fd9bfad3e8204f0754ca14146a84205b07dd47633",
+        "bytes": 6031
+      }
+    },
+    "vendor/head1_v1/tests/test_heads.py": {
+      "original": {
+        "sha256": "49cec2bb7167065dac2b0edc336b7833e83ddb3ee9d5e9080782938df156719c",
+        "bytes": 9078
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "8781c0472c204cbb9ac2f89cd7500cceb7d86a572abe84571030fbcd5502d483",
+        "bytes": 9065
+      }
+    },
+    "vendor/historical_heads/DIAGNOSTICS_CONTRACT.md": {
+      "original": {
+        "sha256": "8bf57b53b7dd6ec505bd94a833444957a6de9a8fbe6db22eea27ac2e1c2c21e8",
+        "bytes": 3457
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "50852587db2297148fe31dfa6147abeb747c9c42bb87b6b920a8cb7ccf3d96e3",
+        "bytes": 1860
+      }
+    },
+    "vendor/historical_heads/kev/anchors.py": {
+      "original": {
+        "sha256": "089d8a5493502bb26f540eb1c5e681780ca0bb01276073d4e1733211f15d0e10",
+        "bytes": 3986
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "af7c9748b95920b625ea8a83b6359cf4d45394f5f305a00cea438f3d8baf4f7c",
+        "bytes": 3941
+      }
+    },
+    "vendor/historical_heads/kev/benchmark.py": {
+      "original": {
+        "sha256": "4192ec3b26b065452f84bde38a091e6854a28fe185d2e0f39a0c91b2efe69df7",
+        "bytes": 19930
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "d77610149348a97db9c0dc819df0360379d19c5f47e99aa45343da778f8b1865",
+        "bytes": 19896
+      }
+    },
+    "vendor/historical_heads/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/historical_heads/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/historical_heads/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/historical_heads/kev/dse_ema_eval.py": {
+      "original": {
+        "sha256": "f05c2d5b962da0ac1e4a2512296c0caa4b1ff71d4e95a9819405133bbbc0e289",
+        "bytes": 11160
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cd3bd7daf6fbfebd034d3434a3a2676bd56e8f5ce0cbfe366417ef67671f0b62",
+        "bytes": 10939
+      }
+    },
+    "vendor/historical_heads/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/historical_heads/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/historical_heads/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/historical_heads/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/historical_heads/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/historical_heads/runtime/mc_worker.py": {
+      "original": {
+        "sha256": "214dbc936d12e429d8d15f60397700bc4131f72b792e0b3790db2f342313abde",
+        "bytes": 6115
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "9b7d559ff1f0399b257f3e3fd9bfad3e8204f0754ca14146a84205b07dd47633",
+        "bytes": 6031
+      }
+    },
+    "vendor/historical_heads/tests/heads_original_reference.py": {
+      "original": {
+        "sha256": "c46830834839d1e31180496cf04a871d2c915afbb32fd8768827ca3de0aacb55",
+        "bytes": 7925
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0933f03783a0ed56bf109322f8a91f21719a27f202369c70ca6f2e224f205339",
+        "bytes": 7829
+      }
+    },
+    "vendor/historical_lowrate/DIAGNOSTICS_CONTRACT.md": {
+      "original": {
+        "sha256": "8bf57b53b7dd6ec505bd94a833444957a6de9a8fbe6db22eea27ac2e1c2c21e8",
+        "bytes": 3457
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "50852587db2297148fe31dfa6147abeb747c9c42bb87b6b920a8cb7ccf3d96e3",
+        "bytes": 1860
+      }
+    },
+    "vendor/historical_lowrate/kev/anchors.py": {
+      "original": {
+        "sha256": "089d8a5493502bb26f540eb1c5e681780ca0bb01276073d4e1733211f15d0e10",
+        "bytes": 3986
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "af7c9748b95920b625ea8a83b6359cf4d45394f5f305a00cea438f3d8baf4f7c",
+        "bytes": 3941
+      }
+    },
+    "vendor/historical_lowrate/kev/benchmark.py": {
+      "original": {
+        "sha256": "4192ec3b26b065452f84bde38a091e6854a28fe185d2e0f39a0c91b2efe69df7",
+        "bytes": 19930
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "d77610149348a97db9c0dc819df0360379d19c5f47e99aa45343da778f8b1865",
+        "bytes": 19896
+      }
+    },
+    "vendor/historical_lowrate/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/historical_lowrate/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/historical_lowrate/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/historical_lowrate/kev/dse_ema_eval.py": {
+      "original": {
+        "sha256": "f05c2d5b962da0ac1e4a2512296c0caa4b1ff71d4e95a9819405133bbbc0e289",
+        "bytes": 11160
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cd3bd7daf6fbfebd034d3434a3a2676bd56e8f5ce0cbfe366417ef67671f0b62",
+        "bytes": 10939
+      }
+    },
+    "vendor/historical_lowrate/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/historical_lowrate/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/historical_lowrate/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/historical_lowrate/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/historical_lowrate/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/historical_lowrate/runtime/mc_worker.py": {
+      "original": {
+        "sha256": "214dbc936d12e429d8d15f60397700bc4131f72b792e0b3790db2f342313abde",
+        "bytes": 6115
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "9b7d559ff1f0399b257f3e3fd9bfad3e8204f0754ca14146a84205b07dd47633",
+        "bytes": 6031
+      }
+    },
+    "vendor/historical_lowrate/tests/heads_original_reference.py": {
+      "original": {
+        "sha256": "c46830834839d1e31180496cf04a871d2c915afbb32fd8768827ca3de0aacb55",
+        "bytes": 7925
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0933f03783a0ed56bf109322f8a91f21719a27f202369c70ca6f2e224f205339",
+        "bytes": 7829
+      }
+    },
+    "vendor/historical_reverse/DIAGNOSTICS_CONTRACT.md": {
+      "original": {
+        "sha256": "8bf57b53b7dd6ec505bd94a833444957a6de9a8fbe6db22eea27ac2e1c2c21e8",
+        "bytes": 3457
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "50852587db2297148fe31dfa6147abeb747c9c42bb87b6b920a8cb7ccf3d96e3",
+        "bytes": 1860
+      }
+    },
+    "vendor/historical_reverse/REVERSE_CONTRACT.md": {
+      "original": {
+        "sha256": "833c6c0f7eb466f464c4b24c8cb8f9d7958707299ed0ac808aa0032708130493",
+        "bytes": 4432
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "ec9a23f317e28a36fbdef219282e57dca8e0239478591bd6f3f5d1327a6c7f6d",
+        "bytes": 1518
+      }
+    },
+    "vendor/historical_reverse/kev/anchors.py": {
+      "original": {
+        "sha256": "089d8a5493502bb26f540eb1c5e681780ca0bb01276073d4e1733211f15d0e10",
+        "bytes": 3986
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "af7c9748b95920b625ea8a83b6359cf4d45394f5f305a00cea438f3d8baf4f7c",
+        "bytes": 3941
+      }
+    },
+    "vendor/historical_reverse/kev/benchmark.py": {
+      "original": {
+        "sha256": "4192ec3b26b065452f84bde38a091e6854a28fe185d2e0f39a0c91b2efe69df7",
+        "bytes": 19930
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "d77610149348a97db9c0dc819df0360379d19c5f47e99aa45343da778f8b1865",
+        "bytes": 19896
+      }
+    },
+    "vendor/historical_reverse/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/historical_reverse/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/historical_reverse/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/historical_reverse/kev/dse_ema_eval.py": {
+      "original": {
+        "sha256": "f05c2d5b962da0ac1e4a2512296c0caa4b1ff71d4e95a9819405133bbbc0e289",
+        "bytes": 11160
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cd3bd7daf6fbfebd034d3434a3a2676bd56e8f5ce0cbfe366417ef67671f0b62",
+        "bytes": 10939
+      }
+    },
+    "vendor/historical_reverse/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/historical_reverse/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/historical_reverse/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/historical_reverse/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/historical_reverse/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "60e7c139d1eb7dc89583c310a91d217fd79df9e71be0a93542fdbcc8aada8511",
+        "bytes": 15931
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "3ac0c83e8b70f903b143e61d6b9d222d8e91161afc6a3c95119f3e79aade09f1",
+        "bytes": 15840
+      }
+    },
+    "vendor/historical_reverse/runtime/mc_worker.py": {
+      "original": {
+        "sha256": "214dbc936d12e429d8d15f60397700bc4131f72b792e0b3790db2f342313abde",
+        "bytes": 6115
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "9b7d559ff1f0399b257f3e3fd9bfad3e8204f0754ca14146a84205b07dd47633",
+        "bytes": 6031
+      }
+    },
+    "vendor/historical_reverse/tests/heads_original_reference.py": {
+      "original": {
+        "sha256": "c46830834839d1e31180496cf04a871d2c915afbb32fd8768827ca3de0aacb55",
+        "bytes": 7925
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0933f03783a0ed56bf109322f8a91f21719a27f202369c70ca6f2e224f205339",
+        "bytes": 7829
+      }
+    },
+    "vendor/historical_reverse/tests/test_reverse_schedule.py": {
+      "original": {
+        "sha256": "fee43919db062d42326d14b4d99620e8720e7d4b36e7e597b07ee82c56843db2",
+        "bytes": 16669
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cd93b3fc7bd81d08afdfbb6bb0a033c2d6d78e79f3b67eba3f7c37d3782359f7",
+        "bytes": 16528
+      }
+    },
+    "vendor/historical_reverse/tests/v1_dse_options_reference.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/inference/freeze_inputs.py": {
+      "original": {
+        "sha256": "af6cfeffd32a2c2bfbfef874eafa8c840996f5b703eb9f1b5922e1ff4edbf4cb",
+        "bytes": 3845
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "92f5fa21a1cd4f7cd0d0a7de452f1ae109b90073366d8e19269212ca8cde0cb1",
+        "bytes": 3827
+      }
+    },
+    "vendor/inference/prepare_inputs.py": {
+      "original": {
+        "sha256": "56f7f10b83f43fa47c8dbda4c2d7694bca3fd0aaef41e702f3d9f44112aae02a",
+        "bytes": 17038
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "9e58f51d9885e378f54fa65af9687ef71cf046c5c5482ef41a15db2a6464fe76",
+        "bytes": 16873
+      }
+    },
+    "vendor/original28/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/original28/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/original28/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/original28/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/original28/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/original28/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/portable_pair/SOURCE_MANIFEST.json": {
+      "original": {
+        "sha256": "c17dbc0875dd7e28402d12d58ca18d221b35c28efc32493a1d7cef0348d71306",
+        "bytes": 4344
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "bc7595f3ce8e91f85cf0647be67338e0851032cf4705f780156d7a21957c5d66",
+        "bytes": 4344
+      }
+    },
+    "vendor/portable_pair/runtime_binding.py": {
+      "original": {
+        "sha256": "cd1f2379e2203b854c0cbef4f37fd0818c8fe7283ba32b7616d6aa0bf3950cc4",
+        "bytes": 6020
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0a0032445d86bb541caf6eb10a1cdff4b7dffed702b5dcc9100fb5c199bb8157",
+        "bytes": 6003
+      }
+    },
+    "vendor/portable_pair/src/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/portable_pair/src/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/portable_pair/src/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/portable_pair/src/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/portable_pair/src/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/portable_pair/src/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/portable_pair/src/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/portable_pair/src/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/SOURCE_MANIFEST.json": {
+      "original": {
+        "sha256": "3bcef5375c2784c0ebc97983b8baae4c059508c1e3396a18cf303b3802bd8aa9",
+        "bytes": 4489
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "880466e2cafffe71d0a036a969eb59e4e1bf9059128b9d95b2663346c94c912f",
+        "bytes": 4489
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/runtime_binding.py": {
+      "original": {
+        "sha256": "cd1f2379e2203b854c0cbef4f37fd0818c8fe7283ba32b7616d6aa0bf3950cc4",
+        "bytes": 6020
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0a0032445d86bb541caf6eb10a1cdff4b7dffed702b5dcc9100fb5c199bb8157",
+        "bytes": 6003
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/src/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/src/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/src/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/src/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/src/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/src/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/src/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/src/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/SOURCE_MANIFEST.json": {
+      "original": {
+        "sha256": "3bcef5375c2784c0ebc97983b8baae4c059508c1e3396a18cf303b3802bd8aa9",
+        "bytes": 4489
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "880466e2cafffe71d0a036a969eb59e4e1bf9059128b9d95b2663346c94c912f",
+        "bytes": 4489
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/runtime_binding.py": {
+      "original": {
+        "sha256": "cd1f2379e2203b854c0cbef4f37fd0818c8fe7283ba32b7616d6aa0bf3950cc4",
+        "bytes": 6020
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0a0032445d86bb541caf6eb10a1cdff4b7dffed702b5dcc9100fb5c199bb8157",
+        "bytes": 6003
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/src/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/src/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/src/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/src/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/src/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/src/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/src/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/src/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/SOURCE_MANIFEST.json": {
+      "original": {
+        "sha256": "3bcef5375c2784c0ebc97983b8baae4c059508c1e3396a18cf303b3802bd8aa9",
+        "bytes": 4489
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "880466e2cafffe71d0a036a969eb59e4e1bf9059128b9d95b2663346c94c912f",
+        "bytes": 4489
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/runtime_binding.py": {
+      "original": {
+        "sha256": "cd1f2379e2203b854c0cbef4f37fd0818c8fe7283ba32b7616d6aa0bf3950cc4",
+        "bytes": 6020
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0a0032445d86bb541caf6eb10a1cdff4b7dffed702b5dcc9100fb5c199bb8157",
+        "bytes": 6003
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/src/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/src/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/src/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/src/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/src/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/src/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/src/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/src/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/SOURCE_MANIFEST.json": {
+      "original": {
+        "sha256": "3bcef5375c2784c0ebc97983b8baae4c059508c1e3396a18cf303b3802bd8aa9",
+        "bytes": 4489
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "880466e2cafffe71d0a036a969eb59e4e1bf9059128b9d95b2663346c94c912f",
+        "bytes": 4489
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/runtime_binding.py": {
+      "original": {
+        "sha256": "cd1f2379e2203b854c0cbef4f37fd0818c8fe7283ba32b7616d6aa0bf3950cc4",
+        "bytes": 6020
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0a0032445d86bb541caf6eb10a1cdff4b7dffed702b5dcc9100fb5c199bb8157",
+        "bytes": 6003
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/src/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/src/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/src/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/src/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/src/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/src/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/src/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/src/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/r3_control/DIAGNOSTICS_CONTRACT.md": {
+      "original": {
+        "sha256": "8bf57b53b7dd6ec505bd94a833444957a6de9a8fbe6db22eea27ac2e1c2c21e8",
+        "bytes": 3457
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "50852587db2297148fe31dfa6147abeb747c9c42bb87b6b920a8cb7ccf3d96e3",
+        "bytes": 1860
+      }
+    },
+    "vendor/r3_control/kev/anchors.py": {
+      "original": {
+        "sha256": "089d8a5493502bb26f540eb1c5e681780ca0bb01276073d4e1733211f15d0e10",
+        "bytes": 3986
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "af7c9748b95920b625ea8a83b6359cf4d45394f5f305a00cea438f3d8baf4f7c",
+        "bytes": 3941
+      }
+    },
+    "vendor/r3_control/kev/benchmark.py": {
+      "original": {
+        "sha256": "4192ec3b26b065452f84bde38a091e6854a28fe185d2e0f39a0c91b2efe69df7",
+        "bytes": 19930
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "d77610149348a97db9c0dc819df0360379d19c5f47e99aa45343da778f8b1865",
+        "bytes": 19896
+      }
+    },
+    "vendor/r3_control/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/r3_control/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/r3_control/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/r3_control/kev/dse_ema_eval.py": {
+      "original": {
+        "sha256": "f05c2d5b962da0ac1e4a2512296c0caa4b1ff71d4e95a9819405133bbbc0e289",
+        "bytes": 11160
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cd3bd7daf6fbfebd034d3434a3a2676bd56e8f5ce0cbfe366417ef67671f0b62",
+        "bytes": 10939
+      }
+    },
+    "vendor/r3_control/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/r3_control/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/r3_control/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/r3_control/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/r3_control/kev/r3_control_diagnostics.py": {
+      "original": {
+        "sha256": "e7ab23c257d7824a092fcb8334f96061daeb31e017c9c60a829c452660d42530",
+        "bytes": 15603
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "6c6ce6bea6895b09fe1c978a054833632a773c023b8d1c171cf8183d106caa37",
+        "bytes": 15529
+      }
+    },
+    "vendor/r3_control/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/r3_control/tests/heads_original_reference.py": {
+      "original": {
+        "sha256": "c46830834839d1e31180496cf04a871d2c915afbb32fd8768827ca3de0aacb55",
+        "bytes": 7925
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0933f03783a0ed56bf109322f8a91f21719a27f202369c70ca6f2e224f205339",
+        "bytes": 7829
+      }
+    },
+    "vendor/r3_trace/DIAGNOSTICS_CONTRACT.md": {
+      "original": {
+        "sha256": "8bf57b53b7dd6ec505bd94a833444957a6de9a8fbe6db22eea27ac2e1c2c21e8",
+        "bytes": 3457
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "50852587db2297148fe31dfa6147abeb747c9c42bb87b6b920a8cb7ccf3d96e3",
+        "bytes": 1860
+      }
+    },
+    "vendor/r3_trace/kev/anchors.py": {
+      "original": {
+        "sha256": "089d8a5493502bb26f540eb1c5e681780ca0bb01276073d4e1733211f15d0e10",
+        "bytes": 3986
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "af7c9748b95920b625ea8a83b6359cf4d45394f5f305a00cea438f3d8baf4f7c",
+        "bytes": 3941
+      }
+    },
+    "vendor/r3_trace/kev/benchmark.py": {
+      "original": {
+        "sha256": "4192ec3b26b065452f84bde38a091e6854a28fe185d2e0f39a0c91b2efe69df7",
+        "bytes": 19930
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "d77610149348a97db9c0dc819df0360379d19c5f47e99aa45343da778f8b1865",
+        "bytes": 19896
+      }
+    },
+    "vendor/r3_trace/kev/contrastive.py": {
+      "original": {
+        "sha256": "cbb979aa5d40265ad0e64695f94b281d91751fa405811ddfa8212fede111edcf",
+        "bytes": 20624
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "468194cd8b0093aee842ffba3043a3baaed72b29f4371bdf14c540d4f187f7f8",
+        "bytes": 20608
+      }
+    },
+    "vendor/r3_trace/kev/data.py": {
+      "original": {
+        "sha256": "997c31d737c2a130ade49edd6534aa47d910786c98af883745b1a97ec858a704",
+        "bytes": 25118
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "e5081aa01debda6652ec631aa89f5a22e11a235c5d6db821628d5dfccf5d8614",
+        "bytes": 25066
+      }
+    },
+    "vendor/r3_trace/kev/dse_ema.py": {
+      "original": {
+        "sha256": "9adbaa59ec2e63a4a389bf9ac2925372cca307a0692bbc5b5a6a9bd928f67747",
+        "bytes": 11094
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "254e87aef1371a80a11b83a19a2be537b53e5dfcac9ce524847057c289660069",
+        "bytes": 11016
+      }
+    },
+    "vendor/r3_trace/kev/dse_ema_eval.py": {
+      "original": {
+        "sha256": "f05c2d5b962da0ac1e4a2512296c0caa4b1ff71d4e95a9819405133bbbc0e289",
+        "bytes": 11160
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "cd3bd7daf6fbfebd034d3434a3a2676bd56e8f5ce0cbfe366417ef67671f0b62",
+        "bytes": 10939
+      }
+    },
+    "vendor/r3_trace/kev/dse_options.py": {
+      "original": {
+        "sha256": "a81cd1adca6600d23d389926f4e676c95d53b101975163c89c97617719b9e15d",
+        "bytes": 23280
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "02e70888bbb4988ca686779ddd73ee03bb962a0ec8f9ea234c4db3554b326ee0",
+        "bytes": 23146
+      }
+    },
+    "vendor/r3_trace/kev/dse_surface_training.py": {
+      "original": {
+        "sha256": "67c20db9a89ac71a933e74afd13a0b640eaf5579bdee447251eda4e10817614a",
+        "bytes": 4728
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4ddc0c155a42a433ed88d1f2fd84098d1ebed2adce5276bc89efc6700e85095a",
+        "bytes": 4737
+      }
+    },
+    "vendor/r3_trace/kev/dse_views.py": {
+      "original": {
+        "sha256": "8bb6349e67b12a1abe2ac03a6efe691d73903e789a4e502dec42be861784dc28",
+        "bytes": 13756
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c176b678d38456fed9dd61eb0c23f4bd7f46cea3eafa8f09db7e63c051f4c2c4",
+        "bytes": 13469
+      }
+    },
+    "vendor/r3_trace/kev/heads.py": {
+      "original": {
+        "sha256": "112ff0117fd9ccd2667aa3611160adedc17b9b07be5fc2bf93e951a759263875",
+        "bytes": 8327
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c31edc946d2616cd8857f8eac917eb5b61525c41e49cf83920df44084c287e46",
+        "bytes": 8231
+      }
+    },
+    "vendor/r3_trace/kev/r3_control_diagnostics.py": {
+      "original": {
+        "sha256": "e7ab23c257d7824a092fcb8334f96061daeb31e017c9c60a829c452660d42530",
+        "bytes": 15603
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "6c6ce6bea6895b09fe1c978a054833632a773c023b8d1c171cf8183d106caa37",
+        "bytes": 15529
+      }
+    },
+    "vendor/r3_trace/kev/supplement_diagnostics.py": {
+      "original": {
+        "sha256": "b243d74fa52af282c882f6af807039cf67f1af2cba3d462597c8172682939e7b",
+        "bytes": 15041
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4485f8a182d9898c9224121464e6d3aee40e72879ec2262ea52b1dfeef173dc4",
+        "bytes": 14950
+      }
+    },
+    "vendor/r3_trace/tests/heads_original_reference.py": {
+      "original": {
+        "sha256": "c46830834839d1e31180496cf04a871d2c915afbb32fd8768827ca3de0aacb55",
+        "bytes": 7925
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0933f03783a0ed56bf109322f8a91f21719a27f202369c70ca6f2e224f205339",
+        "bytes": 7829
+      }
+    },
+    "vendor/readout_analysis/branch_heads_eval.py": {
+      "original": {
+        "sha256": "3e237554fcd40d65629656dd311a11d98ddf8b1cd76f80720d8479008c070d34",
+        "bytes": 12542
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "9a6fd52b5f20f0c4dd541e5bb5aa73f37aba36107c91012de91195daaeb811f1",
+        "bytes": 12356
+      }
+    },
+    "vendor/readout_analysis/build_branch_population.py": {
+      "original": {
+        "sha256": "cbb78c31fe8c643c241accf7fb83fb0feca7c51431874bd1d114b98fc965e18c",
+        "bytes": 14183
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "be2c125d7bf2efcc90bbbe6d1ee2187d1eaf7cc80fa4c5dc86f8dc145f7a664a",
+        "bytes": 13757
+      }
+    },
+    "vendor/readout_analysis/paired_branch.py": {
+      "original": {
+        "sha256": "cf23808f0f5e4db4bacba6818582215e77d63f42576487eb00acc26e77a32ab8",
+        "bytes": 8505
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "291cfd3af9ffc3dd58341c7a0133a9ad2bbd5baa7fd834ae4a3f4c8aabb73c3e",
+        "bytes": 8385
+      }
+    },
+    "vendor/release_runtime/export_merged_bundle.py": {
+      "original": {
+        "sha256": "9fd4d7c19b31c2bbe48d47405e9c8a510e7e00ff81d1733e086737cb01db9e55",
+        "bytes": 7999
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "0bb075b9009d12a53cdcbd96dfc4cd60374b825f9a00164a87a555d1e153c34e",
+        "bytes": 7628
+      }
+    },
+    "vendor/socialiqa/e10_contract.py": {
+      "original": {
+        "sha256": "7444aa554741ee494f8a73e7d4e6f7dd481aa904f8397438e657a81d363101bb",
+        "bytes": 18341
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "b0214f19027a1362e87b1f7bfbd0917c76925ea60a7c289ac5f234a9ee9aa894",
+        "bytes": 18160
+      }
+    },
+    "vendor/socialiqa/encoder_witness.py": {
+      "original": {
+        "sha256": "b48917c54d7637b64fc6f35425493995a6992d90ef2626f1ad29341f5d6893d6",
+        "bytes": 10085
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "b87d9a8268f9522f75ce035854ec7d02c6da34ca0c385c6756ab0e2d101fa145",
+        "bytes": 9595
+      }
+    },
+    "vendor/socialiqa/seal_population.py": {
+      "original": {
+        "sha256": "205f3c808d524d69cee7545409ea1421e6309ffae10436346c55daf99a424efd",
+        "bytes": 16451
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "bff222d8361fa2b2536e0c8bcc62af0130e60bd849aca42ff1ca5cfcc2b15b73",
+        "bytes": 15812
+      }
+    },
+    "vendor/socialiqa/source/build_mask.py": {
+      "original": {
+        "sha256": "830f63e5e57a445706390352b9026e1768522a7feb39c159a6a0b4eddd491ed8",
+        "bytes": 32359
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "99821129c3f09912b5313555c25b11294a7706c5a031ac3b8bb3856d49e41f8e",
+        "bytes": 31715
+      }
+    },
+    "vendor/socialiqa/source/jev_audit_adapter.py": {
+      "original": {
+        "sha256": "7f153bedbb5ba86f157707ab5ab20a6ec6549cca1b77e767cadaf10e925b99d0",
+        "bytes": 26387
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "ec944505e9b905838f3cc5da20ac1da7c0d0a63b3ee66b94851596a892f66034",
+        "bytes": 26045
+      }
+    },
+    "vendor/socialiqa/source/jev_renderer.py": {
+      "original": {
+        "sha256": "dc93e01f2b6c097c2c6a9473bdf1e00586187e43be3890453b97221d2e23f730",
+        "bytes": 5709
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "4d9fac7e030fb339ceec769ffad712d11e1968e9ce07eddd57f8fec2fdba9c3b",
+        "bytes": 5632
+      }
+    },
+    "vendor/socialiqa/source/socialiqa_requests.py": {
+      "original": {
+        "sha256": "fdb262705e59bcdbb5e51aa44d3ee8ec2c6cb1b69d5ec25b9522e10a329e8423",
+        "bytes": 4240
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "186c9fc16d256a8f6a6f98d14e295458b67f506a5f5642b97495c43db006cf6d",
+        "bytes": 4199
+      }
+    },
+    "vendor/stored_scoring/manifest.json": {
+      "original": {
+        "sha256": "c9bbe109ee12c86349ed89afb1db50945ee365e6d03501932b9edd12ae865f53",
+        "bytes": 4125
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "328969fb0273e37057c369c5e9d21d39589be7938bd8e81bc4331faa25c5b750",
+        "bytes": 4125
+      }
+    },
+    "vendor/stored_scoring/summary_views/README.md": {
+      "original": {
+        "sha256": "53f61ce4d1a3b61159f97bdb6201f430bf9972fb7bf5a70b2909f55526477455",
+        "bytes": 3943
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "dac8afa18efd1021ef4631ddfd2fcb6173c7428010c5bdd682a59f973833f8a3",
+        "bytes": 3158
+      }
+    },
+    "vendor/e11/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/e11/kev/transfer_v9.py": {
+      "original": {
+        "sha256": "588aa2ff3ec0823c2e31733bef9a3748b263849c966ef6a80ebd686539c605e9",
+        "bytes": 11266
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "8c17dfacf7e860fab77f7183ac46a5cd3b50320fd07dfe8ac422776988370e74",
+        "bytes": 10485
+      }
+    },
+    "vendor/e12/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/e12/kev/transfer_v9.py": {
+      "original": {
+        "sha256": "588aa2ff3ec0823c2e31733bef9a3748b263849c966ef6a80ebd686539c605e9",
+        "bytes": 11266
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "8c17dfacf7e860fab77f7183ac46a5cd3b50320fd07dfe8ac422776988370e74",
+        "bytes": 10485
+      }
+    },
+    "vendor/e458/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/e458/kev/transfer_v9.py": {
+      "original": {
+        "sha256": "588aa2ff3ec0823c2e31733bef9a3748b263849c966ef6a80ebd686539c605e9",
+        "bytes": 11266
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "8c17dfacf7e860fab77f7183ac46a5cd3b50320fd07dfe8ac422776988370e74",
+        "bytes": 10485
+      }
+    },
+    "vendor/head1_v1/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/head1_v1/kev/transfer_v9.py": {
+      "original": {
+        "sha256": "588aa2ff3ec0823c2e31733bef9a3748b263849c966ef6a80ebd686539c605e9",
+        "bytes": 11266
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "8c17dfacf7e860fab77f7183ac46a5cd3b50320fd07dfe8ac422776988370e74",
+        "bytes": 10485
+      }
+    },
+    "vendor/historical_heads/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/historical_heads/kev/transfer_v9.py": {
+      "original": {
+        "sha256": "588aa2ff3ec0823c2e31733bef9a3748b263849c966ef6a80ebd686539c605e9",
+        "bytes": 11266
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "8c17dfacf7e860fab77f7183ac46a5cd3b50320fd07dfe8ac422776988370e74",
+        "bytes": 10485
+      }
+    },
+    "vendor/historical_lowrate/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/historical_lowrate/kev/transfer_v9.py": {
+      "original": {
+        "sha256": "588aa2ff3ec0823c2e31733bef9a3748b263849c966ef6a80ebd686539c605e9",
+        "bytes": 11266
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "8c17dfacf7e860fab77f7183ac46a5cd3b50320fd07dfe8ac422776988370e74",
+        "bytes": 10485
+      }
+    },
+    "vendor/historical_reverse/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/historical_reverse/kev/transfer_v9.py": {
+      "original": {
+        "sha256": "588aa2ff3ec0823c2e31733bef9a3748b263849c966ef6a80ebd686539c605e9",
+        "bytes": 11266
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "8c17dfacf7e860fab77f7183ac46a5cd3b50320fd07dfe8ac422776988370e74",
+        "bytes": 10485
+      }
+    },
+    "vendor/original28/kev/evaluate.py": {
+      "original": {
+        "sha256": "66828dbce1c8a9fd41c033cfca1a8206820c32596ed61d10dfcc3b7c55daf871",
+        "bytes": 18589
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "eb36cd980fe107b38f7a7fb7fd710bf91f340644467a44c430273016136c4e75",
+        "bytes": 18283
+      }
+    },
+    "vendor/portable_pair/src/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s44/src/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/qwen3_actual/cells/F2s45/src/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s44/src/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/qwen3_actual/cells/F3s45/src/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/r3_control/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/r3_control/kev/transfer_v9.py": {
+      "original": {
+        "sha256": "588aa2ff3ec0823c2e31733bef9a3748b263849c966ef6a80ebd686539c605e9",
+        "bytes": 11266
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "8c17dfacf7e860fab77f7183ac46a5cd3b50320fd07dfe8ac422776988370e74",
+        "bytes": 10485
+      }
+    },
+    "vendor/r3_trace/kev/evaluate.py": {
+      "original": {
+        "sha256": "de3114934e8abde3fae918bfa1d1524e50f537a71e55033300b46e9e3df75e59",
+        "bytes": 19032
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "c2e03838d8c66334d6f69f8c5353cfc186bb07adb782e2c1aacccf6a1f802076",
+        "bytes": 18726
+      }
+    },
+    "vendor/r3_trace/kev/transfer_v9.py": {
+      "original": {
+        "sha256": "588aa2ff3ec0823c2e31733bef9a3748b263849c966ef6a80ebd686539c605e9",
+        "bytes": 11266
+      },
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "public": {
+        "sha256": "8c17dfacf7e860fab77f7183ac46a5cd3b50320fd07dfe8ac422776988370e74",
+        "bytes": 10485
+      }
+    }
+  },
+  "research_modifications_notice": "The selected kev/runtime files are JEV research versions of the upstream project. Original selected scientific source bytes are retained unless explicitly listed here. Each listed record states the original and public file identity and the public-deployment-only change."
+}

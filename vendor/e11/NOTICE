@@ -1,0 +1,3 @@
+JEV research versions of kev training, decision heads, diagnostics, and bundle runtime.
+These files include the JEV authors' scientific modifications to upstream kev; the selected snapshots preserve their recorded scientific implementation.
+See third_party/kev/LICENSE and NOTICE at the repository root. Third-party model, data, and evaluator dependencies retain their own licenses.

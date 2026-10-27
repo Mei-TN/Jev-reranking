@@ -1,0 +1,1524 @@
+{
+  "schema_version": 1,
+  "schema": "jev.paper-catalog.v1",
+  "current_manuscript": {
+    "title": "Improving JEV Entailment Reranking with Span Readouts and Selective Adaptation",
+    "manuscript_source_entry": "main.tex",
+    "source_distribution": "Separate manuscript source; not included in this code repository.",
+    "scope": "Main-paper comparisons and supporting experiments for readout, adaptation scope, training recipe, and evaluation interface."
+  },
+  "path_conventions": {
+    "source_tree": "Logical snapshot key in vendor/SOURCES.json; import_root is repository-relative.",
+    "portable_plan": "Scientific arguments and fixed data/model identity; deployment locations are bound by the local site.",
+    "recipe_files": "Complete jev.recipe.v1 configurations usable with --recipe; deployment base/data/output paths use public tokens."
+  },
+  "recipe_defaults": {
+    "paper_low_rate": {
+      "model": "TokenRhythm/NeoHorse-1-4B",
+      "revision": "56f0584bb40578a2c33b1b40a08ccd17243ad710",
+      "head_dim": 256,
+      "lora": 64,
+      "lora_alpha": 128,
+      "lora_targets": "all",
+      "lora_dropout": 0.05,
+      "head_dropout": 0.0,
+      "epochs": 1,
+      "batch": 1,
+      "accum": 8,
+      "lr": 1.25e-05,
+      "head_lr": 1.25e-05,
+      "weight_decay": 0.01,
+      "weights_dtype": "fp32",
+      "dtype": "bf16",
+      "checkpointing": 1,
+      "option_isolation": 0,
+      "special_embeddings": 0,
+      "ord_w": 0.0,
+      "original_augmentation": 1,
+      "ema_mode": "off",
+      "target_mode": "native",
+      "label_smoothing": 0.0,
+      "smoothing_scope": "hard_only",
+      "brier_weight": 0.0,
+      "supervised_views": 1,
+      "js_weight": 0.0,
+      "freeze_fraction": 0.0,
+      "p_none": 0.1,
+      "p_none_distract": 0.12,
+      "p_distract": 0.15,
+      "p_none_pair": 0.25,
+      "perm_kl": 0.0,
+      "anchor_w": 0.0,
+      "synthetic_repeat": 1,
+      "public_frac": 1.0
+    },
+    "paper_higher_rate": {
+      "model": "TokenRhythm/NeoHorse-1-4B",
+      "revision": "56f0584bb40578a2c33b1b40a08ccd17243ad710",
+      "head_dim": 256,
+      "lora": 64,
+      "lora_alpha": 128,
+      "lora_targets": "all",
+      "lora_dropout": 0.05,
+      "head_dropout": 0.0,
+      "epochs": 1,
+      "batch": 1,
+      "accum": 8,
+      "lr": 2.5e-05,
+      "head_lr": 2.5e-05,
+      "weight_decay": 0.01,
+      "weights_dtype": "fp32",
+      "dtype": "bf16",
+      "checkpointing": 1,
+      "option_isolation": 0,
+      "special_embeddings": 0,
+      "ord_w": 0.0,
+      "original_augmentation": 1,
+      "ema_mode": "off",
+      "target_mode": "native",
+      "label_smoothing": 0.0,
+      "smoothing_scope": "hard_only",
+      "brier_weight": 0.0,
+      "supervised_views": 1,
+      "js_weight": 0.0,
+      "freeze_fraction": 0.0,
+      "p_none": 0.1,
+      "p_none_distract": 0.12,
+      "p_distract": 0.15,
+      "p_none_pair": 0.25,
+      "perm_kl": 0.0,
+      "anchor_w": 0.0,
+      "synthetic_repeat": 1,
+      "public_frac": 1.0
+    },
+    "release_reference": {
+      "model": "TokenRhythm/NeoHorse-1-4B",
+      "revision": "56f0584bb40578a2c33b1b40a08ccd17243ad710",
+      "head_dim": 256,
+      "lora": 64,
+      "lora_alpha": 128,
+      "lora_targets": "all",
+      "lora_dropout": 0.05,
+      "head_dropout": 0.0,
+      "epochs": 1,
+      "batch": 1,
+      "accum": 8,
+      "lr": 5e-05,
+      "head_lr": 5e-05,
+      "weight_decay": 0.01,
+      "weights_dtype": "fp32",
+      "dtype": "bf16",
+      "checkpointing": 1,
+      "option_isolation": 0,
+      "special_embeddings": 0,
+      "ord_w": 0.0,
+      "original_augmentation": 1,
+      "ema_mode": "off",
+      "target_mode": "native",
+      "label_smoothing": 0.0,
+      "smoothing_scope": "hard_only",
+      "brier_weight": 0.0,
+      "supervised_views": 1,
+      "js_weight": 0.0,
+      "freeze_fraction": 0.0,
+      "p_none": 0.1,
+      "p_none_distract": 0.12,
+      "p_distract": 0.15,
+      "p_none_pair": 0.25,
+      "perm_kl": 0.0,
+      "anchor_w": 0.0,
+      "synthetic_repeat": 1,
+      "public_frac": 1.0
+    }
+  },
+  "data": {
+    "folds": {
+      "F2": {
+        "records": 15456,
+        "optimizer_steps_per_epoch": 1932,
+        "sha256": "9253f1c937978174b2ff2e2959ce732c06fe3c0a220154fb962be1c2a1478017"
+      },
+      "F3": {
+        "records": 15442,
+        "optimizer_steps_per_epoch": 1931,
+        "sha256": "2a1cfac79cd64d9cb22f43c4b69c3283fd44c73c92a4468c661d27ac9c897e2a"
+      }
+    },
+    "mixed_records": 22035,
+    "mixed_questions": 29897,
+    "eight_pool_records": 17661,
+    "eight_pool_questions": 24001,
+    "training_limits": {
+      "max_tokens": 4096,
+      "max_state": 2048,
+      "max_branch": 2048
+    },
+    "serving_limits": {
+      "max_tokens": 8192,
+      "max_state": 8192,
+      "max_branch": 8192,
+      "strict": true
+    }
+  },
+  "studies": [
+    {
+      "id": "e1e2",
+      "title": "Factorial head/adapter rates and full-epoch residual controls",
+      "source_tree": "e12",
+      "portable_plan": "provenance/plans/e1e2.json",
+      "paper_labels": [
+        "tab:recipe",
+        "sec:residual",
+        "app:residual",
+        "tab:supp-residual",
+        "app:matching"
+      ],
+      "settings": {
+        "folds": [
+          2,
+          3
+        ],
+        "seeds": [
+          44,
+          45
+        ]
+      },
+      "base_recipe": "paper_low_rate",
+      "arms": [
+        {
+          "id": "LL_A",
+          "overrides": {
+            "head_lr": 1.25e-05,
+            "lr": 1.25e-05
+          },
+          "roles": [
+            "E1:LL",
+            "E2:A"
+          ]
+        },
+        {
+          "id": "LH",
+          "overrides": {
+            "head_lr": 1.25e-05,
+            "lr": 2.5e-05
+          },
+          "roles": [
+            "E1:LH"
+          ]
+        },
+        {
+          "id": "HL",
+          "overrides": {
+            "head_lr": 2.5e-05,
+            "lr": 1.25e-05
+          },
+          "roles": [
+            "E1:HL"
+          ]
+        },
+        {
+          "id": "HH",
+          "overrides": {
+            "head_lr": 2.5e-05,
+            "lr": 2.5e-05
+          },
+          "roles": [
+            "E1:HH"
+          ]
+        },
+        {
+          "id": "B",
+          "overrides": {
+            "head_lr": 1.25e-05,
+            "lr": 1.25e-05
+          },
+          "roles": [
+            "E2:repeated-pointer"
+          ]
+        },
+        {
+          "id": "FROZEN",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "residual_pair_mlp",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256,
+              "mlp_hidden": 128
+            },
+            "r3_sham_residual": 1
+          },
+          "roles": [
+            "E2:frozen-zero-residual"
+          ]
+        },
+        {
+          "id": "TRAINABLE",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "residual_pair_mlp",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256,
+              "mlp_hidden": 128
+            }
+          },
+          "roles": [
+            "E2:trainable-residual"
+          ]
+        }
+      ],
+      "unique_trainings": 28,
+      "source_root": "vendor/e12",
+      "coverage": "Paper scientific implementation and complete scientific training arguments are included; historical outputs and execution records are not distributed."
+    },
+    {
+      "id": "e3",
+      "title": "Residual training-process observations",
+      "source_tree": "e12",
+      "paper_labels": [
+        "app:residual",
+        "tab:supp-residual"
+      ],
+      "arms": [
+        {
+          "id": "LL_A",
+          "overrides": {}
+        },
+        {
+          "id": "B",
+          "overrides": {}
+        },
+        {
+          "id": "FROZEN",
+          "overrides": {}
+        },
+        {
+          "id": "TRAINABLE",
+          "overrides": {}
+        }
+      ],
+      "unique_trainings": 0,
+      "implementation_modules": [
+        "kev.campaign_diagnostics",
+        "kev.r3_control_diagnostics",
+        "kev.supplement_diagnostics"
+      ],
+      "source_root": "vendor/e12",
+      "coverage": "Observational diagnostics of the E1/E2 training recipes; no separate training intervention."
+    },
+    {
+      "id": "e458",
+      "title": "Readout by adapter scope, nearby rank budget, and last-content control",
+      "source_tree": "e458",
+      "portable_plan": "provenance/plans/e458.json",
+      "paper_labels": [
+        "sec:design",
+        "tab:factorial",
+        "tab:capacity",
+        "sec:residual",
+        "fig:task-gains",
+        "sec:direct",
+        "tab:scope",
+        "app:profiles",
+        "tab:supp-tasks",
+        "tab:supp-kev"
+      ],
+      "settings": {
+        "folds": [
+          2,
+          3
+        ],
+        "seeds": [
+          44,
+          45
+        ]
+      },
+      "base_recipe": "paper_low_rate",
+      "reference": {
+        "study": "e1e2",
+        "arm": "LL_A",
+        "count": 4
+      },
+      "arms": [
+        {
+          "id": "POINTER_NOFFN",
+          "overrides": {
+            "lora_targets": "attn"
+          },
+          "roles": [
+            "E4a:pointer/NoFFN",
+            "E5:NoFFN-rank64"
+          ]
+        },
+        {
+          "id": "POOL_ALL",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "mean_span",
+              "rng_anchor_dim": 256
+            }
+          },
+          "roles": [
+            "E4a:pooling/all",
+            "E8:mean-content"
+          ]
+        },
+        {
+          "id": "POOL_NOFFN",
+          "overrides": {
+            "lora_targets": "attn",
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "mean_span",
+              "rng_anchor_dim": 256
+            }
+          },
+          "roles": [
+            "E4a:pooling/NoFFN"
+          ]
+        },
+        {
+          "id": "POINTER_ALL_R28",
+          "overrides": {
+            "lora": 28
+          },
+          "derived_lora_alpha": 56,
+          "roles": [
+            "E5:all-rank28"
+          ]
+        },
+        {
+          "id": "POINTER_LAST_CONTENT",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "last_span",
+              "rng_anchor_dim": 256
+            }
+          },
+          "roles": [
+            "E8:last-content"
+          ]
+        }
+      ],
+      "unique_trainings": 20,
+      "analyzed_models_including_references": 24,
+      "implementation_modules": [
+        "kev.e458_arms",
+        "kev.e458_reference"
+      ],
+      "source_root": "vendor/e458",
+      "coverage": "Paper scientific implementation and complete scientific training arguments are included; historical outputs and execution records are not distributed."
+    },
+    {
+      "id": "e11",
+      "title": "One- versus two-epoch readout and scheduler-horizon sensitivity",
+      "source_tree": "e11",
+      "portable_plan": "provenance/plans/e11.json",
+      "paper_labels": [
+        "tab:recipe",
+        "fig:budget",
+        "app:implementation",
+        "app:matching"
+      ],
+      "settings": {
+        "folds": [
+          2,
+          3
+        ],
+        "seeds": [
+          44,
+          45
+        ]
+      },
+      "base_recipe": "paper_low_rate",
+      "arms": [
+        {
+          "id": "POINTER_2EP",
+          "overrides": {
+            "epochs": 2
+          },
+          "reference": {
+            "study": "e1e2",
+            "arm": "LL_A"
+          }
+        },
+        {
+          "id": "POOL_2EP",
+          "overrides": {
+            "epochs": 2,
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "mean_span",
+              "rng_anchor_dim": 256
+            }
+          },
+          "reference": {
+            "study": "e458",
+            "arm": "POOL_ALL"
+          }
+        }
+      ],
+      "unique_trainings": 8,
+      "analyzed_models_including_references": 16,
+      "optimizer_steps": {
+        "F2": 3864,
+        "F3": 3862
+      },
+      "implementation_modules": [
+        "kev.e11_arms",
+        "kev.e11_reference"
+      ],
+      "source_root": "vendor/e11",
+      "coverage": "Paper scientific implementation and complete scientific training arguments are included; historical outputs and execution records are not distributed."
+    },
+    {
+      "id": "head1",
+      "title": "Six-head exploratory comparison",
+      "source_tree": "head1_v1",
+      "paper_labels": [],
+      "settings": {
+        "folds": [
+          1
+        ],
+        "seeds": [
+          44,
+          45
+        ]
+      },
+      "base_recipe": "paper_higher_rate",
+      "arms": [
+        {
+          "id": "H0",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256
+            }
+          }
+        },
+        {
+          "id": "H1",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 64,
+              "readout": "end",
+              "rng_anchor_dim": 256
+            },
+            "head_dim": 64
+          }
+        },
+        {
+          "id": "H2",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "tanh_pointer",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256
+            }
+          }
+        },
+        {
+          "id": "H3",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "cosine_pointer",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256,
+              "cosine_scale": 16
+            }
+          }
+        },
+        {
+          "id": "H4",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "residual_pair_mlp",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256,
+              "mlp_hidden": 128
+            }
+          }
+        },
+        {
+          "id": "H5",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "mean_span",
+              "rng_anchor_dim": 256
+            }
+          }
+        }
+      ],
+      "unique_trainings": 12,
+      "source_root": "vendor/head1_v1",
+      "coverage": "Paper scientific implementation and complete scientific training arguments are included; historical outputs and execution records are not distributed.",
+      "recipe_files": [
+        "configs/studies/head1/HEAD1_win0_H0_f1_s44.json",
+        "configs/studies/head1/HEAD1_win0_H0_f1_s45.json",
+        "configs/studies/head1/HEAD1_win0_H1_f1_s44.json",
+        "configs/studies/head1/HEAD1_win0_H1_f1_s45.json",
+        "configs/studies/head1/HEAD1_win0_H2_f1_s44.json",
+        "configs/studies/head1/HEAD1_win0_H2_f1_s45.json",
+        "configs/studies/head1/HEAD1_win0_H3_f1_s44.json",
+        "configs/studies/head1/HEAD1_win0_H3_f1_s45.json",
+        "configs/studies/head1/HEAD1_win0_H4_f1_s44.json",
+        "configs/studies/head1/HEAD1_win0_H4_f1_s45.json",
+        "configs/studies/head1/HEAD1_win0_H5_f1_s44.json",
+        "configs/studies/head1/HEAD1_win0_H5_f1_s45.json"
+      ],
+      "publication_scope": "Additional implementation; not reported in the current manuscript."
+    },
+    {
+      "id": "historical_joint_rate",
+      "title": "Joint learning-rate comparison",
+      "source_tree": "historical_heads",
+      "paper_labels": [
+        "app:cohorts",
+        "app:schedules",
+        "sec:validation",
+        "tab:extra"
+      ],
+      "settings": {
+        "folds": [
+          2,
+          3
+        ],
+        "seeds": [
+          44,
+          45
+        ],
+        "joint_rates": [
+          2.5e-05,
+          1.25e-05
+        ]
+      },
+      "arms": [
+        {
+          "id": "pointer",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256
+            }
+          }
+        },
+        {
+          "id": "residual",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "residual_pair_mlp",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256,
+              "mlp_hidden": 128
+            }
+          }
+        },
+        {
+          "id": "pooling",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "mean_span",
+              "rng_anchor_dim": 256
+            }
+          }
+        }
+      ],
+      "unique_trainings": 24,
+      "source_root": "vendor/historical_heads",
+      "coverage": "Paper scientific implementation and complete scientific training arguments are included; historical outputs and execution records are not distributed.",
+      "recipe_files": [
+        "configs/studies/historical_joint_rate/ARR_R1_Q_f2_s44.json",
+        "configs/studies/historical_joint_rate/ARR_R1_Q_f2_s45.json",
+        "configs/studies/historical_joint_rate/ARR_R1_Q_f3_s44.json",
+        "configs/studies/historical_joint_rate/ARR_R1_Q_f3_s45.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_LR_H4_f2_s44.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_LR_H4_f2_s45.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_LR_H4_f3_s44.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_LR_H4_f3_s45.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_LR_H5_f2_s44.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_LR_H5_f2_s45.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_LR_H5_f3_s44.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_LR_H5_f3_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H0_f2_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H0_f2_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H0_f3_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H0_f3_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H4_f2_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H4_f2_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H4_f3_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H4_f3_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H5_f2_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H5_f2_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H5_f3_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_H5_f3_s45.json"
+      ],
+      "additional_source_trees": [
+        "r3_control"
+      ]
+    },
+    {
+      "id": "historical_schedule_scope",
+      "title": "Head-first, head-only tail, and adapter-scope comparisons",
+      "source_tree": "historical_reverse",
+      "paper_labels": [
+        "app:schedules",
+        "tab:supp-schedules"
+      ],
+      "settings": {
+        "folds": [
+          2,
+          3
+        ],
+        "seeds": [
+          44,
+          45
+        ]
+      },
+      "base_recipe": "paper_higher_rate",
+      "arms": [
+        {
+          "id": "head_first",
+          "overrides": {
+            "freeze_fraction": 0.3
+          }
+        },
+        {
+          "id": "no_ffn",
+          "overrides": {
+            "lora_targets": "attn"
+          }
+        },
+        {
+          "id": "head_first_no_ffn",
+          "overrides": {
+            "freeze_fraction": 0.3,
+            "lora_targets": "attn"
+          }
+        },
+        {
+          "id": "head_only_tail",
+          "overrides": {},
+          "recipe_semantics": "Adapters frozen during final 580 of 1932/1931 head updates; exact historical launcher/source required."
+        },
+        {
+          "id": "frozen_residual",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "residual_pair_mlp",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256,
+              "mlp_hidden": 128
+            },
+            "r3_sham_residual": 1
+          },
+          "source_tree": "e12"
+        }
+      ],
+      "unique_trainings": 20,
+      "source_root": "vendor/historical_reverse",
+      "coverage": "Paper scientific implementation and complete scientific training arguments are included; historical outputs and execution records are not distributed.",
+      "recipe_files": [
+        "configs/studies/historical_tail/REV_WINH4_f2_s44.json",
+        "configs/studies/historical_tail/REV_WINH4_f2_s45.json",
+        "configs/studies/historical_tail/REV_WINH4_f3_s44.json",
+        "configs/studies/historical_tail/REV_WINH4_f3_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_D_f2_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_D_f2_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_D_f3_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_D_f3_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_MD_f2_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_MD_f2_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_MD_f3_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_MD_f3_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_M_f2_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_M_f2_s45.json",
+        "configs/studies/historical_controls/SUPP_WINH4_M_f3_s44.json",
+        "configs/studies/historical_controls/SUPP_WINH4_M_f3_s45.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_SHAM_H4_f2_s44.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_SHAM_H4_f2_s45.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_SHAM_H4_f3_s44.json",
+        "configs/studies/historical_low_rate_residual/ARR_R3_SHAM_H4_f3_s45.json"
+      ],
+      "additional_source_trees": [
+        "historical_heads",
+        "r3_control"
+      ]
+    },
+    {
+      "id": "matched_scope",
+      "title": "Adapter-scope comparison with shared initialization",
+      "source_tree": "historical_lowrate",
+      "paper_labels": [
+        "app:cohorts",
+        "app:schedules",
+        "sec:validation",
+        "tab:extra"
+      ],
+      "settings": {
+        "folds": [
+          2,
+          3
+        ],
+        "seeds": [
+          44,
+          45
+        ]
+      },
+      "base_recipe": "paper_low_rate",
+      "arms": [
+        {
+          "id": "all",
+          "overrides": {
+            "lora_targets": "all"
+          }
+        },
+        {
+          "id": "no_ffn",
+          "overrides": {
+            "lora_targets": "attn"
+          }
+        }
+      ],
+      "unique_trainings": 8,
+      "source_root": "vendor/historical_lowrate",
+      "coverage": "Paper scientific implementation and complete scientific training arguments are included; historical outputs and execution records are not distributed.",
+      "recipe_files": [
+        "configs/studies/historical_joint_rate/ARR_R1_Q_f2_s44.json",
+        "configs/studies/historical_joint_rate/ARR_R1_Q_f2_s45.json",
+        "configs/studies/historical_joint_rate/ARR_R1_Q_f3_s44.json",
+        "configs/studies/historical_joint_rate/ARR_R1_Q_f3_s45.json",
+        "configs/studies/matched_scope_noffn/LOWRATE_NOFFN_F2s44.json",
+        "configs/studies/matched_scope_noffn/LOWRATE_NOFFN_F2s45.json",
+        "configs/studies/matched_scope_noffn/LOWRATE_NOFFN_F3s44.json",
+        "configs/studies/matched_scope_noffn/LOWRATE_NOFFN_F3s45.json"
+      ],
+      "additional_source_trees": [
+        "historical_heads"
+      ],
+      "initialization": "The NoFFN arm loads the corresponding Q pointer genuine step-zero safetensors by fixed SHA; retained weights are external inputs. The loader explicitly does not claim reconstruction of the historical RNG state."
+    },
+    {
+      "id": "qwen3",
+      "title": "Qwen3-4B second-backbone pointer/pooling study",
+      "source_tree": "qwen3_F2s44",
+      "paper_labels": [
+        "sec:validation",
+        "app:profiles",
+        "tab:supp-tasks"
+      ],
+      "settings": {
+        "folds": [
+          2,
+          3
+        ],
+        "seeds": [
+          44,
+          45
+        ]
+      },
+      "base_recipe": "paper_low_rate",
+      "arms": [
+        {
+          "id": "pointer",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256
+            }
+          }
+        },
+        {
+          "id": "pooling",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "mean_span",
+              "rng_anchor_dim": 256
+            }
+          }
+        }
+      ],
+      "unique_trainings": 8,
+      "source_root": "vendor/qwen3_actual/cells/F2s44/src",
+      "coverage": "Paper scientific implementation and complete scientific training arguments are included; historical outputs and execution records are not distributed.",
+      "source_trees": [
+        "qwen3_F2s44",
+        "qwen3_F2s45",
+        "qwen3_F3s44",
+        "qwen3_F3s45"
+      ],
+      "model": {
+        "name": "Qwen3-4B",
+        "modelscope_revision": "2c54d5a0",
+        "architecture": "dense_attention",
+        "deltanet_targets": false
+      },
+      "recipe_files": [
+        "configs/studies/qwen3/qwen3_F2s44_pointer.json",
+        "configs/studies/qwen3/qwen3_F2s44_pooling.json",
+        "configs/studies/qwen3/qwen3_F2s45_pointer.json",
+        "configs/studies/qwen3/qwen3_F2s45_pooling.json",
+        "configs/studies/qwen3/qwen3_F3s44_pointer.json",
+        "configs/studies/qwen3/qwen3_F3s44_pooling.json",
+        "configs/studies/qwen3/qwen3_F3s45_pointer.json",
+        "configs/studies/qwen3/qwen3_F3s45_pooling.json"
+      ],
+      "native_package_configs": [
+        "vendor/qwen3_actual/cells/F2s44/configs/pair.json",
+        "vendor/qwen3_actual/cells/F2s45/configs/pair.json",
+        "vendor/qwen3_actual/cells/F3s44/configs/pair.json",
+        "vendor/qwen3_actual/cells/F3s45/configs/pair.json"
+      ]
+    },
+    {
+      "id": "release_half_rate",
+      "title": "Seven-pair joint learning-rate comparison",
+      "source_tree": "original28",
+      "paper_labels": [
+        "app:schedules"
+      ],
+      "settings": {
+        "fold_seed_pairs": [
+          [
+            1,
+            45
+          ],
+          [
+            2,
+            44
+          ],
+          [
+            3,
+            45
+          ],
+          [
+            4,
+            44
+          ],
+          [
+            5,
+            45
+          ],
+          [
+            6,
+            44
+          ],
+          [
+            7,
+            45
+          ]
+        ]
+      },
+      "arms": [
+        {
+          "id": "reference",
+          "overrides": {
+            "lr": 5e-05,
+            "head_lr": 5e-05
+          }
+        },
+        {
+          "id": "half_rate",
+          "overrides": {
+            "lr": 2.5e-05,
+            "head_lr": 2.5e-05
+          }
+        }
+      ],
+      "unique_trainings": 14,
+      "source_root": "vendor/original28",
+      "coverage": "Paper scientific implementation and complete scientific training arguments are included; historical outputs and execution records are not distributed.",
+      "recipe_files": [
+        "configs/studies/release_half_rate/mt1r_win0_lr05-Toriginal28_f1_s45.json",
+        "configs/studies/release_half_rate/mt1r_win0_lr05_f2_s44.json",
+        "configs/studies/release_half_rate/mt1r_win0_lr05_f3_s45.json",
+        "configs/studies/release_half_rate/mt1r_win0_lr05_f4_s44.json",
+        "configs/studies/release_half_rate/mt1r_win0_lr05_f5_s45.json",
+        "configs/studies/release_half_rate/mt1r_win0_lr05_f6_s44.json",
+        "configs/studies/release_half_rate/mt1r_win0_lr05_f7_s45.json",
+        "configs/studies/release_half_rate/mt1r_win0_r0_f1_s45.json",
+        "configs/studies/release_half_rate/mt1r_win0_r0_f2_s44.json",
+        "configs/studies/release_half_rate/mt1r_win0_r0_f3_s45.json",
+        "configs/studies/release_half_rate/mt1r_win0_r0_f4_s44.json",
+        "configs/studies/release_half_rate/mt1r_win0_r0_f5_s45.json",
+        "configs/studies/release_half_rate/mt1r_win0_r0_f6_s44.json",
+        "configs/studies/release_half_rate/mt1r_win0_r0_f7_s45.json"
+      ],
+      "base_recipe": "release_reference",
+      "identity_note": "All fourteen exact paper CSV run identities are explicit, including the exceptional F1/45 half-rate original28 run. This is the seven-pair release-code rate study only."
+    },
+    {
+      "id": "portable_pair",
+      "title": "Pointer/pooling reproduction workflow",
+      "source_tree": "portable_pair",
+      "paper_labels": [
+        "app:reproduction"
+      ],
+      "settings": {
+        "folds": [
+          2
+        ],
+        "seeds": [
+          44
+        ]
+      },
+      "base_recipe": "paper_higher_rate",
+      "arms": [
+        {
+          "id": "pointer",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "end",
+              "rng_anchor_dim": 256
+            }
+          }
+        },
+        {
+          "id": "pooling",
+          "overrides": {
+            "head_config": {
+              "version": 1,
+              "kind": "pointer",
+              "dim": 256,
+              "readout": "mean_span",
+              "rng_anchor_dim": 256
+            }
+          }
+        }
+      ],
+      "unique_trainings": 2,
+      "source_root": "vendor/portable_pair/src",
+      "coverage": "Paper scientific implementation and complete scientific training arguments are included; historical outputs and execution records are not distributed.",
+      "recipe_files": [
+        "configs/studies/portable_pair/portable_F2s44_pointer.json",
+        "configs/studies/portable_pair/portable_F2s44_pooling.json"
+      ],
+      "native_package_config": "vendor/portable_pair/configs/pair.json",
+      "external_inputs": "Retained base/data and exact framework roles are external; configure_runtime.py creates a fresh local runtime binding from the public template.",
+      "publication_scope": "Reproduction workflow described in the appendix; no separate results table."
+    }
+  ],
+  "inference_protocols": [
+    {
+      "id": "standard",
+      "title": "JevBench, Kev, and custom MC11 reranking",
+      "implementation_modules": [
+        "runtime.run_evaluation",
+        "runtime.run_opencompass",
+        "runtime.mc_worker",
+        "runtime.openjev_head"
+      ],
+      "paper_labels": [
+        "app:mc11_protocol",
+        "app:other_endpoints"
+      ],
+      "endpoints": {
+        "jevbench": {
+          "questions": 231,
+          "weighting": "mean_of_18_family_accuracies",
+          "invalid": "incorrect",
+          "tie": "native_sorted_key_order"
+        },
+        "kev": {
+          "input_record_occurrences": 6436,
+          "selections": 6,
+          "excluded_source": "unknowable",
+          "scored_question_denominators": [
+            1264,
+            1200,
+            656,
+            656,
+            1046,
+            1046
+          ],
+          "weighting": "equal_mean_of_six_clean_question_accuracies"
+        },
+        "mc11": {
+          "configurations": [
+            {
+              "id": "arc_easy",
+              "source": "ARC",
+              "split": "test",
+              "questions": 2376
+            },
+            {
+              "id": "arc_challenge",
+              "source": "ARC",
+              "split": "test",
+              "questions": 1172
+            },
+            {
+              "id": "winogrande",
+              "source": "WinoGrande",
+              "split": "validation",
+              "questions": 1267
+            },
+            {
+              "id": "gsm8k_mc4",
+              "source": "GSM8K",
+              "split": "test",
+              "questions": 1319
+            },
+            {
+              "id": "gsm8k_mc10",
+              "source": "GSM8K",
+              "split": "test",
+              "questions": 1319
+            },
+            {
+              "id": "gpqa",
+              "source": "GPQA",
+              "split": "Diamond",
+              "questions": 198
+            },
+            {
+              "id": "gpqa_fewshot",
+              "source": "GPQA",
+              "split": "Diamond",
+              "questions": 198
+            },
+            {
+              "id": "chess",
+              "source": "chess",
+              "split": "generated",
+              "questions": 500
+            },
+            {
+              "id": "hellaswag",
+              "source": "HellaSwag",
+              "split": "validation",
+              "questions": 10042
+            },
+            {
+              "id": "mmlu",
+              "source": "MMLU",
+              "split": "test",
+              "questions": 14042
+            },
+            {
+              "id": "mmlu_fewshot",
+              "source": "MMLU",
+              "split": "test",
+              "questions": 14042
+            }
+          ],
+          "question_occurrences": 46475,
+          "candidate_requests": 191276,
+          "score": "candidate_entailment_probability",
+          "weighting": "equal_mean_of_11_configuration_accuracies",
+          "tie": "first_maximum_in_loaded_candidate_order",
+          "invalid": "abort_no_denominator_reduction"
+        }
+      },
+      "required_external_components": [
+        "pinned_OpenCompass_fork",
+        "pinned_RunWeaver_OpenJev_fork",
+        "decision_cache",
+        "ordered_MC11_candidate_inventory"
+      ],
+      "limitations": [
+        "Original GSM8K candidates depend on Python set iteration.",
+        "Original GPQA Diamond few-shot demo/evaluation overlap is retained, not retroactively replaced.",
+        "Question populations shared by GSM8K/GPQA/MMLU paired configurations."
+      ],
+      "nli_request": {
+        "instruction": "Hypothesis: \"{hypothesis}\" How does it relate to the premise?",
+        "default_hypothesis": "The correct answer is: {option}",
+        "gsm8k_hypothesis": "The answer is {option}",
+        "winogrande_hypothesis": "candidate inserted into sentence",
+        "hellaswag_hypothesis": "candidate ending",
+        "fewshot_hypothesis": "Answer: {option}",
+        "options": {
+          "entailment": "The hypothesis follows from the premise",
+          "neutral": "The hypothesis may or may not be true given the premise",
+          "contradiction": "The hypothesis contradicts the premise"
+        },
+        "mmlu_demonstrations": "five from subject development split",
+        "historical_gpqa_demonstrations": "five other Diamond questions; overlap with evaluation population retained",
+        "chess_version": "1.11.2",
+        "probability_validity": {
+          "finite": true,
+          "minimum": 0,
+          "maximum": 1,
+          "sum_absolute_tolerance": 1e-05
+        },
+        "cross_candidate_renormalization": false
+      },
+      "source_root": "vendor/evaluation"
+    },
+    {
+      "id": "piqa_direct_nli",
+      "experiment_ids": [
+        "E7"
+      ],
+      "title": "Same-question direct selection versus NLI",
+      "source_tree": "e12",
+      "portable_plan": "provenance/plans/inference_protocol.json",
+      "questions": 1838,
+      "interfaces": {
+        "direct": {
+          "requests_per_model": 1838,
+          "input_tokens_per_model": 157586,
+          "instruction": "Select the solution that best achieves the goal."
+        },
+        "nli_original": {
+          "requests_per_model": 3676,
+          "input_tokens_per_model": 372247,
+          "hypothesis": "The correct solution is: {solution}"
+        }
+      },
+      "state": "Goal: {goal}\nWhich solution best achieves this goal?",
+      "implementation": [
+        "prepare_inputs.py",
+        "inference_worker.py",
+        "inference_scores.py",
+        "run_inference.py"
+      ],
+      "paper_labels": [
+        "sec:interface",
+        "tab:interface",
+        "app:additional"
+      ],
+      "source_root": "vendor/inference"
+    },
+    {
+      "id": "piqa_templates",
+      "experiment_ids": [
+        "E9"
+      ],
+      "title": "Three descriptions crossed with six internal semantic orders",
+      "portable_plan": "provenance/plans/inference_protocol.json",
+      "questions": 1838,
+      "models": 8,
+      "conditions": 18,
+      "orders": [
+        [
+          "entailment",
+          "neutral",
+          "contradiction"
+        ],
+        [
+          "entailment",
+          "contradiction",
+          "neutral"
+        ],
+        [
+          "neutral",
+          "entailment",
+          "contradiction"
+        ],
+        [
+          "neutral",
+          "contradiction",
+          "entailment"
+        ],
+        [
+          "contradiction",
+          "entailment",
+          "neutral"
+        ],
+        [
+          "contradiction",
+          "neutral",
+          "entailment"
+        ]
+      ],
+      "descriptions": {
+        "D0": {
+          "entailment": "The hypothesis follows from the premise",
+          "neutral": "The hypothesis may or may not be true given the premise",
+          "contradiction": "The hypothesis contradicts the premise"
+        },
+        "D1": {
+          "entailment": "The premise supports the hypothesis as true.",
+          "neutral": "The premise does not determine whether the hypothesis is true.",
+          "contradiction": "The premise supports the hypothesis as false."
+        },
+        "D2": {
+          "entailment": "The hypothesis must be true if the premise is true.",
+          "neutral": "The hypothesis could be either true or false if the premise is true.",
+          "contradiction": "The hypothesis must be false if the premise is true."
+        }
+      },
+      "score_semantic_key": "entailment",
+      "external_solution_order": "fixed",
+      "limitations": [
+        "No candidate-set-size, CLINC permutation or description-length extension was executed."
+      ],
+      "source_root": "vendor/inference",
+      "paper_labels": [
+        "app:additional"
+      ]
+    },
+    {
+      "id": "gpqa_disjoint",
+      "experiment_ids": [
+        "E12"
+      ],
+      "title": "Disjoint Main demonstrations and Diamond evaluation",
+      "portable_plan": "provenance/plans/inference_protocol.json",
+      "models": 8,
+      "questions": 198,
+      "candidate_requests_per_model": 792,
+      "demo_pool": "GPQA Main excluding Diamond IDs, normalized current-question matches and aliases",
+      "eligible_demo_rows": 249,
+      "demonstrations": 5,
+      "demo_selection": "deterministic_source_ID_order",
+      "candidate_order": "deterministic_shared_permutation",
+      "primary_identity": "source_slot",
+      "tie": "first_exact_maximum",
+      "paper_labels": [
+        "app:additional",
+        "app:reproduction"
+      ],
+      "limitations": [
+        "Demo pool, candidate order and identity handling change together.",
+        "Does not replace original MC11 GPQA configuration scores."
+      ],
+      "source_root": "vendor/inference"
+    },
+    {
+      "id": "socialiqa",
+      "experiment_ids": [
+        "E10"
+      ],
+      "title": "Direct selection and NLI reranking after one or two training epochs",
+      "portable_plan": "provenance/plans/socialiqa_freeze.json",
+      "source_version": "SocialIQA 1.4 development",
+      "questions": 1954,
+      "cohorts": {
+        "e10_one_epoch": {
+          "models": 8,
+          "references": [
+            {
+              "study": "e1e2",
+              "arm": "LL_A"
+            },
+            {
+              "study": "e458",
+              "arm": "POOL_ALL"
+            }
+          ]
+        },
+        "e11_two_epoch": {
+          "models": 8,
+          "references": [
+            {
+              "study": "e11",
+              "arm": "POINTER_2EP"
+            },
+            {
+              "study": "e11",
+              "arm": "POOL_2EP"
+            }
+          ]
+        }
+      },
+      "state": "{context}\n\n{question}",
+      "direct_instruction": "Select the correct answer to the question.",
+      "nli_instruction": "Hypothesis: \"{raw_answer}\" How does it relate to the premise?",
+      "candidate_order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "requests_per_model": {
+        "direct": 1954,
+        "nli": 5862,
+        "total": 7816
+      },
+      "total_requests": 125056,
+      "new_trainings": 0,
+      "tie": "first_exact_maximum_A_B_C",
+      "mask_excluded": 0,
+      "paper_labels": [
+        "sec:interface",
+        "tab:interface",
+        "app:additional"
+      ],
+      "limitations": [
+        "Two budgets are separate cohorts.",
+        "The fixed additional source is not a guarantee of sealed unseen confirmation or pretraining decontamination."
+      ],
+      "source_root": "vendor/socialiqa"
+    },
+    {
+      "id": "external_sources",
+      "title": "PIQA, CommonsenseQA and CLINC150 additional-source evaluation",
+      "models": 44,
+      "endpoints": {
+        "piqa": {
+          "questions": 1838,
+          "interface": "NLI_reranking"
+        },
+        "commonsenseqa": {
+          "questions": 1221,
+          "interface": "NLI_reranking",
+          "duplicate_text_questions": 24
+        },
+        "clinc150": {
+          "questions": 4500,
+          "interface": "one_direct_request_with_150_alphabetically_ordered_intents",
+          "known_overlap_items_retained": 1
+        }
+      },
+      "candidate_order": "SHA256(canonical_JSON([source_revision,sample_identity,candidate_identity])); identity_secondary_key",
+      "tie": "first_exact_maximum; uniform_tie_auxiliary",
+      "paper_labels": [
+        "sec:validation",
+        "tab:extra",
+        "app:additional"
+      ],
+      "limitations": [
+        "Earlier H100/native-service PIQA differs from later H20/exported-service execution.",
+        "Known CLINC historical selection overlap is retained and disclosed."
+      ],
+      "source_root": "vendor/readout_analysis"
+    },
+    {
+      "id": "residual_same_forward",
+      "title": "Full versus bilinear-base inference from one forward pass",
+      "models": 4,
+      "question_occurrences_per_model": 46475,
+      "candidate_requests_per_model": 191276,
+      "precision": "BF16 backbone, FP32 full and base head logits",
+      "intervention": "Capture base before residual addition, then separate softmax on full and base logits.",
+      "tie": "first_maximum and uniform_tie_auxiliary",
+      "paper_labels": [
+        "app:residual"
+      ],
+      "limitations": [
+        "Base is the learned bilinear component of a trained residual model, not an independent pointer."
+      ],
+      "source_root": "vendor/readout_analysis"
+    },
+    {
+      "id": "aggregation_sensitivity",
+      "title": "Source weighting, omissions, Kev test-only and repeated-pointer references",
+      "new_inference_requests": 0,
+      "new_trainings": 0,
+      "views": [
+        "MC11_equal_11_configuration_mean",
+        "equal_7_source_mean_after_within_source_mean",
+        "configuration_weighted_leave_one_source_out",
+        "source_weighted_leave_one_source_out",
+        "Kev_test_only_3_subset_mean",
+        "alternate_repeated_pointer_reference"
+      ],
+      "definition_files": [
+        "data/aggregation_source_mapping.csv",
+        "data/aggregation_contrast_coefficients.csv",
+        "data/structure_contrast_coefficients.csv",
+        "data/contrast_aliases.csv"
+      ],
+      "paper_labels": [
+        "app:robust",
+        "tab:supp-weights"
+      ],
+      "source_root": "vendor/stored_scoring"
+    },
+    {
+      "id": "short_synchronized_trajectories",
+      "title": "Four-update pointer/pointer and pointer/frozen-zero trajectories",
+      "fold": 2,
+      "seed": 44,
+      "optimizer_updates": 4,
+      "microbatches": 32,
+      "onecycle_horizon": 1932,
+      "peak_rates": {
+        "head": 2.5e-05,
+        "adapter": 2.5e-05
+      },
+      "paper_labels": [
+        "app:residual"
+      ],
+      "limitations": [
+        "Short diagnostics do not replace full-epoch endpoint controls or establish a unique divergence mechanism."
+      ],
+      "source_root": "vendor/r3_trace",
+      "entrypoints": [
+        "paired_trace.py",
+        "pointer_repeat/paired_trace_repeat.py"
+      ],
+      "protocol_files": [
+        "PROTOCOL.md",
+        "pointer_repeat/PROTOCOL.md"
+      ]
+    },
+    {
+      "id": "reference_conditioned_grading",
+      "title": "GPQA grading with reference answer in premise",
+      "questions": 198,
+      "candidates": 792,
+      "evaluation_uses_reference_answer": true,
+      "main_answer_reranking": false,
+      "source_root": "vendor/grading",
+      "paper_labels": [],
+      "publication_scope": "Additional implementation; not reported in the current manuscript."
+    }
+  ],
+  "training_protocol": {
+    "optimizer": "AdamW",
+    "gradient_clip_global_norm": 1.0,
+    "scheduler": {
+      "class": "torch.optim.lr_scheduler.OneCycleLR",
+      "total_steps": "full requested epoch budget, including final partial accumulation group of each epoch",
+      "pct_start": 0.1,
+      "anneal_strategy": "cos",
+      "div_factor": 25,
+      "final_div_factor": 10000,
+      "cycle_momentum": true,
+      "base_momentum": 0.85,
+      "max_momentum": 0.95
+    },
+    "loss": "native target cross entropy; question mean within record",
+    "final_weights": "final weights; no development-set checkpoint selection",
+    "cuda_deterministic": false,
+    "augmentation": "preserve original per-record randomization and none-pair sibling weighting"
+  }
+}

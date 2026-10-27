@@ -1,0 +1,22 @@
+#!/bin/sh
+# JEV private-prefix launcher; preserves the venv's lexical executable path.
+set -eu
+prefix=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+if [ ! -x "$prefix/venv/bin/python" ]; then
+    echo "Missing executable: $prefix/venv/bin/python" >&2
+    exit 1
+fi
+libraries=
+for directory in \
+    "$prefix/syslibs/usr/lib/x86_64-linux-gnu" \
+    "$prefix/syslibs/lib/x86_64-linux-gnu" \
+    "$prefix/venv/lib/python3.12/site-packages/torch/lib" \
+    "$prefix"/venv/lib/python3.12/site-packages/nvidia/*/lib \
+    /usr/local/nvidia/lib /usr/local/nvidia/lib64
+do
+    if [ -d "$directory" ]; then
+        libraries=${libraries:+$libraries:}$directory
+    fi
+done
+export LD_LIBRARY_PATH="$libraries"
+exec "$prefix/venv/bin/python" "$@"

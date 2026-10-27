@@ -1,0 +1,7 @@
+{
+  "dim": 256,
+  "kind": "pointer",
+  "readout": "mean_span",
+  "rng_anchor_dim": 256,
+  "version": 1
+}

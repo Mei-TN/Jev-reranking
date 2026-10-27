@@ -1,0 +1,7 @@
+{
+  "training": "/absolute/path/to/rebuilt-hopper-runtime",
+  "serving": "/absolute/path/to/rebuilt-hopper-runtime",
+  "opencompass": "/absolute/path/to/rebuilt-five-role-runtime",
+  "openjev": "/absolute/path/to/rebuilt-five-role-runtime",
+  "runweaver": "/absolute/path/to/rebuilt-five-role-runtime"
+}

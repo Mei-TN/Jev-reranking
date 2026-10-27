@@ -1,0 +1,20 @@
+{
+  "schema": "jev.site.v1",
+  "work_root": "../work",
+  "base_model": "../assets/NeoHorse-1-4B-hf",
+  "data_root": "../assets/training",
+  "python": {
+    "training": "/srv/jev/envs/model-001/model-python",
+    "serving": "/srv/jev/envs/model-001/model-python"
+  },
+  "data_files": {
+    "F2": "F2.train.jsonl",
+    "F3": "F3.train.jsonl"
+  },
+  "environment": {},
+  "hardware": {
+    "gpu_name_contains": "H20",
+    "idle_memory_mib_below": 500
+  },
+  "reference_outputs": {}
+}

@@ -1,0 +1,12 @@
+source,configuration,same_question_pair
+ARC,arc_easy,False
+ARC,arc_challenge,False
+GSM8K,gsm8k_mc4,True
+GSM8K,gsm8k_mc10,True
+GPQA,gpqa,True
+GPQA,gpqa_fewshot,True
+MMLU,mmlu,True
+MMLU,mmlu_fewshot,True
+HellaSwag,hellaswag,False
+WinoGrande,winogrande,False
+chess,chess,False

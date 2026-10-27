@@ -1,0 +1,120 @@
+{
+  "status": "FIXED_PREINFERENCE_PENDING_TOKEN_AND_RUNTIME_CHECKS",
+  "version": "inference-block-fixed-v1",
+  "models": 8,
+  "cells": 4,
+  "piqa_questions": 1838,
+  "piqa_candidates": 2,
+  "gpqa_evaluation_questions": 198,
+  "permutations": [
+    {
+      "id": "P0",
+      "order": [
+        "entailment",
+        "neutral",
+        "contradiction"
+      ]
+    },
+    {
+      "id": "P1",
+      "order": [
+        "entailment",
+        "contradiction",
+        "neutral"
+      ]
+    },
+    {
+      "id": "P2",
+      "order": [
+        "neutral",
+        "entailment",
+        "contradiction"
+      ]
+    },
+    {
+      "id": "P3",
+      "order": [
+        "neutral",
+        "contradiction",
+        "entailment"
+      ]
+    },
+    {
+      "id": "P4",
+      "order": [
+        "contradiction",
+        "entailment",
+        "neutral"
+      ]
+    },
+    {
+      "id": "P5",
+      "order": [
+        "contradiction",
+        "neutral",
+        "entailment"
+      ]
+    }
+  ],
+  "descriptions": {
+    "D0": {
+      "entailment": "The hypothesis follows from the premise",
+      "neutral": "The hypothesis may or may not be true given the premise",
+      "contradiction": "The hypothesis contradicts the premise"
+    },
+    "D1": {
+      "entailment": "The premise supports the hypothesis as true.",
+      "neutral": "The premise does not determine whether the hypothesis is true.",
+      "contradiction": "The premise supports the hypothesis as false."
+    },
+    "D2": {
+      "entailment": "The hypothesis must be true if the premise is true.",
+      "neutral": "The hypothesis could be either true or false if the premise is true.",
+      "contradiction": "The hypothesis must be false if the premise is true."
+    }
+  },
+  "direct_instruction": "Select the solution that best achieves the goal.",
+  "shared_baseline": "E7 NLI = E9 P0D0; same calls counted once",
+  "gpqa_protocol": "gpqa_disjoint5_v1; legacy zero/five-shot results retained separately",
+  "tokenization_checked": false,
+  "predictions_generated": false,
+  "requests_per_model": {
+    "piqa_direct": 1838,
+    "piqa_nli_18": 66168,
+    "gpqa_new_fewshot_rerank": 792,
+    "gpqa_new_fewshot_grade": 792,
+    "total": 69590
+  },
+  "requests_all_eight": 556720,
+  "review": {
+    "url": "https://chatgpt.com/c/6ace79b9-9928-83ee-ab5f-0c06765ce4eb",
+    "response": "second complete reply, Worked for 5m21s; root confirmed Response complete",
+    "adoption_record": "revision_20261013/EXPERIMENT_DECISIONS.md, second inference block",
+    "decision": "conditional GO; no additional legacy fewshot arm"
+  },
+  "decision_head_only": true,
+  "preserve_full_precision_scores": true,
+  "semantic_mapping": "probabilities keyed by label; native NLI vector is contradiction/entailment/neutral",
+  "e9": {
+    "descriptions": "D1/D2 are description perturbations, not asserted strictly equivalent paraphrases",
+    "reporting": "report all six orders separately within each description; paired difference in every condition",
+    "worst_paired_difference": "min_t (H5_t - H0_t); never min_t(H5_t) - min_t(H0_t)",
+    "cache_identity": "checkpoint identity + full ordered request input + description version + fixed protocol",
+    "runtime_qualification": "six permutations must remain distinct actual token sequences and cache identities"
+  },
+  "e12": {
+    "comparison": "complete protocol revision, not a pure causal demonstration-pool effect",
+    "alias_fields_on_both_sides": [
+      "Question",
+      "Pre-Revision Question",
+      "Extra Revised Question"
+    ],
+    "retain_all_candidate_source_slots": true,
+    "evaluation_denominator": 198,
+    "primary": "strict source-slot rerank accuracy from argmax entailment over frozen candidate order",
+    "tie_rule": "first candidate in frozen gold-independent candidate order; no source-slot preference",
+    "auxiliary": "text-equivalent accuracy when selected stripped answer text equals stripped gold answer text; separately list all 3 duplicate-text questions",
+    "wire": "source field names Correct Answer/Incorrect Answer and source slots stay in internal ledger only",
+    "reference_gold": "only native grade premise includes the target reference answer; rerank never includes it"
+  }
+}

@@ -1,0 +1,520 @@
+--- a/opencompass/models/base.py
++++ b/opencompass/models/base.py
+@@ -310,6 +310,18 @@
+             str: The final string.
+         """
+         assert isinstance(prompt_template, (str, list, PromptList, tuple))
++
++        # RawPromptTemplate intentionally emits standard OpenAI messages
++        # instead of OpenCompass' legacy ``role``/``prompt`` representation.
++        # Keep a single message list intact; an outer list is still treated as
++        # a batch and recursively parsed below.
++        if (isinstance(prompt_template, (list, PromptList)) and prompt_template
++                and all(
++                    isinstance(item, dict)
++                    and item.get('role') in {'system', 'user', 'assistant'}
++                    and isinstance(item.get('content'), str)
++                    for item in prompt_template)):
++            return prompt_template
+         if not isinstance(prompt_template, (str, PromptList)):
+             return [self.parse_template(p, mode=mode) for p in prompt_template]
+ 
+--- a/opencompass/openicl/icl_inferencer/icl_gen_inferencer_parallel.py
++++ b/opencompass/openicl/icl_inferencer/icl_gen_inferencer_parallel.py
+@@ -15,7 +15,7 @@
+ from ..icl_prompt_template import PromptTemplate
+ from ..icl_retriever import BaseRetriever
+ from ..utils.logging import get_logger
+-from .icl_base_inferencer import GenInferencerOutputHandler
++from .icl_base_inferencer import GenInferencerOutputHandler, prediction_content
+ from .icl_gen_inferencer import GenInferencer
+ 
+ logger = get_logger(__name__)
+@@ -36,8 +36,14 @@
+             output_json_filepath: Optional[str] = './icl_inference_output',
+             output_json_filename: Optional[str] = 'predictions',
+             save_every: Optional[int] = 1,
++            batch_size: Optional[int] = None,
+             max_infer_workers: Optional[int] = None,
+             **kwargs) -> None:
++        # OpenICLInferTask injects the model batch size into every inferencer.
++        # This inferencer schedules one request per worker, so consume that
++        # compatibility argument instead of forwarding a duplicate batch_size
++        # to GenInferencer.
++        del batch_size
+         super().__init__(
+             model=model,
+             max_out_len=max_out_len,
+@@ -132,9 +138,31 @@
+         max_workers = self._resolve_max_workers()
+ 
+         def _infer_one(entry, gold, idx):
+-            parsed_entry = self.model.parse_template(entry, mode='gen')
+-            generated = self.model.generate_from_template(
+-                [entry], max_out_len=self.max_out_len, **extra_gen_kwargs)
++            parsed_entry = entry
++            try:
++                parsed_entry = self.model.parse_template(entry, mode='gen')
++                generated = self.model.generate_from_template(
++                    [entry], max_out_len=self.max_out_len, **extra_gen_kwargs)
++            except Exception as error:
++                # Let one exhausted API retry count as an incorrect sample,
++                # but do not let it abandon the result-persistence loop while
++                # ThreadPoolExecutor silently drains every queued request.
++                # Persisting the failure keeps the official denominator and
++                # makes the transport error auditable in the prediction file.
++                logger.exception(
++                    'Inference failed for sample %s; recording an empty '
++                    'prediction and continuing.', idx)
++                return dict(
++                    origin_prompt=parsed_entry,
++                    prediction={
++                        'reasoning_content': '',
++                        'content': '',
++                    },
++                    idx=idx,
++                    gold=gold,
++                    inference_error=(
++                        f'{type(error).__name__}: {error}'),
++                )
+ 
+             if num_return_sequences == 1:
+                 prediction = generated[0]
+@@ -159,9 +187,7 @@
+                                 parsed_entry[i]['prompt'])
+                         input_length += parsed_entry[i]['input_length']
+ 
+-                pred_str = copy.deepcopy(prediction)
+-                if isinstance(pred_str, dict):
+-                    pred_str = pred_str['prediction']
++                pred_str = prediction_content(copy.deepcopy(prediction))
+ 
+                 if num_return_sequences == 1:
+                     res_length = self.model.get_token_len(pred_str)
+@@ -214,7 +240,11 @@
+             with open(timer_filepath, 'a') as f:
+                 f.write(json.dumps(time_dict) + '\n')
+ 
++        # Futures complete out of order.  Persisted evaluation reloads by
++        # numeric index, and direct callers must observe the same dataset
++        # order rather than completion order.
+         return [
+-            sample['prediction']
+-            for sample in output_handler.results_dict.values()
++            sample['prediction'] for _, sample in sorted(
++                output_handler.results_dict.items(),
++                key=lambda item: int(item[0]))
+         ]
+--- a/opencompass/openicl/icl_inferencer/icl_gen_inferencer.py
++++ b/opencompass/openicl/icl_inferencer/icl_gen_inferencer.py
+@@ -19,7 +19,8 @@
+ from ..icl_prompt_template import PromptTemplate
+ from ..icl_retriever import BaseRetriever
+ from ..utils.logging import get_logger
+-from .icl_base_inferencer import BaseInferencer, GenInferencerOutputHandler
++from .icl_base_inferencer import (BaseInferencer, GenInferencerOutputHandler,
++                                  prediction_content)
+ 
+ logger = get_logger(__name__)
+ 
+@@ -60,6 +61,7 @@
+             output_json_filepath: Optional[str] = './icl_inference_output',
+             output_json_filename: Optional[str] = 'predictions',
+             save_every: Optional[int] = 1,
++            generation_kwargs: Optional[dict] = None,
+             **kwargs) -> None:
+         super().__init__(
+             model=model,
+@@ -74,6 +76,7 @@
+         self.max_out_len = max_out_len
+         self.min_out_len = min_out_len
+         self.stopping_criteria = stopping_criteria
++        self.generation_kwargs = generation_kwargs or {}
+         self.dump_timer = kwargs.get('dump_timer', False)
+         self.dump_res_length = kwargs.get('dump_res_length', False)
+         self.dump_only_message_path = kwargs.get('dump_only_message_path',
+@@ -117,17 +120,21 @@
+ 
+         # Create tmp json file for saving intermediate results and future
+         # resuming
+-        index = 0
+         tmp_jsonl_filename = Path('tmp_' + output_json_filename).with_suffix(
+             '.jsonl').name
+         tmp_jsonl_filepath = Path(output_json_filepath) / tmp_jsonl_filename
+         tmp_result_dict = output_handler.restore_from_jsonl(
+             output_json_filepath, tmp_jsonl_filename)
+-        index = len(tmp_result_dict)
++        total_samples = len(prompt_list)
++        todo = [
++            index for index in range(total_samples)
++            if str(index) not in tmp_result_dict
++        ]
+ 
+         # 4. Wrap prompts with Dataloader
+         logger.info('Starting build dataloader')
+-        dataloader = self.get_dataloader(prompt_list[index:], self.batch_size)
++        dataloader = self.get_dataloader([prompt_list[index] for index in todo],
++                                         self.batch_size)
+ 
+         # 5. Inference for prompts in each batch
+         logger.info('Starting inference process...')
+@@ -135,14 +142,18 @@
+         start_time_stamp = time.time()
+         num_sample = 0
+         first_dump = True
++        completed = total_samples - len(todo)
++        todo_cursor = 0
+         for datum in tqdm(dataloader, disable=not self.is_main_process):
++            batch_indices = todo[todo_cursor:todo_cursor + len(datum)]
++            todo_cursor += len(datum)
+             if ds_reader.output_column:
+                 entry, golds = list(zip(*datum))
+             else:
+                 entry = datum
+                 golds = [None for _ in range(len(entry))]
+             # 5-1. Inference with local model
+-            extra_gen_kwargs = {}
++            extra_gen_kwargs = copy.deepcopy(self.generation_kwargs)
+             sig = inspect.signature(self.model.generate)
+             if 'stopping_criteria' in sig.parameters:
+                 extra_gen_kwargs['stopping_criteria'] = self.stopping_criteria
+@@ -181,9 +192,9 @@
+             num_return_sequences = getattr(self.model, 'generation_kwargs',
+                                            {}).get('num_return_sequences', 1)
+             # 5-3. Save current output
+-            for prompt, prediction, gold in zip(
+-                    parsed_entries, batched(generated, num_return_sequences),
+-                    golds):
++            for index, prompt, prediction, gold in zip(
++                    batch_indices, parsed_entries,
++                    batched(generated, num_return_sequences), golds):
+                 if num_return_sequences == 1:
+                     prediction = prediction[0]
+ 
+@@ -206,9 +217,7 @@
+                                     'Cannot find prompt field in the message!')
+                             input_length += prompt[i]['input_length']
+ 
+-                    pred_str = copy.deepcopy(prediction)
+-                    if isinstance(pred_str, dict):
+-                        pred_str = pred_str['prediction']
++                    pred_str = prediction_content(copy.deepcopy(prediction))
+ 
+                     if num_return_sequences == 1:
+                         res_length = self.model.get_token_len(pred_str)
+@@ -227,10 +236,11 @@
+                                                 prediction,
+                                                 index,
+                                                 gold=gold)
+-                index = index + 1
++                completed += 1
+ 
+             # 5-4. Save intermediate results
+-            if (self.save_every is not None and index % self.save_every == 0
++            if (self.save_every is not None
++                    and completed % self.save_every == 0
+                     and self.is_main_process):
+                 output_handler.write_to_jsonl(output_json_filepath,
+                                               tmp_jsonl_filename)
+@@ -262,8 +272,8 @@
+                 f.write(json.dumps(time_dict) + '\n')
+ 
+         return [
+-            sample['prediction']
+-            for sample in output_handler.results_dict.values()
++            output_handler.results_dict[str(index)]['prediction']
++            for index in range(total_samples)
+         ]
+ 
+     def get_generation_prompt_list_from_retriever_indices(
+--- a/opencompass/openicl/icl_inferencer/icl_base_inferencer.py
++++ b/opencompass/openicl/icl_inferencer/icl_base_inferencer.py
+@@ -88,8 +88,11 @@
+         raise NotImplementedError("Method hasn't been implemented yet")
+ 
+     @staticmethod
+-    def get_dataloader(datalist: List[List], batch_size: int) -> DataLoader:
++    def get_dataloader(datalist: List[List],
++                       batch_size: Optional[int]) -> DataLoader:
+         """Return a dataloader of the input data list."""
++        if batch_size is None:
++            batch_size = 1
+         dataloader = DataLoader(datalist,
+                                 batch_size=batch_size,
+                                 collate_fn=lambda x: x)
+@@ -99,6 +102,105 @@
+ def dump_results_dict(results_dict, filename):
+     with open(filename, 'w', encoding='utf-8') as json_file:
+         json.dump(results_dict, json_file, indent=4, ensure_ascii=False)
++
++
++def split_prediction_fields(prediction):
++    """Split structured model output into answer and reasoning fields.
++
++    Models traditionally return a string. Reasoning APIs may instead return
++    ``{'content': ..., 'reasoning_content': ...}``. The latter is normalized
++    here so inference files retain both fields while the legacy ``prediction``
++    field contains only the final answer.
++    """
++    if isinstance(prediction, dict) and ('content' in prediction
++                                         or 'reasoning_content' in prediction):
++        content = prediction.get('content', '')
++        reasoning_content = prediction.get('reasoning_content', '')
++        return (content if content is not None else '',
++                reasoning_content if reasoning_content is not None else '',
++                True)
++
++    if (isinstance(prediction, list) and prediction and all(
++            isinstance(item, dict) and
++        ('content' in item or 'reasoning_content' in item)
++            for item in prediction)):
++        contents = []
++        reasoning_contents = []
++        for item in prediction:
++            content = item.get('content', '')
++            reasoning_content = item.get('reasoning_content', '')
++            contents.append(content if content is not None else '')
++            reasoning_contents.append(
++                reasoning_content if reasoning_content is not None else '')
++        return contents, reasoning_contents, True
++
++    return prediction, None, False
++
++
++def prediction_content(prediction):
++    """Return only the final-answer content from a generated output."""
++    return split_prediction_fields(prediction)[0]
++
++
++def _next_jsonl_backup_path(path: Path) -> Path:
++    """Return a backup path without overwriting an earlier recovery file."""
++    backup = path.with_name(path.name + '.bak')
++    suffix = 1
++    while backup.exists():
++        backup = path.with_name(f'{path.name}.bak.{suffix}')
++        suffix += 1
++    return backup
++
++
++def _restore_results_from_jsonl(path: Path) -> dict:
++    """Load every intact JSONL record and quarantine malformed records.
++
++    A process can be interrupted while appending its final record.  The old
++    behavior moved the entire temporary file aside when *one* line was
++    malformed, which discarded all completed requests on resume.  Preserve
++    every independently valid row, keep the original bytes in a backup for
++    diagnosis, and rewrite a clean checkpoint containing only those rows.
++    Missing/corrupt rows are then naturally submitted again by the inferencer.
++    """
++    logger = get_logger()
++    result_dict = {}
++    invalid_lines = []
++    # Iterate over physical LF-delimited records. ``str.splitlines()`` also
++    # splits at Unicode separators such as U+0085 and U+2028, which are legal
++    # inside a JSON string and occur in some LongBench documents. Treating
++    # those characters as JSONL boundaries corrupts otherwise valid rows.
++    with path.open('r', encoding='utf-8', newline='') as json_file:
++        for line_number, line in enumerate(json_file, start=1):
++            if not line.strip():
++                continue
++            try:
++                item = json.loads(line)
++                if not isinstance(item, dict) or 'idx' not in item:
++                    raise ValueError('JSONL record must be an object with idx')
++                idx = item.pop('idx')
++                result_dict[idx] = item
++            except (json.JSONDecodeError, TypeError, ValueError):
++                invalid_lines.append(line_number)
++
++    if invalid_lines:
++        backup = _next_jsonl_backup_path(path)
++        shutil.move(path, backup)
++        if result_dict:
++            with path.open('x', encoding='utf-8') as json_file:
++                for idx, result in result_dict.items():
++                    json_file.write(
++                        json.dumps({
++                            'idx': idx,
++                            **result,
++                        }, ensure_ascii=False) + '\n')
++            logger.warning(
++                f'Recovered {len(result_dict)} valid entries from {path}; '
++                f'quarantined malformed lines {invalid_lines} in {backup}.')
++        else:
++            logger.warning(
++                f'No valid entries could be recovered from {path}; moved '
++                f'the original file to {backup}.')
++    return result_dict
+ 
+ 
+ class GenInferencerOutputHandler:
+@@ -128,25 +230,11 @@
+                 json_file.write('\n'.join(new_lines) + '\n')
+ 
+     def restore_from_jsonl(self, save_dir: str, filename: str) -> dict:
+-        logger = get_logger()
+-
+         path = Path(save_dir) / filename
+         if path.exists():
+-            try:
+-                result_dict = {}
+-                for line in path.read_text().splitlines():
+-                    if line.strip():
+-                        item = json.loads(line)
+-                        idx = item.pop('idx')
+-                        result_dict[idx] = item
+-            except Exception:
+-                bak_file = path.with_name(path.name + '.bak')
+-                shutil.move(path, bak_file)
+-                logger.warning(f'Failed to load {path}, '
+-                               f'move to {bak_file} to avoid error.')
+-            else:
+-                self.results_dict = result_dict
+-                self.dumped_indices.update(result_dict.keys())
++            result_dict = _restore_results_from_jsonl(path)
++            self.results_dict = result_dict
++            self.dumped_indices.update(result_dict.keys())
+         return self.results_dict
+ 
+     def write_to_json(self, save_dir: str, filename: str):
+@@ -159,17 +247,32 @@
+                      idx,
+                      gold=None,
+                      res_length=None,
+-                     input_length=None):
++                     input_length=None,
++                     inference_error=None):
++        structured_error = (prediction.get('inference_error')
++                            if isinstance(prediction, dict) else None)
++        content, reasoning_content, is_structured = split_prediction_fields(
++            prediction)
+         self.results_dict[str(idx)] = {
+             'origin_prompt': origin_prompt,
+-            'prediction': prediction,
++            # Keep prediction as a compatibility alias. It must never include
++            # reasoning, because existing evaluators consume this field.
++            'prediction': content,
+         }
++        if is_structured:
++            self.results_dict[str(idx)]['content'] = content
++            self.results_dict[str(
++                idx)]['reasoning_content'] = reasoning_content
+         if gold:
+             self.results_dict[str(idx)]['gold'] = gold
+         if res_length:
+             self.results_dict[str(idx)]['res_length'] = res_length
+         if input_length:
+             self.results_dict[str(idx)]['all_input_length'] = input_length
++        inference_error = (inference_error
++                           if inference_error is not None else structured_error)
++        if inference_error is not None:
++            self.results_dict[str(idx)]['inference_error'] = inference_error
+ 
+ 
+ class ChatOutputHandler:
+@@ -195,25 +298,11 @@
+                 json_file.write('\n'.join(new_lines) + '\n')
+ 
+     def restore_from_jsonl(self, save_dir: str, filename: str) -> dict:
+-        logger = get_logger()
+-
+         path = Path(save_dir) / filename
+         if path.exists():
+-            try:
+-                result_dict = {}
+-                for line in path.read_text().splitlines():
+-                    if line.strip():
+-                        item = json.loads(line)
+-                        idx = item.pop('idx')
+-                        result_dict[idx] = item
+-            except Exception:
+-                bak_file = path.with_name(path.name + '.bak')
+-                shutil.move(path, bak_file)
+-                logger.warning(f'Failed to load {path}, '
+-                               f'move to {bak_file} to avoid error.')
+-            else:
+-                self.results_dict = result_dict
+-                self.dumped_indices.update(result_dict.keys())
++            result_dict = _restore_results_from_jsonl(path)
++            self.results_dict = result_dict
++            self.dumped_indices.update(result_dict.keys())
+         return self.results_dict
+ 
+     def write_to_json(self, save_dir: str, filename: str):
+@@ -228,10 +317,18 @@
+         result_dict = {}
+         if gold:
+             result_dict['gold'] = gold
++        content, reasoning_content, is_structured = split_prediction_fields(
++            prediction)
+         result_dict.update({
+-            'prediction': prediction,
++            'prediction': content,
+             'origin_prompt': origin_prompt,
+         })
++        if is_structured:
++            result_dict['content'] = content
++            result_dict['reasoning_content'] = reasoning_content
++        if isinstance(prediction, dict) and prediction.get(
++                'inference_error') is not None:
++            result_dict['inference_error'] = prediction['inference_error']
+         self.results_dict[str(idx)] = result_dict
+ 
+     def save_multiround_results(self,
+@@ -245,7 +342,20 @@
+             'origin_prompt': [],
+         })
+         result_dict['gold'].append(gold)
+-        result_dict['prediction'].append(prediction)
++        content, reasoning_content, is_structured = split_prediction_fields(
++            prediction)
++        result_dict['prediction'].append(content)
++        if is_structured:
++            result_dict.setdefault('content', []).append(content)
++            result_dict.setdefault('reasoning_content',
++                                   []).append(reasoning_content)
++        round_error = (prediction.get('inference_error')
++                       if isinstance(prediction, dict) else None)
++        if round_error is not None or 'inference_error' in result_dict:
++            errors = result_dict.setdefault(
++                'inference_error',
++                [None] * (len(result_dict['prediction']) - 1))
++            errors.append(round_error)
+         result_dict['origin_prompt'].append(origin_prompt)
+         self.results_dict[str(idx)] = result_dict
+ 
+--- a/opencompass/tasks/openicl_eval.py
++++ b/opencompass/tasks/openicl_eval.py
+@@ -23,6 +23,16 @@
+ from opencompass.tasks.base import BaseTask, extract_role_pred
+ from opencompass.utils import (build_dataset_from_cfg, get_infer_output_path,
+                                get_logger)
++
++
++def extract_prediction_content(pred):
++    """Extract final-answer content from one persisted prediction record."""
++    if 'content' in pred:
++        return pred['content']
++    prediction = pred.get('prediction')
++    if isinstance(prediction, dict) and 'content' in prediction:
++        return prediction['content']
++    return prediction
+ 
+ 
+ @TASKS.register_module()
+@@ -186,9 +196,12 @@
+                     break
+ 
+         pred_dicts = copy.deepcopy(preds)
+-        preds = {k: [pred.get(k) for pred in preds] for k in preds[0]}
+-
+-        pred_strs = preds.pop('prediction', None)
++
++        # Structured chat responses persist both reasoning and final answer.
++        # Evaluation must only consume ``content``. Fall back to prediction
++        # for legacy inference files and unwrap early structured files that
++        # may have stored the response under prediction.
++        pred_strs = [extract_prediction_content(pred) for pred in preds]
+ 
+         return pred_dicts, pred_strs
+ 

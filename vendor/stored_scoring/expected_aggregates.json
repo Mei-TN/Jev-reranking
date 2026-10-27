@@ -1,0 +1,4380 @@
+{
+  "core56": {
+    "models": 56,
+    "tasks": 1008,
+    "results": {
+      "M005": {
+        "tasks_percent": {
+          "jevbench_public": 75.86074390769953,
+          "kev_decision-v7_development": 84.73101265822785,
+          "kev_decision-v7_test": 84.58333333333333,
+          "kev_transfer-v4_development": 78.65853658536585,
+          "kev_transfer-v4_test": 82.16463414634147,
+          "kev_transfer-v9_development": 72.75334608030593,
+          "kev_transfer-v9_test": 74.8565965583174,
+          "mmlu_fewshot": 57.82652043868395,
+          "mmlu": 59.08702464036462,
+          "hellaswag": 45.83748257319259,
+          "gsm8k_mc10": 20.39423805913571,
+          "arc_easy": 91.87710437710437,
+          "gsm8k_mc4": 38.36239575435936,
+          "winogrande": 61.40489344909235,
+          "arc_challenge": 81.74061433447098,
+          "chess": 17.6,
+          "gpqa_fewshot": 34.84848484848485,
+          "gpqa": 35.35353535353536
+        },
+        "endpoints_percent": {
+          "JevBench": 75.86074390769953,
+          "Kev": 79.6245765603153,
+          "MC-11": 49.48475398440219
+        }
+      },
+      "M004": {
+        "tasks_percent": {
+          "jevbench_public": 76.88007464194254,
+          "kev_decision-v7_development": 86.15506329113924,
+          "kev_decision-v7_test": 84.91666666666667,
+          "kev_transfer-v4_development": 82.16463414634147,
+          "kev_transfer-v4_test": 85.67073170731707,
+          "kev_transfer-v9_development": 74.09177820267686,
+          "kev_transfer-v9_test": 76.95984703632887,
+          "mmlu_fewshot": 61.12377154251531,
+          "mmlu": 59.45734225893747,
+          "hellaswag": 38.11989643497311,
+          "gsm8k_mc10": 18.802122820318424,
+          "arc_easy": 90.65656565656566,
+          "gsm8k_mc4": 34.57164518574678,
+          "winogrande": 61.95737963693765,
+          "arc_challenge": 79.77815699658704,
+          "chess": 17.2,
+          "gpqa_fewshot": 35.858585858585855,
+          "gpqa": 35.858585858585855
+        },
+        "endpoints_percent": {
+          "JevBench": 76.88007464194254,
+          "Kev": 81.65978684174503,
+          "MC-11": 48.489459295432106
+        }
+      },
+      "M003": {
+        "tasks_percent": {
+          "jevbench_public": 78.87081538268329,
+          "kev_decision-v7_development": 85.68037974683544,
+          "kev_decision-v7_test": 84.58333333333333,
+          "kev_transfer-v4_development": 81.70731707317073,
+          "kev_transfer-v4_test": 83.6890243902439,
+          "kev_transfer-v9_development": 73.80497131931166,
+          "kev_transfer-v9_test": 75.62141491395793,
+          "mmlu_fewshot": 58.29653895456488,
+          "mmlu": 59.18672553767269,
+          "hellaswag": 44.1346345349532,
+          "gsm8k_mc10": 21.68309325246399,
+          "arc_easy": 91.28787878787878,
+          "gsm8k_mc4": 41.470811220621684,
+          "winogrande": 62.19415943172849,
+          "arc_challenge": 80.2047781569966,
+          "chess": 23.2,
+          "gpqa_fewshot": 36.86868686868687,
+          "gpqa": 36.86868686868687
+        },
+        "endpoints_percent": {
+          "JevBench": 78.87081538268329,
+          "Kev": 80.8477401294755,
+          "MC-11": 50.490544874023094
+        }
+      },
+      "M002": {
+        "tasks_percent": {
+          "jevbench_public": 76.22392036736721,
+          "kev_decision-v7_development": 86.23417721518987,
+          "kev_decision-v7_test": 85.08333333333333,
+          "kev_transfer-v4_development": 82.16463414634147,
+          "kev_transfer-v4_test": 84.60365853658537,
+          "kev_transfer-v9_development": 74.5697896749522,
+          "kev_transfer-v9_test": 76.19502868068834,
+          "mmlu_fewshot": 57.76242700470019,
+          "mmlu": 57.52029625409486,
+          "hellaswag": 33.33001394144593,
+          "gsm8k_mc10": 19.257012888551934,
+          "arc_easy": 86.57407407407408,
+          "gsm8k_mc4": 38.36239575435936,
+          "winogrande": 60.06314127861089,
+          "arc_challenge": 75.08532423208192,
+          "chess": 17.4,
+          "gpqa_fewshot": 39.39393939393939,
+          "gpqa": 36.86868686868687
+        },
+        "endpoints_percent": {
+          "JevBench": 76.22392036736721,
+          "Kev": 81.47510359784843,
+          "MC-11": 47.419755608231405
+        }
+      },
+      "M000": {
+        "tasks_percent": {
+          "jevbench_public": 75.45289558318454,
+          "kev_decision-v7_development": 85.75949367088607,
+          "kev_decision-v7_test": 84.25,
+          "kev_transfer-v4_development": 80.1829268292683,
+          "kev_transfer-v4_test": 83.38414634146342,
+          "kev_transfer-v9_development": 73.23135755258126,
+          "kev_transfer-v9_test": 75.52581261950287,
+          "mmlu_fewshot": 59.65674405355362,
+          "mmlu": 59.88463181882923,
+          "hellaswag": 44.77195777733519,
+          "gsm8k_mc10": 21.30401819560273,
+          "arc_easy": 92.42424242424242,
+          "gsm8k_mc4": 40.94010614101592,
+          "winogrande": 60.6156274664562,
+          "arc_challenge": 81.31399317406144,
+          "chess": 30.4,
+          "gpqa_fewshot": 40.4040404040404,
+          "gpqa": 37.87878787878788
+        },
+        "endpoints_percent": {
+          "JevBench": 75.45289558318454,
+          "Kev": 80.38895616895032,
+          "MC-11": 51.7812863030841
+        }
+      },
+      "M001": {
+        "tasks_percent": {
+          "jevbench_public": 74.41975718162509,
+          "kev_decision-v7_development": 85.68037974683544,
+          "kev_decision-v7_test": 85.0,
+          "kev_transfer-v4_development": 81.09756097560975,
+          "kev_transfer-v4_test": 83.6890243902439,
+          "kev_transfer-v9_development": 74.47418738049713,
+          "kev_transfer-v9_test": 76.67304015296367,
+          "mmlu_fewshot": 59.22233300099701,
+          "mmlu": 59.88463181882923,
+          "hellaswag": 49.22326229834694,
+          "gsm8k_mc10": 21.37983320697498,
+          "arc_easy": 93.13973063973064,
+          "gsm8k_mc4": 40.0303260045489,
+          "winogrande": 62.03630623520127,
+          "arc_challenge": 82.76450511945391,
+          "chess": 27.0,
+          "gpqa_fewshot": 40.4040404040404,
+          "gpqa": 39.39393939393939
+        },
+        "endpoints_percent": {
+          "JevBench": 74.41975718162509,
+          "Kev": 81.10236544102499,
+          "MC-11": 52.22535528382388
+        }
+      },
+      "M006": {
+        "tasks_percent": {
+          "jevbench_public": 76.21568217930447,
+          "kev_decision-v7_development": 85.68037974683544,
+          "kev_decision-v7_test": 85.0,
+          "kev_transfer-v4_development": 80.1829268292683,
+          "kev_transfer-v4_test": 83.53658536585365,
+          "kev_transfer-v9_development": 73.61376673040154,
+          "kev_transfer-v9_test": 76.19502868068834,
+          "mmlu_fewshot": 57.43483834211651,
+          "mmlu": 60.03418316479134,
+          "hellaswag": 42.21270663214499,
+          "gsm8k_mc10": 20.84912812736922,
+          "arc_easy": 91.58249158249158,
+          "gsm8k_mc4": 39.8786959818044,
+          "winogrande": 62.74664561957379,
+          "arc_challenge": 80.80204778156995,
+          "chess": 24.2,
+          "gpqa_fewshot": 38.38383838383838,
+          "gpqa": 33.83838383838384
+        },
+        "endpoints_percent": {
+          "JevBench": 76.21568217930447,
+          "Kev": 80.70144789217454,
+          "MC-11": 50.17845085946219
+        }
+      },
+      "M012": {
+        "tasks_percent": {
+          "jevbench_public": 76.67945735799194,
+          "kev_decision-v7_development": 85.36392405063292,
+          "kev_decision-v7_test": 85.08333333333333,
+          "kev_transfer-v4_development": 83.23170731707317,
+          "kev_transfer-v4_test": 84.14634146341463,
+          "kev_transfer-v9_development": 77.34225621414915,
+          "kev_transfer-v9_test": 76.76864244741874,
+          "mmlu_fewshot": 62.57655604614727,
+          "mmlu": 61.55106110240707,
+          "hellaswag": 51.3343955387373,
+          "gsm8k_mc10": 21.152388172858224,
+          "arc_easy": 93.39225589225589,
+          "gsm8k_mc4": 38.58984078847612,
+          "winogrande": 62.19415943172849,
+          "arc_challenge": 82.42320819112628,
+          "chess": 25.6,
+          "gpqa_fewshot": 39.39393939393939,
+          "gpqa": 41.41414141414141
+        },
+        "endpoints_percent": {
+          "JevBench": 76.67945735799194,
+          "Kev": 81.98936747100366,
+          "MC-11": 52.69290417925613
+        }
+      },
+      "M011": {
+        "tasks_percent": {
+          "jevbench_public": 77.15065850901765,
+          "kev_decision-v7_development": 86.7879746835443,
+          "kev_decision-v7_test": 85.16666666666667,
+          "kev_transfer-v4_development": 80.64024390243902,
+          "kev_transfer-v4_test": 84.60365853658537,
+          "kev_transfer-v9_development": 75.52581261950287,
+          "kev_transfer-v9_test": 77.05544933078394,
+          "mmlu_fewshot": 63.69463039453069,
+          "mmlu": 60.9742201965532,
+          "hellaswag": 46.59430392352121,
+          "gsm8k_mc10": 18.19560272934041,
+          "arc_easy": 92.17171717171718,
+          "gsm8k_mc4": 36.46702047005307,
+          "winogrande": 62.98342541436464,
+          "arc_challenge": 81.8259385665529,
+          "chess": 23.6,
+          "gpqa_fewshot": 32.82828282828283,
+          "gpqa": 38.38383838383838
+        },
+        "endpoints_percent": {
+          "JevBench": 77.15065850901765,
+          "Kev": 81.6299676232537,
+          "MC-11": 50.70172546170495
+        }
+      },
+      "M010": {
+        "tasks_percent": {
+          "jevbench_public": 77.32922993758908,
+          "kev_decision-v7_development": 86.15506329113924,
+          "kev_decision-v7_test": 84.58333333333333,
+          "kev_transfer-v4_development": 81.70731707317073,
+          "kev_transfer-v4_test": 83.53658536585365,
+          "kev_transfer-v9_development": 76.2906309751434,
+          "kev_transfer-v9_test": 76.48183556405354,
+          "mmlu_fewshot": 61.04543512320182,
+          "mmlu": 60.29055690072639,
+          "hellaswag": 45.74785899223262,
+          "gsm8k_mc10": 20.84912812736922,
+          "arc_easy": 92.50841750841751,
+          "gsm8k_mc4": 35.78468536770281,
+          "winogrande": 61.72059984214681,
+          "arc_challenge": 81.8259385665529,
+          "chess": 24.4,
+          "gpqa_fewshot": 36.36363636363637,
+          "gpqa": 41.91919191919192
+        },
+        "endpoints_percent": {
+          "JevBench": 77.32922993758908,
+          "Kev": 81.45912760044898,
+          "MC-11": 51.132313519198036
+        }
+      },
+      "M009": {
+        "tasks_percent": {
+          "jevbench_public": 78.26258183585325,
+          "kev_decision-v7_development": 87.0253164556962,
+          "kev_decision-v7_test": 85.83333333333333,
+          "kev_transfer-v4_development": 79.8780487804878,
+          "kev_transfer-v4_test": 86.1280487804878,
+          "kev_transfer-v9_development": 74.37858508604207,
+          "kev_transfer-v9_test": 78.29827915869981,
+          "mmlu_fewshot": 61.95698618430423,
+          "mmlu": 60.04842615012107,
+          "hellaswag": 41.28659629555865,
+          "gsm8k_mc10": 21.455648218347235,
+          "arc_easy": 90.44612794612794,
+          "gsm8k_mc4": 39.27217589082638,
+          "winogrande": 61.08918705603789,
+          "arc_challenge": 80.71672354948807,
+          "chess": 24.8,
+          "gpqa_fewshot": 33.33333333333333,
+          "gpqa": 35.35353535353536
+        },
+        "endpoints_percent": {
+          "JevBench": 78.26258183585325,
+          "Kev": 81.92360193245783,
+          "MC-11": 49.9780672706982
+        }
+      },
+      "M007": {
+        "tasks_percent": {
+          "jevbench_public": 74.72921137265823,
+          "kev_decision-v7_development": 85.91772151898734,
+          "kev_decision-v7_test": 85.58333333333333,
+          "kev_transfer-v4_development": 81.40243902439025,
+          "kev_transfer-v4_test": 84.60365853658537,
+          "kev_transfer-v9_development": 75.62141491395793,
+          "kev_transfer-v9_test": 77.72466539196941,
+          "mmlu_fewshot": 60.70360347528843,
+          "mmlu": 60.52556615866685,
+          "hellaswag": 45.439155546703844,
+          "gsm8k_mc10": 21.152388172858224,
+          "arc_easy": 92.76094276094277,
+          "gsm8k_mc4": 36.54283548142532,
+          "winogrande": 61.79952644041041,
+          "arc_challenge": 82.5938566552901,
+          "chess": 26.6,
+          "gpqa_fewshot": 37.87878787878788,
+          "gpqa": 40.90909090909091
+        },
+        "endpoints_percent": {
+          "JevBench": 74.72921137265823,
+          "Kev": 81.8088721198706,
+          "MC-11": 51.53688667995134
+        }
+      },
+      "M008": {
+        "tasks_percent": {
+          "jevbench_public": 79.88933390120181,
+          "kev_decision-v7_development": 85.52215189873418,
+          "kev_decision-v7_test": 85.0,
+          "kev_transfer-v4_development": 80.33536585365853,
+          "kev_transfer-v4_test": 84.60365853658537,
+          "kev_transfer-v9_development": 74.5697896749522,
+          "kev_transfer-v9_test": 76.95984703632887,
+          "mmlu_fewshot": 60.71072496795328,
+          "mmlu": 60.24782794473722,
+          "hellaswag": 45.20015933081059,
+          "gsm8k_mc10": 21.531463229719485,
+          "arc_easy": 92.2979797979798,
+          "gsm8k_mc4": 39.72706595905989,
+          "winogrande": 61.1681136543015,
+          "arc_challenge": 81.48464163822526,
+          "chess": 22.8,
+          "gpqa_fewshot": 35.858585858585855,
+          "gpqa": 39.8989898989899
+        },
+        "endpoints_percent": {
+          "JevBench": 79.88933390120181,
+          "Kev": 81.16513550004319,
+          "MC-11": 50.99323202548753
+        }
+      },
+      "M013": {
+        "tasks_percent": {
+          "jevbench_public": 78.91792389470407,
+          "kev_decision-v7_development": 85.75949367088607,
+          "kev_decision-v7_test": 85.16666666666667,
+          "kev_transfer-v4_development": 81.5548780487805,
+          "kev_transfer-v4_test": 84.60365853658537,
+          "kev_transfer-v9_development": 76.0038240917782,
+          "kev_transfer-v9_test": 77.43785850860421,
+          "mmlu_fewshot": 60.4614727246831,
+          "mmlu": 60.26919242273181,
+          "hellaswag": 45.82752439753037,
+          "gsm8k_mc10": 19.332827899924187,
+          "arc_easy": 92.08754208754208,
+          "gsm8k_mc4": 35.17816527672479,
+          "winogrande": 61.40489344909235,
+          "arc_challenge": 81.74061433447098,
+          "chess": 22.0,
+          "gpqa_fewshot": 39.39393939393939,
+          "gpqa": 43.93939393939394
+        },
+        "endpoints_percent": {
+          "JevBench": 78.91792389470407,
+          "Kev": 81.75439658721683,
+          "MC-11": 51.057778720548455
+        }
+      },
+      "M018": {
+        "tasks_percent": {
+          "jevbench_public": 76.33194505872524,
+          "kev_decision-v7_development": 85.36392405063292,
+          "kev_decision-v7_test": 85.5,
+          "kev_transfer-v4_development": 81.70731707317073,
+          "kev_transfer-v4_test": 85.67073170731707,
+          "kev_transfer-v9_development": 75.62141491395793,
+          "kev_transfer-v9_test": 76.95984703632887,
+          "mmlu_fewshot": 56.92921236291126,
+          "mmlu": 58.31078193989461,
+          "hellaswag": 34.78390758812985,
+          "gsm8k_mc10": 20.773313115996967,
+          "arc_easy": 86.82659932659934,
+          "gsm8k_mc4": 37.52843062926459,
+          "winogrande": 60.69455406471981,
+          "arc_challenge": 74.57337883959045,
+          "chess": 22.2,
+          "gpqa_fewshot": 37.37373737373738,
+          "gpqa": 37.37373737373738
+        },
+        "endpoints_percent": {
+          "JevBench": 76.33194505872524,
+          "Kev": 81.80387246356791,
+          "MC-11": 47.94251387405288
+        }
+      },
+      "M017": {
+        "tasks_percent": {
+          "jevbench_public": 75.03065943726419,
+          "kev_decision-v7_development": 86.47151898734177,
+          "kev_decision-v7_test": 85.58333333333333,
+          "kev_transfer-v4_development": 80.64024390243902,
+          "kev_transfer-v4_test": 84.45121951219512,
+          "kev_transfer-v9_development": 73.7093690248566,
+          "kev_transfer-v9_test": 76.09942638623328,
+          "mmlu_fewshot": 46.994730095428,
+          "mmlu": 48.00598205383849,
+          "hellaswag": 29.1575383389763,
+          "gsm8k_mc10": 20.84912812736922,
+          "arc_easy": 65.02525252525253,
+          "gsm8k_mc4": 41.54662623199393,
+          "winogrande": 55.40647198105761,
+          "arc_challenge": 53.49829351535836,
+          "chess": 17.0,
+          "gpqa_fewshot": 31.81818181818182,
+          "gpqa": 29.797979797979796
+        },
+        "endpoints_percent": {
+          "JevBench": 75.03065943726419,
+          "Kev": 81.15918519106653,
+          "MC-11": 39.918198589585096
+        }
+      },
+      "M027": {
+        "tasks_percent": {
+          "jevbench_public": 76.47965228976581,
+          "kev_decision-v7_development": 86.07594936708861,
+          "kev_decision-v7_test": 85.41666666666667,
+          "kev_transfer-v4_development": 82.01219512195122,
+          "kev_transfer-v4_test": 85.97560975609755,
+          "kev_transfer-v9_development": 75.90822179732314,
+          "kev_transfer-v9_test": 76.95984703632887,
+          "mmlu_fewshot": 56.15296966244124,
+          "mmlu": 56.16721264777097,
+          "hellaswag": 35.68014339772954,
+          "gsm8k_mc10": 19.63608794541319,
+          "arc_easy": 82.74410774410774,
+          "gsm8k_mc4": 37.90750568612585,
+          "winogrande": 59.27387529597474,
+          "arc_challenge": 69.45392491467577,
+          "chess": 17.8,
+          "gpqa_fewshot": 35.35353535353536,
+          "gpqa": 35.35353535353536
+        },
+        "endpoints_percent": {
+          "JevBench": 76.47965228976581,
+          "Kev": 82.05808162424267,
+          "MC-11": 45.95662709102816
+        }
+      },
+      "M016": {
+        "tasks_percent": {
+          "jevbench_public": 76.8866883985563,
+          "kev_decision-v7_development": 85.91772151898734,
+          "kev_decision-v7_test": 85.91666666666667,
+          "kev_transfer-v4_development": 80.79268292682927,
+          "kev_transfer-v4_test": 85.21341463414635,
+          "kev_transfer-v9_development": 74.5697896749522,
+          "kev_transfer-v9_test": 76.38623326959846,
+          "mmlu_fewshot": 53.06936333855576,
+          "mmlu": 52.42842899871814,
+          "hellaswag": 33.72834096793467,
+          "gsm8k_mc10": 20.697498104624714,
+          "arc_easy": 74.24242424242424,
+          "gsm8k_mc4": 40.48521607278241,
+          "winogrande": 56.11681136543015,
+          "arc_challenge": 64.84641638225256,
+          "chess": 19.4,
+          "gpqa_fewshot": 32.323232323232325,
+          "gpqa": 33.83838383838384
+        },
+        "endpoints_percent": {
+          "JevBench": 76.8866883985563,
+          "Kev": 81.46608478186339,
+          "MC-11": 43.74328323948534
+        }
+      },
+      "M014": {
+        "tasks_percent": {
+          "jevbench_public": 76.87125629979087,
+          "kev_decision-v7_development": 85.20569620253164,
+          "kev_decision-v7_test": 85.58333333333333,
+          "kev_transfer-v4_development": 81.40243902439025,
+          "kev_transfer-v4_test": 85.97560975609755,
+          "kev_transfer-v9_development": 75.04780114722753,
+          "kev_transfer-v9_test": 76.8642447418738,
+          "mmlu_fewshot": 56.72981056829511,
+          "mmlu": 57.40635237145706,
+          "hellaswag": 33.54909380601474,
+          "gsm8k_mc10": 21.37983320697498,
+          "arc_easy": 86.86868686868686,
+          "gsm8k_mc4": 38.96891584533738,
+          "winogrande": 59.74743488555643,
+          "arc_challenge": 74.2320819112628,
+          "chess": 19.0,
+          "gpqa_fewshot": 38.38383838383838,
+          "gpqa": 38.38383838383838
+        },
+        "endpoints_percent": {
+          "JevBench": 76.87125629979087,
+          "Kev": 81.67985403424235,
+          "MC-11": 47.69544420284201
+        }
+      },
+      "M015": {
+        "tasks_percent": {
+          "jevbench_public": 78.01323160843285,
+          "kev_decision-v7_development": 85.52215189873418,
+          "kev_decision-v7_test": 85.16666666666667,
+          "kev_transfer-v4_development": 80.64024390243902,
+          "kev_transfer-v4_test": 85.36585365853658,
+          "kev_transfer-v9_development": 74.282982791587,
+          "kev_transfer-v9_test": 77.151051625239,
+          "mmlu_fewshot": 57.29952998148412,
+          "mmlu": 57.29952998148412,
+          "hellaswag": 38.88667596096395,
+          "gsm8k_mc10": 21.00075815011372,
+          "arc_easy": 86.91077441077442,
+          "gsm8k_mc4": 39.27217589082638,
+          "winogrande": 61.40489344909235,
+          "arc_challenge": 74.48805460750854,
+          "chess": 20.8,
+          "gpqa_fewshot": 39.39393939393939,
+          "gpqa": 39.39393939393939
+        },
+        "endpoints_percent": {
+          "JevBench": 78.01323160843285,
+          "Kev": 81.35482509053374,
+          "MC-11": 48.74093374728421
+        }
+      },
+      "M019": {
+        "tasks_percent": {
+          "jevbench_public": 75.81027050196298,
+          "kev_decision-v7_development": 85.28481012658227,
+          "kev_decision-v7_test": 85.83333333333333,
+          "kev_transfer-v4_development": 81.09756097560975,
+          "kev_transfer-v4_test": 83.84146341463415,
+          "kev_transfer-v9_development": 74.8565965583174,
+          "kev_transfer-v9_test": 76.19502868068834,
+          "mmlu_fewshot": 56.0675117504629,
+          "mmlu": 58.4247258225324,
+          "hellaswag": 35.52081258713404,
+          "gsm8k_mc10": 22.744503411675513,
+          "arc_easy": 87.03703703703702,
+          "gsm8k_mc4": 39.65125094768764,
+          "winogrande": 59.43172849250198,
+          "arc_challenge": 76.5358361774744,
+          "chess": 18.8,
+          "gpqa_fewshot": 41.91919191919192,
+          "gpqa": 39.39393939393939
+        },
+        "endpoints_percent": {
+          "JevBench": 75.81027050196298,
+          "Kev": 81.1847988481942,
+          "MC-11": 48.68423068542156
+        }
+      },
+      "M025": {
+        "tasks_percent": {
+          "jevbench_public": 79.58730568250692,
+          "kev_decision-v7_development": 84.96835443037975,
+          "kev_decision-v7_test": 85.25,
+          "kev_transfer-v4_development": 83.84146341463415,
+          "kev_transfer-v4_test": 84.60365853658537,
+          "kev_transfer-v9_development": 76.48183556405354,
+          "kev_transfer-v9_test": 77.34225621414915,
+          "mmlu_fewshot": 62.14214499359065,
+          "mmlu": 61.12377154251531,
+          "hellaswag": 43.80601473809998,
+          "gsm8k_mc10": 22.21379833206975,
+          "arc_easy": 91.70875420875421,
+          "gsm8k_mc4": 39.04473085670963,
+          "winogrande": 59.82636148382005,
+          "arc_challenge": 81.56996587030717,
+          "chess": 24.6,
+          "gpqa_fewshot": 35.35353535353536,
+          "gpqa": 39.39393939393939
+        },
+        "endpoints_percent": {
+          "JevBench": 79.58730568250692,
+          "Kev": 82.081261359967,
+          "MC-11": 50.98027425212195
+        }
+      },
+      "M024": {
+        "tasks_percent": {
+          "jevbench_public": 73.52330308341661,
+          "kev_decision-v7_development": 85.60126582278481,
+          "kev_decision-v7_test": 85.0,
+          "kev_transfer-v4_development": 81.09756097560975,
+          "kev_transfer-v4_test": 84.45121951219512,
+          "kev_transfer-v9_development": 74.18738049713193,
+          "kev_transfer-v9_test": 76.09942638623328,
+          "mmlu_fewshot": 58.26093149124056,
+          "mmlu": 58.09001566728387,
+          "hellaswag": 38.27922724556861,
+          "gsm8k_mc10": 21.68309325246399,
+          "arc_easy": 87.66835016835017,
+          "gsm8k_mc4": 39.19636087945413,
+          "winogrande": 56.66929755327546,
+          "arc_challenge": 76.79180887372014,
+          "chess": 21.4,
+          "gpqa_fewshot": 35.858585858585855,
+          "gpqa": 35.35353535353536
+        },
+        "endpoints_percent": {
+          "JevBench": 73.52330308341661,
+          "Kev": 81.07280886565916,
+          "MC-11": 48.11374603122529
+        }
+      },
+      "M023": {
+        "tasks_percent": {
+          "jevbench_public": 74.25801022163252,
+          "kev_decision-v7_development": 85.20569620253164,
+          "kev_decision-v7_test": 85.91666666666667,
+          "kev_transfer-v4_development": 82.92682926829268,
+          "kev_transfer-v4_test": 84.14634146341463,
+          "kev_transfer-v9_development": 76.19502868068834,
+          "kev_transfer-v9_test": 76.95984703632887,
+          "mmlu_fewshot": 62.24184589089873,
+          "mmlu": 59.74220196553197,
+          "hellaswag": 39.59370643298148,
+          "gsm8k_mc10": 21.152388172858224,
+          "arc_easy": 90.36195286195287,
+          "gsm8k_mc4": 40.86429112964367,
+          "winogrande": 59.0370955011839,
+          "arc_challenge": 80.54607508532423,
+          "chess": 30.2,
+          "gpqa_fewshot": 38.88888888888889,
+          "gpqa": 38.88888888888889
+        },
+        "endpoints_percent": {
+          "JevBench": 74.25801022163252,
+          "Kev": 81.89173488632046,
+          "MC-11": 51.0470304380139
+        }
+      },
+      "M022": {
+        "tasks_percent": {
+          "jevbench_public": 72.49979523973332,
+          "kev_decision-v7_development": 86.07594936708861,
+          "kev_decision-v7_test": 85.41666666666667,
+          "kev_transfer-v4_development": 82.46951219512195,
+          "kev_transfer-v4_test": 84.14634146341463,
+          "kev_transfer-v9_development": 75.23900573613767,
+          "kev_transfer-v9_test": 76.76864244741874,
+          "mmlu_fewshot": 59.91311778948868,
+          "mmlu": 58.652613587808,
+          "hellaswag": 33.37980481975702,
+          "gsm8k_mc10": 21.30401819560273,
+          "arc_easy": 87.5,
+          "gsm8k_mc4": 40.48521607278241,
+          "winogrande": 58.40568271507498,
+          "arc_challenge": 78.41296928327645,
+          "chess": 22.6,
+          "gpqa_fewshot": 37.37373737373738,
+          "gpqa": 37.87878787878788
+        },
+        "endpoints_percent": {
+          "JevBench": 72.49979523973332,
+          "Kev": 81.68601964597471,
+          "MC-11": 48.71872251966504
+        }
+      },
+      "M020": {
+        "tasks_percent": {
+          "jevbench_public": 78.76917238630345,
+          "kev_decision-v7_development": 85.28481012658227,
+          "kev_decision-v7_test": 85.16666666666667,
+          "kev_transfer-v4_development": 81.09756097560975,
+          "kev_transfer-v4_test": 83.38414634146342,
+          "kev_transfer-v9_development": 74.5697896749522,
+          "kev_transfer-v9_test": 76.67304015296367,
+          "mmlu_fewshot": 61.85728528699616,
+          "mmlu": 59.88463181882923,
+          "hellaswag": 42.35212109141605,
+          "gsm8k_mc10": 21.986353297952995,
+          "arc_easy": 90.78282828282829,
+          "gsm8k_mc4": 39.80288097043215,
+          "winogrande": 57.30071033938438,
+          "arc_challenge": 80.54607508532423,
+          "chess": 25.8,
+          "gpqa_fewshot": 38.38383838383838,
+          "gpqa": 39.8989898989899
+        },
+        "endpoints_percent": {
+          "JevBench": 78.76917238630345,
+          "Kev": 81.029335656373,
+          "MC-11": 50.78142858690835
+        }
+      },
+      "M021": {
+        "tasks_percent": {
+          "jevbench_public": 75.62288073123986,
+          "kev_decision-v7_development": 85.75949367088607,
+          "kev_decision-v7_test": 85.58333333333333,
+          "kev_transfer-v4_development": 82.6219512195122,
+          "kev_transfer-v4_test": 83.9939024390244,
+          "kev_transfer-v9_development": 75.4302103250478,
+          "kev_transfer-v9_test": 76.38623326959846,
+          "mmlu_fewshot": 61.20922945449366,
+          "mmlu": 59.79205241418601,
+          "hellaswag": 43.288189603664605,
+          "gsm8k_mc10": 22.21379833206975,
+          "arc_easy": 90.82491582491582,
+          "gsm8k_mc4": 41.015921152388174,
+          "winogrande": 59.27387529597474,
+          "arc_challenge": 80.37542662116041,
+          "chess": 22.0,
+          "gpqa_fewshot": 37.37373737373738,
+          "gpqa": 40.90909090909091
+        },
+        "endpoints_percent": {
+          "JevBench": 75.62288073123986,
+          "Kev": 81.6291873762337,
+          "MC-11": 50.75238518015286
+        }
+      },
+      "M026": {
+        "tasks_percent": {
+          "jevbench_public": 74.24339033859158,
+          "kev_decision-v7_development": 85.12658227848101,
+          "kev_decision-v7_test": 85.08333333333333,
+          "kev_transfer-v4_development": 83.07926829268293,
+          "kev_transfer-v4_test": 83.38414634146342,
+          "kev_transfer-v9_development": 75.81261950286807,
+          "kev_transfer-v9_test": 76.09942638623328,
+          "mmlu_fewshot": 61.58666856573137,
+          "mmlu": 60.31192137872098,
+          "hellaswag": 40.967934674367655,
+          "gsm8k_mc10": 22.21379833206975,
+          "arc_easy": 91.03535353535354,
+          "gsm8k_mc4": 40.48521607278241,
+          "winogrande": 59.98421468034728,
+          "arc_challenge": 80.80204778156995,
+          "chess": 29.6,
+          "gpqa_fewshot": 38.38383838383838,
+          "gpqa": 39.8989898989899
+        },
+        "endpoints_percent": {
+          "JevBench": 74.24339033859158,
+          "Kev": 81.43089602251034,
+          "MC-11": 51.38818030034284
+        }
+      },
+      "M038": {
+        "tasks_percent": {
+          "jevbench_public": 77.65806127519234,
+          "kev_decision-v7_development": 84.65189873417721,
+          "kev_decision-v7_test": 83.66666666666667,
+          "kev_transfer-v4_development": 78.8109756097561,
+          "kev_transfer-v4_test": 80.48780487804878,
+          "kev_transfer-v9_development": 71.79732313575526,
+          "kev_transfer-v9_test": 73.80497131931166,
+          "mmlu_fewshot": 60.73921093861273,
+          "mmlu": 60.83891183592081,
+          "hellaswag": 50.18920533758215,
+          "gsm8k_mc10": 19.56027293404094,
+          "arc_easy": 93.30808080808082,
+          "gsm8k_mc4": 37.30098559514784,
+          "winogrande": 62.43093922651933,
+          "arc_challenge": 83.27645051194538,
+          "chess": 33.8,
+          "gpqa_fewshot": 36.86868686868687,
+          "gpqa": 40.90909090909091
+        },
+        "endpoints_percent": {
+          "JevBench": 77.65806127519234,
+          "Kev": 78.86994005728594,
+          "MC-11": 52.65653045142071
+        }
+      },
+      "M039": {
+        "tasks_percent": {
+          "jevbench_public": 76.77785149147378,
+          "kev_decision-v7_development": 85.44303797468355,
+          "kev_decision-v7_test": 85.08333333333333,
+          "kev_transfer-v4_development": 77.89634146341463,
+          "kev_transfer-v4_test": 80.9451219512195,
+          "kev_transfer-v9_development": 70.74569789674952,
+          "kev_transfer-v9_test": 73.1357552581262,
+          "mmlu_fewshot": 59.40037031761858,
+          "mmlu": 60.96709870388833,
+          "hellaswag": 47.31129257120096,
+          "gsm8k_mc10": 16.906747536012134,
+          "arc_easy": 93.0976430976431,
+          "gsm8k_mc4": 33.73768006065201,
+          "winogrande": 63.22020520915549,
+          "arc_challenge": 83.44709897610922,
+          "chess": 25.4,
+          "gpqa_fewshot": 35.858585858585855,
+          "gpqa": 35.35353535353536
+        },
+        "endpoints_percent": {
+          "JevBench": 76.77785149147378,
+          "Kev": 78.87488131292112,
+          "MC-11": 50.427296153127365
+        }
+      },
+      "M052": {
+        "tasks_percent": {
+          "jevbench_public": 72.52021666366352,
+          "kev_decision-v7_development": 84.81012658227849,
+          "kev_decision-v7_test": 84.08333333333333,
+          "kev_transfer-v4_development": 74.84756097560975,
+          "kev_transfer-v4_test": 80.03048780487805,
+          "kev_transfer-v9_development": 68.26003824091778,
+          "kev_transfer-v9_test": 72.27533460803059,
+          "mmlu_fewshot": 60.43298675402364,
+          "mmlu": 61.90713573565019,
+          "hellaswag": 58.1557458673571,
+          "gsm8k_mc10": 19.02956785443518,
+          "arc_easy": 94.27609427609428,
+          "gsm8k_mc4": 32.676269901440484,
+          "winogrande": 64.08839779005525,
+          "arc_challenge": 85.75085324232082,
+          "chess": 41.0,
+          "gpqa_fewshot": 34.84848484848485,
+          "gpqa": 35.35353535353536
+        },
+        "endpoints_percent": {
+          "JevBench": 72.52021666366352,
+          "Kev": 77.384480257508,
+          "MC-11": 53.410824693036105
+        }
+      },
+      "M036": {
+        "tasks_percent": {
+          "jevbench_public": 73.94275448971011,
+          "kev_decision-v7_development": 85.36392405063292,
+          "kev_decision-v7_test": 84.33333333333333,
+          "kev_transfer-v4_development": 80.79268292682927,
+          "kev_transfer-v4_test": 82.16463414634147,
+          "kev_transfer-v9_development": 73.61376673040154,
+          "kev_transfer-v9_test": 74.95219885277247,
+          "mmlu_fewshot": 61.03831363053696,
+          "mmlu": 60.78906138726677,
+          "hellaswag": 49.65146385182235,
+          "gsm8k_mc10": 21.076573161485975,
+          "arc_easy": 93.43434343434345,
+          "gsm8k_mc4": 39.49962092494314,
+          "winogrande": 61.56274664561957,
+          "arc_challenge": 83.19112627986348,
+          "chess": 40.4,
+          "gpqa_fewshot": 37.37373737373738,
+          "gpqa": 40.90909090909091
+        },
+        "endpoints_percent": {
+          "JevBench": 73.94275448971011,
+          "Kev": 80.20342334005183,
+          "MC-11": 53.53873432715545
+        }
+      },
+      "M037": {
+        "tasks_percent": {
+          "jevbench_public": 75.02903500581519,
+          "kev_decision-v7_development": 86.23417721518987,
+          "kev_decision-v7_test": 84.33333333333333,
+          "kev_transfer-v4_development": 78.35365853658537,
+          "kev_transfer-v4_test": 82.77439024390245,
+          "kev_transfer-v9_development": 71.79732313575526,
+          "kev_transfer-v9_test": 75.1434034416826,
+          "mmlu_fewshot": 61.088164079191,
+          "mmlu": 60.44010824668851,
+          "hellaswag": 38.84684325831508,
+          "gsm8k_mc10": 21.30401819560273,
+          "arc_easy": 91.24579124579124,
+          "gsm8k_mc4": 39.34799090219864,
+          "winogrande": 65.50907655880032,
+          "arc_challenge": 80.46075085324232,
+          "chess": 21.4,
+          "gpqa_fewshot": 39.39393939393939,
+          "gpqa": 37.37373737373738
+        },
+        "endpoints_percent": {
+          "JevBench": 75.02903500581519,
+          "Kev": 79.77271431774147,
+          "MC-11": 50.58276546431878
+        }
+      },
+      "M041": {
+        "tasks_percent": {
+          "jevbench_public": 76.13242665487248,
+          "kev_decision-v7_development": 84.73101265822785,
+          "kev_decision-v7_test": 84.08333333333333,
+          "kev_transfer-v4_development": 80.1829268292683,
+          "kev_transfer-v4_test": 83.6890243902439,
+          "kev_transfer-v9_development": 74.8565965583174,
+          "kev_transfer-v9_test": 75.90822179732314,
+          "mmlu_fewshot": 63.35279874661729,
+          "mmlu": 62.38427574419598,
+          "hellaswag": 55.40728938458475,
+          "gsm8k_mc10": 20.621683093252464,
+          "arc_easy": 94.31818181818181,
+          "gsm8k_mc4": 37.30098559514784,
+          "winogrande": 62.50986582478295,
+          "arc_challenge": 83.44709897610922,
+          "chess": 35.0,
+          "gpqa_fewshot": 36.36363636363637,
+          "gpqa": 39.39393939393939
+        },
+        "endpoints_percent": {
+          "JevBench": 76.13242665487248,
+          "Kev": 80.57518592778565,
+          "MC-11": 53.64543226731346
+        }
+      },
+      "M042": {
+        "tasks_percent": {
+          "jevbench_public": 72.73348130675272,
+          "kev_decision-v7_development": 85.8386075949367,
+          "kev_decision-v7_test": 84.75,
+          "kev_transfer-v4_development": 80.1829268292683,
+          "kev_transfer-v4_test": 82.6219512195122,
+          "kev_transfer-v9_development": 72.848948374761,
+          "kev_transfer-v9_test": 75.23900573613767,
+          "mmlu_fewshot": 56.68708161230593,
+          "mmlu": 60.48995869534254,
+          "hellaswag": 49.55188209520016,
+          "gsm8k_mc10": 20.773313115996967,
+          "arc_easy": 93.05555555555556,
+          "gsm8k_mc4": 38.21076573161486,
+          "winogrande": 61.40489344909235,
+          "arc_challenge": 83.70307167235495,
+          "chess": 25.8,
+          "gpqa_fewshot": 35.858585858585855,
+          "gpqa": 35.35353535353536
+        },
+        "endpoints_percent": {
+          "JevBench": 72.73348130675272,
+          "Kev": 80.24690662576931,
+          "MC-11": 50.98987664905314
+        }
+      },
+      "M043": {
+        "tasks_percent": {
+          "jevbench_public": 71.84259668779792,
+          "kev_decision-v7_development": 84.81012658227849,
+          "kev_decision-v7_test": 82.91666666666667,
+          "kev_transfer-v4_development": 78.35365853658537,
+          "kev_transfer-v4_test": 80.79268292682927,
+          "kev_transfer-v9_development": 71.60611854684512,
+          "kev_transfer-v9_test": 73.23135755258126,
+          "mmlu_fewshot": 61.10240706452073,
+          "mmlu": 61.77182737501781,
+          "hellaswag": 58.75323640709023,
+          "gsm8k_mc10": 20.84912812736922,
+          "arc_easy": 94.6969696969697,
+          "gsm8k_mc4": 36.39120545868082,
+          "winogrande": 61.87845303867403,
+          "arc_challenge": 85.580204778157,
+          "chess": 42.0,
+          "gpqa_fewshot": 34.34343434343434,
+          "gpqa": 36.36363636363637
+        },
+        "endpoints_percent": {
+          "JevBench": 71.84259668779792,
+          "Kev": 78.6184351352977,
+          "MC-11": 53.97550024123184
+        }
+      },
+      "M053": {
+        "tasks_percent": {
+          "jevbench_public": 76.72494143856373,
+          "kev_decision-v7_development": 84.73101265822785,
+          "kev_decision-v7_test": 84.08333333333333,
+          "kev_transfer-v4_development": 81.40243902439025,
+          "kev_transfer-v4_test": 83.9939024390244,
+          "kev_transfer-v9_development": 74.47418738049713,
+          "kev_transfer-v9_test": 76.5774378585086,
+          "mmlu_fewshot": 63.65902293120638,
+          "mmlu": 62.35578977353653,
+          "hellaswag": 53.77414857598088,
+          "gsm8k_mc10": 21.455648218347235,
+          "arc_easy": 94.52861952861953,
+          "gsm8k_mc4": 40.10614101592115,
+          "winogrande": 62.27308602999211,
+          "arc_challenge": 83.61774744027304,
+          "chess": 25.0,
+          "gpqa_fewshot": 38.38383838383838,
+          "gpqa": 38.88888888888889
+        },
+        "endpoints_percent": {
+          "JevBench": 76.72494143856373,
+          "Kev": 80.8770521156636,
+          "MC-11": 53.09481188969128
+        }
+      },
+      "M040": {
+        "tasks_percent": {
+          "jevbench_public": 77.52021666366352,
+          "kev_decision-v7_development": 85.28481012658227,
+          "kev_decision-v7_test": 84.66666666666667,
+          "kev_transfer-v4_development": 78.96341463414635,
+          "kev_transfer-v4_test": 84.14634146341463,
+          "kev_transfer-v9_development": 73.7093690248566,
+          "kev_transfer-v9_test": 76.2906309751434,
+          "mmlu_fewshot": 59.2436974789916,
+          "mmlu": 59.87751032616436,
+          "hellaswag": 43.43756223859789,
+          "gsm8k_mc10": 18.802122820318424,
+          "arc_easy": 92.2979797979798,
+          "gsm8k_mc4": 34.79909021986353,
+          "winogrande": 61.08918705603789,
+          "arc_challenge": 81.31399317406144,
+          "chess": 19.4,
+          "gpqa_fewshot": 34.84848484848485,
+          "gpqa": 36.36363636363637
+        },
+        "endpoints_percent": {
+          "JevBench": 77.52021666366352,
+          "Kev": 80.51020548180166,
+          "MC-11": 49.22484221128511
+        }
+      },
+      "M045": {
+        "tasks_percent": {
+          "jevbench_public": 76.0318893639327,
+          "kev_decision-v7_development": 85.36392405063292,
+          "kev_decision-v7_test": 84.58333333333333,
+          "kev_transfer-v4_development": 78.96341463414635,
+          "kev_transfer-v4_test": 81.85975609756098,
+          "kev_transfer-v9_development": 73.51816443594646,
+          "kev_transfer-v9_test": 74.66539196940727,
+          "mmlu_fewshot": 59.39324882495371,
+          "mmlu": 60.63951004130466,
+          "hellaswag": 52.2903804023103,
+          "gsm8k_mc10": 20.166793025018954,
+          "arc_easy": 92.17171717171718,
+          "gsm8k_mc4": 36.16376042456406,
+          "winogrande": 58.87924230465666,
+          "arc_challenge": 83.10580204778157,
+          "chess": 28.6,
+          "gpqa_fewshot": 37.37373737373738,
+          "gpqa": 37.37373737373738
+        },
+        "endpoints_percent": {
+          "JevBench": 76.0318893639327,
+          "Kev": 79.82566408683788,
+          "MC-11": 51.46890263543471
+        }
+      },
+      "M046": {
+        "tasks_percent": {
+          "jevbench_public": 75.1591055525524,
+          "kev_decision-v7_development": 85.04746835443038,
+          "kev_decision-v7_test": 84.91666666666667,
+          "kev_transfer-v4_development": 79.72560975609755,
+          "kev_transfer-v4_test": 84.29878048780488,
+          "kev_transfer-v9_development": 72.75334608030593,
+          "kev_transfer-v9_test": 75.23900573613767,
+          "mmlu_fewshot": 61.05255661586668,
+          "mmlu": 59.56416464891041,
+          "hellaswag": 47.92869946225851,
+          "gsm8k_mc10": 20.47005307050796,
+          "arc_easy": 91.58249158249158,
+          "gsm8k_mc4": 37.75587566338135,
+          "winogrande": 61.40489344909235,
+          "arc_challenge": 82.25255972696246,
+          "chess": 23.6,
+          "gpqa_fewshot": 42.42424242424242,
+          "gpqa": 37.37373737373738
+        },
+        "endpoints_percent": {
+          "JevBench": 75.1591055525524,
+          "Kev": 80.3301461802405,
+          "MC-11": 51.400843092495556
+        }
+      },
+      "M047": {
+        "tasks_percent": {
+          "jevbench_public": 77.13940351969248,
+          "kev_decision-v7_development": 85.12658227848101,
+          "kev_decision-v7_test": 83.66666666666667,
+          "kev_transfer-v4_development": 77.13414634146342,
+          "kev_transfer-v4_test": 81.09756097560975,
+          "kev_transfer-v9_development": 70.07648183556405,
+          "kev_transfer-v9_test": 72.75334608030593,
+          "mmlu_fewshot": 61.69349095570431,
+          "mmlu": 61.60803304372596,
+          "hellaswag": 56.55247958573989,
+          "gsm8k_mc10": 18.72630780894617,
+          "arc_easy": 93.68686868686869,
+          "gsm8k_mc4": 36.01213040181956,
+          "winogrande": 61.40489344909235,
+          "arc_challenge": 84.0443686006826,
+          "chess": 45.4,
+          "gpqa_fewshot": 34.34343434343434,
+          "gpqa": 33.83838383838384
+        },
+        "endpoints_percent": {
+          "JevBench": 77.13940351969248,
+          "Kev": 78.30913069634848,
+          "MC-11": 53.39185370130888
+        }
+      },
+      "M044": {
+        "tasks_percent": {
+          "jevbench_public": 76.36257719462054,
+          "kev_decision-v7_development": 84.88924050632912,
+          "kev_decision-v7_test": 84.83333333333333,
+          "kev_transfer-v4_development": 79.8780487804878,
+          "kev_transfer-v4_test": 83.53658536585365,
+          "kev_transfer-v9_development": 73.51816443594646,
+          "kev_transfer-v9_test": 75.52581261950287,
+          "mmlu_fewshot": 62.8756587380715,
+          "mmlu": 60.78193989460191,
+          "hellaswag": 46.12626966739693,
+          "gsm8k_mc10": 20.92494313874147,
+          "arc_easy": 92.46632996632997,
+          "gsm8k_mc4": 38.96891584533738,
+          "winogrande": 60.85240726124704,
+          "arc_challenge": 82.67918088737203,
+          "chess": 25.2,
+          "gpqa_fewshot": 38.38383838383838,
+          "gpqa": 40.4040404040404
+        },
+        "endpoints_percent": {
+          "JevBench": 76.36257719462054,
+          "Kev": 80.3635308402422,
+          "MC-11": 51.78759310790701
+        }
+      },
+      "M054": {
+        "tasks_percent": {
+          "jevbench_public": 76.76485603988183,
+          "kev_decision-v7_development": 85.44303797468355,
+          "kev_decision-v7_test": 85.41666666666667,
+          "kev_transfer-v4_development": 80.33536585365853,
+          "kev_transfer-v4_test": 84.29878048780488,
+          "kev_transfer-v9_development": 73.4225621414914,
+          "kev_transfer-v9_test": 75.90822179732314,
+          "mmlu_fewshot": 55.07050277738214,
+          "mmlu": 54.72154963680388,
+          "hellaswag": 35.89922326229835,
+          "gsm8k_mc10": 20.39423805913571,
+          "arc_easy": 82.11279461279462,
+          "gsm8k_mc4": 35.4814253222138,
+          "winogrande": 58.72138910812944,
+          "arc_challenge": 70.39249146757679,
+          "chess": 30.0,
+          "gpqa_fewshot": 35.35353535353536,
+          "gpqa": 37.37373737373738
+        },
+        "endpoints_percent": {
+          "JevBench": 76.76485603988183,
+          "Kev": 80.80410582027136,
+          "MC-11": 46.86553517941886
+        }
+      },
+      "M055": {
+        "tasks_percent": {
+          "jevbench_public": 80.25279702524284,
+          "kev_decision-v7_development": 84.33544303797468,
+          "kev_decision-v7_test": 84.41666666666667,
+          "kev_transfer-v4_development": 78.65853658536585,
+          "kev_transfer-v4_test": 83.07926829268293,
+          "kev_transfer-v9_development": 73.04015296367113,
+          "kev_transfer-v9_test": 75.62141491395793,
+          "mmlu_fewshot": 61.46560319042872,
+          "mmlu": 61.98547215496368,
+          "hellaswag": 54.38159729137622,
+          "gsm8k_mc10": 19.711902956785444,
+          "arc_easy": 93.35016835016835,
+          "gsm8k_mc4": 35.93631539044731,
+          "winogrande": 61.01026045777427,
+          "arc_challenge": 83.53242320819113,
+          "chess": 31.8,
+          "gpqa_fewshot": 34.84848484848485,
+          "gpqa": 35.858585858585855
+        },
+        "endpoints_percent": {
+          "JevBench": 80.25279702524284,
+          "Kev": 79.8585804100532,
+          "MC-11": 52.170983064291434
+        }
+      },
+      "M050": {
+        "tasks_percent": {
+          "jevbench_public": 76.79247137451472,
+          "kev_decision-v7_development": 84.88924050632912,
+          "kev_decision-v7_test": 85.41666666666667,
+          "kev_transfer-v4_development": 79.8780487804878,
+          "kev_transfer-v4_test": 82.46951219512195,
+          "kev_transfer-v9_development": 72.94455066921606,
+          "kev_transfer-v9_test": 75.52581261950287,
+          "mmlu_fewshot": 60.98846318188292,
+          "mmlu": 60.99558467454779,
+          "hellaswag": 47.90878311093408,
+          "gsm8k_mc10": 20.47005307050796,
+          "arc_easy": 92.46632996632997,
+          "gsm8k_mc4": 38.21076573161486,
+          "winogrande": 60.37884767166535,
+          "arc_challenge": 83.44709897610922,
+          "chess": 23.0,
+          "gpqa_fewshot": 36.36363636363637,
+          "gpqa": 38.88888888888889
+        },
+        "endpoints_percent": {
+          "JevBench": 76.79247137451472,
+          "Kev": 80.18730523955408,
+          "MC-11": 51.192586512374305
+        }
+      },
+      "M051": {
+        "tasks_percent": {
+          "jevbench_public": 73.6605675408565,
+          "kev_decision-v7_development": 85.28481012658227,
+          "kev_decision-v7_test": 82.5,
+          "kev_transfer-v4_development": 77.7439024390244,
+          "kev_transfer-v4_test": 80.48780487804878,
+          "kev_transfer-v9_development": 70.07648183556405,
+          "kev_transfer-v9_test": 72.94455066921606,
+          "mmlu_fewshot": 60.19797749608318,
+          "mmlu": 62.39851872952571,
+          "hellaswag": 55.65624377614021,
+          "gsm8k_mc10": 18.802122820318424,
+          "arc_easy": 94.44444444444444,
+          "gsm8k_mc4": 34.34420015163002,
+          "winogrande": 63.2991318074191,
+          "arc_challenge": 85.15358361774744,
+          "chess": 30.2,
+          "gpqa_fewshot": 38.38383838383838,
+          "gpqa": 37.87878787878788
+        },
+        "endpoints_percent": {
+          "JevBench": 73.6605675408565,
+          "Kev": 78.17292499140592,
+          "MC-11": 52.79625900963044
+        }
+      },
+      "M048": {
+        "tasks_percent": {
+          "jevbench_public": 75.30600056786847,
+          "kev_decision-v7_development": 84.73101265822785,
+          "kev_decision-v7_test": 84.75,
+          "kev_transfer-v4_development": 80.9451219512195,
+          "kev_transfer-v4_test": 82.46951219512195,
+          "kev_transfer-v9_development": 73.80497131931166,
+          "kev_transfer-v9_test": 75.81261950286807,
+          "mmlu_fewshot": 59.52143569292123,
+          "mmlu": 60.55405212932631,
+          "hellaswag": 51.0157339175463,
+          "gsm8k_mc10": 20.318423047763456,
+          "arc_easy": 92.67676767676768,
+          "gsm8k_mc4": 39.12054586808188,
+          "winogrande": 58.95816890292028,
+          "arc_challenge": 82.25255972696246,
+          "chess": 26.8,
+          "gpqa_fewshot": 35.858585858585855,
+          "gpqa": 35.858585858585855
+        },
+        "endpoints_percent": {
+          "JevBench": 75.30600056786847,
+          "Kev": 80.4188729377915,
+          "MC-11": 51.17589624358739
+        }
+      },
+      "M049": {
+        "tasks_percent": {
+          "jevbench_public": 76.98090542259789,
+          "kev_decision-v7_development": 86.15506329113924,
+          "kev_decision-v7_test": 85.91666666666667,
+          "kev_transfer-v4_development": 79.26829268292683,
+          "kev_transfer-v4_test": 83.6890243902439,
+          "kev_transfer-v9_development": 71.89292543021033,
+          "kev_transfer-v9_test": 76.2906309751434,
+          "mmlu_fewshot": 58.95171627973224,
+          "mmlu": 59.96296823814271,
+          "hellaswag": 42.11312487552281,
+          "gsm8k_mc10": 20.318423047763456,
+          "arc_easy": 88.21548821548821,
+          "gsm8k_mc4": 37.75587566338135,
+          "winogrande": 59.51065509076559,
+          "arc_challenge": 79.18088737201364,
+          "chess": 26.6,
+          "gpqa_fewshot": 36.86868686868687,
+          "gpqa": 37.87878787878788
+        },
+        "endpoints_percent": {
+          "JevBench": 76.98090542259789,
+          "Kev": 80.53543390605506,
+          "MC-11": 49.7596921391168
+        }
+      },
+      "M028": {
+        "tasks_percent": {
+          "jevbench_public": 77.95069099764662,
+          "kev_decision-v7_development": 85.8386075949367,
+          "kev_decision-v7_test": 85.75,
+          "kev_transfer-v4_development": 80.1829268292683,
+          "kev_transfer-v4_test": 84.7560975609756,
+          "kev_transfer-v9_development": 74.47418738049713,
+          "kev_transfer-v9_test": 77.24665391969407,
+          "mmlu_fewshot": 55.81113801452785,
+          "mmlu": 55.88235294117647,
+          "hellaswag": 28.87870942043418,
+          "gsm8k_mc10": 18.043972706595905,
+          "arc_easy": 80.76599326599326,
+          "gsm8k_mc4": 34.11675511751327,
+          "winogrande": 61.95737963693765,
+          "arc_challenge": 70.90443686006824,
+          "chess": 28.0,
+          "gpqa_fewshot": 34.34343434343434,
+          "gpqa": 34.34343434343434
+        },
+        "endpoints_percent": {
+          "JevBench": 77.95069099764662,
+          "Kev": 81.37474554756197,
+          "MC-11": 45.73160060455596
+        }
+      },
+      "M029": {
+        "tasks_percent": {
+          "jevbench_public": 76.08584369420282,
+          "kev_decision-v7_development": 85.28481012658227,
+          "kev_decision-v7_test": 85.66666666666667,
+          "kev_transfer-v4_development": 79.8780487804878,
+          "kev_transfer-v4_test": 82.46951219512195,
+          "kev_transfer-v9_development": 73.04015296367113,
+          "kev_transfer-v9_test": 75.04780114722753,
+          "mmlu_fewshot": 57.76242700470019,
+          "mmlu": 56.8651189289275,
+          "hellaswag": 32.45369448317068,
+          "gsm8k_mc10": 19.9393479909022,
+          "arc_easy": 86.91077441077442,
+          "gsm8k_mc4": 34.34420015163002,
+          "winogrande": 60.29992107340174,
+          "arc_challenge": 77.98634812286689,
+          "chess": 24.0,
+          "gpqa_fewshot": 37.37373737373738,
+          "gpqa": 35.858585858585855
+        },
+        "endpoints_percent": {
+          "JevBench": 76.08584369420282,
+          "Kev": 80.23116531329289,
+          "MC-11": 47.61765049079062
+        }
+      },
+      "M030": {
+        "tasks_percent": {
+          "jevbench_public": 76.20106229626353,
+          "kev_decision-v7_development": 87.18354430379746,
+          "kev_decision-v7_test": 86.33333333333333,
+          "kev_transfer-v4_development": 81.70731707317073,
+          "kev_transfer-v4_test": 85.21341463414635,
+          "kev_transfer-v9_development": 75.33460803059273,
+          "kev_transfer-v9_test": 77.72466539196941,
+          "mmlu_fewshot": 56.20282011109529,
+          "mmlu": 50.79760717846461,
+          "hellaswag": 28.340967934674367,
+          "gsm8k_mc10": 19.48445792266869,
+          "arc_easy": 70.53872053872053,
+          "gsm8k_mc4": 36.23957543593632,
+          "winogrande": 60.1420678768745,
+          "arc_challenge": 61.43344709897611,
+          "chess": 9.6,
+          "gpqa_fewshot": 32.82828282828283,
+          "gpqa": 30.303030303030305
+        },
+        "endpoints_percent": {
+          "JevBench": 76.20106229626353,
+          "Kev": 82.24948046116833,
+          "MC-11": 41.4464524753385
+        }
+      },
+      "M031": {
+        "tasks_percent": {
+          "jevbench_public": 78.43813646316227,
+          "kev_decision-v7_development": 85.68037974683544,
+          "kev_decision-v7_test": 86.33333333333333,
+          "kev_transfer-v4_development": 81.09756097560975,
+          "kev_transfer-v4_test": 85.0609756097561,
+          "kev_transfer-v9_development": 73.4225621414914,
+          "kev_transfer-v9_test": 77.62906309751435,
+          "mmlu_fewshot": 57.84788491667854,
+          "mmlu": 57.57726819541376,
+          "hellaswag": 35.29177454690301,
+          "gsm8k_mc10": 18.423047763457166,
+          "arc_easy": 83.08080808080808,
+          "gsm8k_mc4": 34.64746019711903,
+          "winogrande": 59.43172849250198,
+          "arc_challenge": 73.97610921501706,
+          "chess": 12.8,
+          "gpqa_fewshot": 35.858585858585855,
+          "gpqa": 34.34343434343434
+        },
+        "endpoints_percent": {
+          "JevBench": 78.43813646316227,
+          "Kev": 81.53731248409007,
+          "MC-11": 45.75255469181081
+        }
+      },
+      "M032": {
+        "tasks_percent": {
+          "jevbench_public": 77.86633659311678,
+          "kev_decision-v7_development": 86.86708860759494,
+          "kev_decision-v7_test": 85.83333333333333,
+          "kev_transfer-v4_development": 81.70731707317073,
+          "kev_transfer-v4_test": 84.45121951219512,
+          "kev_transfer-v9_development": 74.95219885277247,
+          "kev_transfer-v9_test": 77.151051625239,
+          "mmlu_fewshot": 56.81526848027346,
+          "mmlu": 54.3939609742202,
+          "hellaswag": 26.74765982871938,
+          "gsm8k_mc10": 19.408642911296436,
+          "arc_easy": 75.04208754208754,
+          "gsm8k_mc4": 35.78468536770281,
+          "winogrande": 58.24782951854776,
+          "arc_challenge": 65.78498293515358,
+          "chess": 17.0,
+          "gpqa_fewshot": 35.858585858585855,
+          "gpqa": 38.38383838383838
+        },
+        "endpoints_percent": {
+          "JevBench": 77.86633659311678,
+          "Kev": 81.82703483405093,
+          "MC-11": 43.95159470912958
+        }
+      },
+      "M033": {
+        "tasks_percent": {
+          "jevbench_public": 75.91609060778308,
+          "kev_decision-v7_development": 85.99683544303798,
+          "kev_decision-v7_test": 86.5,
+          "kev_transfer-v4_development": 78.5060975609756,
+          "kev_transfer-v4_test": 83.07926829268293,
+          "kev_transfer-v9_development": 71.98852772466539,
+          "kev_transfer-v9_test": 75.04780114722753,
+          "mmlu_fewshot": 60.71784646061814,
+          "mmlu": 60.58965959265062,
+          "hellaswag": 43.706432981477796,
+          "gsm8k_mc10": 17.361637604245644,
+          "arc_easy": 91.03535353535354,
+          "gsm8k_mc4": 34.874905231235786,
+          "winogrande": 59.5895816890292,
+          "arc_challenge": 82.25255972696246,
+          "chess": 27.8,
+          "gpqa_fewshot": 39.39393939393939,
+          "gpqa": 40.90909090909091
+        },
+        "endpoints_percent": {
+          "JevBench": 75.91609060778308,
+          "Kev": 80.1864216947649,
+          "MC-11": 50.74827337496395
+        }
+      },
+      "M034": {
+        "tasks_percent": {
+          "jevbench_public": 75.54681911751055,
+          "kev_decision-v7_development": 85.75949367088607,
+          "kev_decision-v7_test": 86.0,
+          "kev_transfer-v4_development": 81.5548780487805,
+          "kev_transfer-v4_test": 84.7560975609756,
+          "kev_transfer-v9_development": 75.23900573613767,
+          "kev_transfer-v9_test": 76.95984703632887,
+          "mmlu_fewshot": 58.90898732374306,
+          "mmlu": 54.75003560746332,
+          "hellaswag": 27.325234017128064,
+          "gsm8k_mc10": 18.57467778620167,
+          "arc_easy": 77.23063973063972,
+          "gsm8k_mc4": 37.8316906747536,
+          "winogrande": 59.66850828729282,
+          "arc_challenge": 68.60068259385665,
+          "chess": 16.8,
+          "gpqa_fewshot": 35.35353535353536,
+          "gpqa": 36.86868686868687
+        },
+        "endpoints_percent": {
+          "JevBench": 75.54681911751055,
+          "Kev": 81.71155367551812,
+          "MC-11": 44.71933438575465
+        }
+      },
+      "M035": {
+        "tasks_percent": {
+          "jevbench_public": 72.39757208926456,
+          "kev_decision-v7_development": 86.7879746835443,
+          "kev_decision-v7_test": 85.83333333333333,
+          "kev_transfer-v4_development": 78.8109756097561,
+          "kev_transfer-v4_test": 83.07926829268293,
+          "kev_transfer-v9_development": 71.51051625239006,
+          "kev_transfer-v9_test": 75.04780114722753,
+          "mmlu_fewshot": 60.07691212078051,
+          "mmlu": 60.51132317333713,
+          "hellaswag": 43.86576379207329,
+          "gsm8k_mc10": 19.9393479909022,
+          "arc_easy": 91.62457912457911,
+          "gsm8k_mc4": 35.405610310841546,
+          "winogrande": 59.19494869771112,
+          "arc_challenge": 82.16723549488054,
+          "chess": 25.4,
+          "gpqa_fewshot": 36.36363636363637,
+          "gpqa": 37.37373737373738
+        },
+        "endpoints_percent": {
+          "JevBench": 72.39757208926456,
+          "Kev": 80.17831155315571,
+          "MC-11": 50.174826767498104
+        }
+      }
+    },
+    "derived": {
+      "E123": {
+        "contrasts": {
+          "E1_head_main_effect": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -0.029181750672979234,
+                "descriptive_se": 1.0508324281138004
+              },
+              "Kev": {
+                "mean": 0.2233334777567091,
+                "descriptive_se": 0.1315555589005659
+              },
+              "MC-11": {
+                "mean": 0.020346111570322734,
+                "descriptive_se": 0.434192924921087
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -0.029181750672979234,
+                "descriptive_se": 1.0508324281138004
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.3659018987341742,
+                "descriptive_se": 0.10261328069800421
+              },
+              "kev_decision-v7_test": {
+                "mean": 0.20833333333333393,
+                "descriptive_se": 0.11154429447367531
+              },
+              "kev_transfer-v4_development": {
+                "mean": 0.2096036585365848,
+                "descriptive_se": 0.5446496161568778
+              },
+              "kev_transfer-v4_test": {
+                "mean": 0.20960365853658125,
+                "descriptive_se": 0.20728110863923818
+              },
+              "kev_transfer-v9_development": {
+                "mean": 0.1553537284894837,
+                "descriptive_se": 0.4254816784845279
+              },
+              "kev_transfer-v9_test": {
+                "mean": 0.19120458891013037,
+                "descriptive_se": 0.10140154605925669
+              },
+              "mmlu_fewshot": {
+                "mean": 0.11127332288848102,
+                "descriptive_se": 1.0205037023373822
+              },
+              "mmlu": {
+                "mean": -0.3204671699188184,
+                "descriptive_se": 0.5077841505884513
+              },
+              "hellaswag": {
+                "mean": -2.62895837482573,
+                "descriptive_se": 1.8437365700507082
+              },
+              "gsm8k_mc10": {
+                "mean": 0.24639878695981787,
+                "descriptive_se": 0.5505295796599569
+              },
+              "arc_easy": {
+                "mean": -0.45770202020202433,
+                "descriptive_se": 1.0600984599707444
+              },
+              "gsm8k_mc4": {
+                "mean": 1.165655799848369,
+                "descriptive_se": 0.8658601790037
+              },
+              "winogrande": {
+                "mean": -0.4044988161010252,
+                "descriptive_se": 0.34190456691324567
+              },
+              "arc_challenge": {
+                "mean": -0.13865187713310423,
+                "descriptive_se": 1.2954557187661229
+              },
+              "chess": {
+                "mean": 1.3249999999999993,
+                "descriptive_se": 1.0780963160435466
+              },
+              "gpqa_fewshot": {
+                "mean": 0.8207070707070718,
+                "descriptive_se": 1.0632832572945952
+              },
+              "gpqa": {
+                "mean": 0.5050505050505083,
+                "descriptive_se": 0.592224212098918
+              }
+            }
+          },
+          "E1_adapter_main_effect": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -1.1174347906804059,
+                "descriptive_se": 0.9856251891754205
+              },
+              "Kev": {
+                "mean": 0.03959954806590993,
+                "descriptive_se": 0.4582312125840544
+              },
+              "MC-11": {
+                "mean": -2.8305005245086132,
+                "descriptive_se": 0.7910303478044234
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -1.1174347906804059,
+                "descriptive_se": 0.9856251891754205
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.8405854430379716,
+                "descriptive_se": 0.1465699767630266
+              },
+              "kev_decision-v7_test": {
+                "mean": 0.2500000000000018,
+                "descriptive_se": 0.22243913025065332
+              },
+              "kev_transfer-v4_development": {
+                "mean": -0.7431402439024364,
+                "descriptive_se": 0.9342073805852854
+              },
+              "kev_transfer-v4_test": {
+                "mean": 0.6669207317073198,
+                "descriptive_se": 0.7313201624388522
+              },
+              "kev_transfer-v9_development": {
+                "mean": -1.0157743785850855,
+                "descriptive_se": 0.6914319320373429
+              },
+              "kev_transfer-v9_test": {
+                "mean": 0.23900573613766873,
+                "descriptive_se": 0.5550561965694804
+              },
+              "mmlu_fewshot": {
+                "mean": -1.8044082039595466,
+                "descriptive_se": 1.8691246788135092
+              },
+              "mmlu": {
+                "mean": -2.5352513886910666,
+                "descriptive_se": 1.539310131577139
+              },
+              "hellaswag": {
+                "mean": -5.880302728540132,
+                "descriptive_se": 1.2055614804501429
+              },
+              "gsm8k_mc10": {
+                "mean": -0.7012888551933272,
+                "descriptive_se": 0.5634293282693088
+              },
+              "arc_easy": {
+                "mean": -5.802819865319865,
+                "descriptive_se": 3.139619389271658
+              },
+              "gsm8k_mc4": {
+                "mean": 0.10424564063684638,
+                "descriptive_se": 1.3907780297916987
+              },
+              "winogrande": {
+                "mean": -1.706787687450669,
+                "descriptive_se": 0.9307226187933179
+              },
+              "arc_challenge": {
+                "mean": -5.172781569965866,
+                "descriptive_se": 2.631159562637206
+              },
+              "chess": {
+                "mean": -2.7750000000000004,
+                "descriptive_se": 0.9936255163121905
+              },
+              "gpqa_fewshot": {
+                "mean": -1.9570707070707103,
+                "descriptive_se": 1.5681492864108852
+              },
+              "gpqa": {
+                "mean": -2.9040404040404044,
+                "descriptive_se": 1.1686400148918192
+              }
+            }
+          },
+          "E1_interaction": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": 0.7025085862805085,
+                "descriptive_se": 1.6617985097256773
+              },
+              "Kev": {
+                "mean": 0.06786376269655037,
+                "descriptive_se": 0.5235728803362469
+              },
+              "MC-11": {
+                "mean": 1.277657406925627,
+                "descriptive_se": 1.646601803377319
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": 0.7025085862805085,
+                "descriptive_se": 1.6617985097256773
+              },
+              "kev_decision-v7_development": {
+                "mean": -0.6131329113924018,
+                "descriptive_se": 0.3187139231348069
+              },
+              "kev_decision-v7_test": {
+                "mean": 0.37499999999999645,
+                "descriptive_se": 0.2975595178559506
+              },
+              "kev_transfer-v4_development": {
+                "mean": -0.03810975609755829,
+                "descriptive_se": 1.1225679171806606
+              },
+              "kev_transfer-v4_test": {
+                "mean": 0.038109756097565395,
+                "descriptive_se": 0.978810093246731
+              },
+              "kev_transfer-v9_development": {
+                "mean": 0.3107074569789745,
+                "descriptive_se": 0.41557684371398856
+              },
+              "kev_transfer-v9_test": {
+                "mean": 0.3346080305927366,
+                "descriptive_se": 0.6720553444538901
+              },
+              "mmlu_fewshot": {
+                "mean": 1.0913687508901901,
+                "descriptive_se": 2.223030286014205
+              },
+              "mmlu": {
+                "mean": 1.702036746902154,
+                "descriptive_se": 1.8157874545951413
+              },
+              "hellaswag": {
+                "mean": 0.044811790479980296,
+                "descriptive_se": 1.401608065534992
+              },
+              "gsm8k_mc10": {
+                "mean": 1.0993176648976482,
+                "descriptive_se": 0.9126712549782336
+              },
+              "arc_easy": {
+                "mean": 2.5357744107744082,
+                "descriptive_se": 3.713271641404964
+              },
+              "gsm8k_mc4": {
+                "mean": 1.0803639120545814,
+                "descriptive_se": 1.5713335562519022
+              },
+              "winogrande": {
+                "mean": 0.1381215469613295,
+                "descriptive_se": 1.2930379453473058
+              },
+              "arc_challenge": {
+                "mean": 3.8609215017064766,
+                "descriptive_se": 4.3663413114978695
+              },
+              "chess": {
+                "mean": -0.14999999999999858,
+                "descriptive_se": 2.8929512036442406
+              },
+              "gpqa_fewshot": {
+                "mean": 1.3888888888888875,
+                "descriptive_se": 1.2088726108034538
+              },
+              "gpqa": {
+                "mean": 1.2626262626262656,
+                "descriptive_se": 2.0874742033059324
+              }
+            }
+          },
+          "E2_B_minus_A": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -0.6592290912466332,
+                "descriptive_se": 0.5157249254878185
+              },
+              "Kev": {
+                "mean": -0.14801496885440457,
+                "descriptive_se": 0.3709390437964961
+              },
+              "MC-11": {
+                "mean": 0.17364987073816174,
+                "descriptive_se": 0.7410804645935553
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -0.6592290912466332,
+                "descriptive_se": 0.5157249254878185
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.4351265822784711,
+                "descriptive_se": 0.2470331486708228
+              },
+              "kev_decision-v7_test": {
+                "mean": 0.04166666666666785,
+                "descriptive_se": 0.17513222517942229
+              },
+              "kev_transfer-v4_development": {
+                "mean": -0.8384146341463392,
+                "descriptive_se": 0.9345312072027221
+              },
+              "kev_transfer-v4_test": {
+                "mean": 0.19054878048780566,
+                "descriptive_se": 0.510822389809022
+              },
+              "kev_transfer-v9_development": {
+                "mean": -0.9321223709369058,
+                "descriptive_se": 0.5552276954756494
+              },
+              "kev_transfer-v9_test": {
+                "mean": 0.21510516252389777,
+                "descriptive_se": 0.36897820831451433
+              },
+              "mmlu_fewshot": {
+                "mean": -0.1317476142999503,
+                "descriptive_se": 0.7587899470953552
+              },
+              "mmlu": {
+                "mean": -0.5928642643498101,
+                "descriptive_se": 0.4686260988325175
+              },
+              "hellaswag": {
+                "mean": -2.4123680541724735,
+                "descriptive_se": 1.1636756045486258
+              },
+              "gsm8k_mc10": {
+                "mean": 0.3222137983320694,
+                "descriptive_se": 0.2633139497621266
+              },
+              "arc_easy": {
+                "mean": -0.24200336700336678,
+                "descriptive_se": 0.33200953491971924
+              },
+              "gsm8k_mc4": {
+                "mean": 0.6823351023502671,
+                "descriptive_se": 0.9841360868648346
+              },
+              "winogrande": {
+                "mean": -1.164167324388318,
+                "descriptive_se": 0.46846221791959547
+              },
+              "arc_challenge": {
+                "mean": -0.4052901023890776,
+                "descriptive_se": 0.24476556424997847
+              },
+              "chess": {
+                "mean": 2.9499999999999993,
+                "descriptive_se": 3.436446808356949
+              },
+              "gpqa_fewshot": {
+                "mean": 2.0202020202020172,
+                "descriptive_se": 1.5010567761049647
+              },
+              "gpqa": {
+                "mean": 0.8838383838383841,
+                "descriptive_se": 0.631313131313131
+              }
+            }
+          },
+          "E2_Frozen_minus_A": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -0.12856214610600603,
+                "descriptive_se": 1.6035644390488006
+              },
+              "Kev": {
+                "mean": -0.06189111175456574,
+                "descriptive_se": 0.5207295130426063
+              },
+              "MC-11": {
+                "mean": 0.4028649867288312,
+                "descriptive_se": 0.9327373623576042
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -0.12856214610600603,
+                "descriptive_se": 1.6035644390488006
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.5142405063291093,
+                "descriptive_se": 0.20806611073390624
+              },
+              "kev_decision-v7_test": {
+                "mean": 0.0833333333333357,
+                "descriptive_se": 0.17677669529663576
+              },
+              "kev_transfer-v4_development": {
+                "mean": -0.685975609756099,
+                "descriptive_se": 1.1210574935421864
+              },
+              "kev_transfer-v4_test": {
+                "mean": 0.2667682926829258,
+                "descriptive_se": 0.47548189207857905
+              },
+              "kev_transfer-v9_development": {
+                "mean": -0.8604206500956053,
+                "descriptive_se": 0.9391435327145535
+              },
+              "kev_transfer-v9_test": {
+                "mean": 0.3107074569789603,
+                "descriptive_se": 0.570117611944386
+              },
+              "mmlu_fewshot": {
+                "mean": -0.25815410910126246,
+                "descriptive_se": 0.717083833255459
+              },
+              "mmlu": {
+                "mean": -0.7121492664862572,
+                "descriptive_se": 0.5084350108837202
+              },
+              "hellaswag": {
+                "mean": 0.20912168890659188,
+                "descriptive_se": 2.3455326664001337
+              },
+              "gsm8k_mc10": {
+                "mean": 0.3980288097043214,
+                "descriptive_se": 0.2107761854638897
+              },
+              "arc_easy": {
+                "mean": -0.1578282828282802,
+                "descriptive_se": 0.538538292949656
+              },
+              "gsm8k_mc4": {
+                "mean": 1.6300227445034121,
+                "descriptive_se": 0.1764498362871996
+              },
+              "winogrande": {
+                "mean": -0.05919494869770858,
+                "descriptive_se": 0.43274885950002684
+              },
+              "arc_challenge": {
+                "mean": -0.29863481228668576,
+                "descriptive_se": 0.5005607482024481
+              },
+              "chess": {
+                "mean": 0.6499999999999995,
+                "descriptive_se": 2.9330018752124927
+              },
+              "gpqa_fewshot": {
+                "mean": 1.515151515151512,
+                "descriptive_se": 1.8784439060960763
+              },
+              "gpqa": {
+                "mean": 1.5151515151515138,
+                "descriptive_se": 1.147995092338874
+              }
+            }
+          },
+          "E2_Trainable_minus_Frozen": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -0.6894841269841265,
+                "descriptive_se": 0.8671534818295439
+              },
+              "Kev": {
+                "mean": -0.04499351443492472,
+                "descriptive_se": 0.21758029715372312
+              },
+              "MC-11": {
+                "mean": -0.35081641774335814,
+                "descriptive_se": 0.5851741930516375
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -0.6894841269841265,
+                "descriptive_se": 0.8671534818295439
+              },
+              "kev_decision-v7_development": {
+                "mean": -0.15822784810126933,
+                "descriptive_se": 0.18553859809428055
+              },
+              "kev_decision-v7_test": {
+                "mean": 0.08333333333333215,
+                "descriptive_se": 0.2405626121623423
+              },
+              "kev_transfer-v4_development": {
+                "mean": 0.3048780487804912,
+                "descriptive_se": 0.4444323090583312
+              },
+              "kev_transfer-v4_test": {
+                "mean": -0.5716463414634134,
+                "descriptive_se": 0.3429878048780466
+              },
+              "kev_transfer-v9_development": {
+                "mean": 0.3824091778202714,
+                "descriptive_se": 0.4732072149431922
+              },
+              "kev_transfer-v9_test": {
+                "mean": -0.3107074569789603,
+                "descriptive_se": 0.2981989686458406
+              },
+              "mmlu_fewshot": {
+                "mean": -0.7228315054835495,
+                "descriptive_se": 0.4854252001496272
+              },
+              "mmlu": {
+                "mean": 0.4539951573849894,
+                "descriptive_se": 0.24743771190644928
+              },
+              "hellaswag": {
+                "mean": -3.0173272256522576,
+                "descriptive_se": 1.5768386758908781
+              },
+              "gsm8k_mc10": {
+                "mean": -0.24639878695981654,
+                "descriptive_se": 0.8120674891545632
+              },
+              "arc_easy": {
+                "mean": -0.3577441077441179,
+                "descriptive_se": 0.4100386572860666
+              },
+              "gsm8k_mc4": {
+                "mean": -1.2130401819560266,
+                "descriptive_se": 1.1274960801720608
+              },
+              "winogrande": {
+                "mean": -0.07892659826361559,
+                "descriptive_se": 0.6412027154408788
+              },
+              "arc_challenge": {
+                "mean": 0.19197952218428682,
+                "descriptive_se": 0.8238502720603251
+              },
+              "chess": {
+                "mean": 0.5,
+                "descriptive_se": 2.402082429892863
+              },
+              "gpqa_fewshot": {
+                "mean": 1.2626262626262612,
+                "descriptive_se": 1.2110685664931116
+              },
+              "gpqa": {
+                "mean": -0.6313131313131297,
+                "descriptive_se": 1.9709376218801482
+              }
+            }
+          },
+          "E2_Trainable_minus_A": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -0.8180462730901326,
+                "descriptive_se": 1.614762375167273
+              },
+              "Kev": {
+                "mean": -0.10688462618949046,
+                "descriptive_se": 0.405729086723536
+              },
+              "MC-11": {
+                "mean": 0.052048568985473054,
+                "descriptive_se": 0.5671967308975463
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -0.8180462730901326,
+                "descriptive_se": 1.614762375167273
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.35601265822784,
+                "descriptive_se": 0.22024384346637796
+              },
+              "kev_decision-v7_test": {
+                "mean": 0.16666666666666785,
+                "descriptive_se": 0.13176156917368323
+              },
+              "kev_transfer-v4_development": {
+                "mean": -0.38109756097560776,
+                "descriptive_se": 0.6774538427832012
+              },
+              "kev_transfer-v4_test": {
+                "mean": -0.30487804878048763,
+                "descriptive_se": 0.7389755880207803
+              },
+              "kev_transfer-v9_development": {
+                "mean": -0.4780114722753339,
+                "descriptive_se": 0.4699770938098368
+              },
+              "kev_transfer-v9_test": {
+                "mean": 0.0,
+                "descriptive_se": 0.6033810143008741
+              },
+              "mmlu_fewshot": {
+                "mean": -0.9809856145848119,
+                "descriptive_se": 0.3903783661205268
+              },
+              "mmlu": {
+                "mean": -0.2581541091012678,
+                "descriptive_se": 0.495463276724131
+              },
+              "hellaswag": {
+                "mean": -2.8082055367456658,
+                "descriptive_se": 1.307615019412932
+              },
+              "gsm8k_mc10": {
+                "mean": 0.15163002274450488,
+                "descriptive_se": 0.7805633162234265
+              },
+              "arc_easy": {
+                "mean": -0.5155723905723981,
+                "descriptive_se": 0.3193179904354677
+              },
+              "gsm8k_mc4": {
+                "mean": 0.4169825625473855,
+                "descriptive_se": 1.2853197432738024
+              },
+              "winogrande": {
+                "mean": -0.13812154696132417,
+                "descriptive_se": 0.574933002538806
+              },
+              "arc_challenge": {
+                "mean": -0.10665529010239894,
+                "descriptive_se": 0.6917536373693751
+              },
+              "chess": {
+                "mean": 1.1499999999999995,
+                "descriptive_se": 2.7047797199279153
+              },
+              "gpqa_fewshot": {
+                "mean": 2.7777777777777732,
+                "descriptive_se": 0.9780260975271241
+              },
+              "gpqa": {
+                "mean": 0.8838383838383841,
+                "descriptive_se": 0.9075698086215407
+              }
+            }
+          }
+        }
+      },
+      "E4a": {
+        "contrasts": {
+          "pooling_minus_pointer_all": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -1.7491355704074998,
+                "descriptive_se": 1.0551683775145633
+              },
+              "Kev": {
+                "mean": -1.4649596240922165,
+                "descriptive_se": 0.2537592206006487
+              },
+              "MC-11": {
+                "mean": 0.7275390293043031,
+                "descriptive_se": 1.0675733320166694
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -1.7491355704074998,
+                "descriptive_se": 1.0551683775145633
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.19778481012657778,
+                "descriptive_se": 0.2384380448315546
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.06249999999999645,
+                "descriptive_se": 0.24384791480665793
+              },
+              "kev_transfer-v4_development": {
+                "mean": -2.4390243902439046,
+                "descriptive_se": 0.6901970379677909
+              },
+              "kev_transfer-v4_test": {
+                "mean": -1.5625000000000036,
+                "descriptive_se": 0.20045393595095848
+              },
+              "kev_transfer-v9_development": {
+                "mean": -3.226577437858513,
+                "descriptive_se": 0.5256315233654143
+              },
+              "kev_transfer-v9_test": {
+                "mean": -1.6969407265774379,
+                "descriptive_se": 0.060148457897313226
+              },
+              "mmlu_fewshot": {
+                "mean": -0.33649052841475324,
+                "descriptive_se": 2.1417080137997266
+              },
+              "mmlu": {
+                "mean": 0.48604187437686797,
+                "descriptive_se": 0.6647725222711345
+              },
+              "hellaswag": {
+                "mean": 4.234714200358498,
+                "descriptive_se": 3.2046387522235498
+              },
+              "gsm8k_mc10": {
+                "mean": -1.4783927217589081,
+                "descriptive_se": 0.747011941059259
+              },
+              "arc_easy": {
+                "mean": 1.5993265993265986,
+                "descriptive_se": 1.1016703899812184
+              },
+              "gsm8k_mc4": {
+                "mean": -1.4025777103866517,
+                "descriptive_se": 1.0958263733016849
+              },
+              "winogrande": {
+                "mean": 0.572217837411209,
+                "descriptive_se": 0.5337280512672521
+              },
+              "arc_challenge": {
+                "mean": 3.135665529010243,
+                "descriptive_se": 1.51970377928604
+              },
+              "chess": {
+                "mean": 1.9499999999999993,
+                "descriptive_se": 2.0451161336217556
+              },
+              "gpqa_fewshot": {
+                "mean": 0.8838383838383805,
+                "descriptive_se": 1.7540964633143683
+              },
+              "gpqa": {
+                "mean": -1.6414141414141383,
+                "descriptive_se": 1.477866150343386
+              }
+            }
+          },
+          "pooling_minus_pointer_noffn": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -3.728097476807484,
+                "descriptive_se": 1.680508910824687
+              },
+              "Kev": {
+                "mean": -1.6610998503506416,
+                "descriptive_se": 0.1079202422328029
+              },
+              "MC-11": {
+                "mean": 0.9081473066867396,
+                "descriptive_se": 0.34972481531167504
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -3.728097476807484,
+                "descriptive_se": 1.680508910824687
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.2373417721518969,
+                "descriptive_se": 0.2522564144212678
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.8958333333333321,
+                "descriptive_se": 0.4863590637470296
+              },
+              "kev_transfer-v4_development": {
+                "mean": -2.1341463414634134,
+                "descriptive_se": 0.6467440071828203
+              },
+              "kev_transfer-v4_test": {
+                "mean": -1.676829268292682,
+                "descriptive_se": 0.6223297110729615
+              },
+              "kev_transfer-v9_development": {
+                "mean": -3.2982791586998133,
+                "descriptive_se": 0.12646994794763772
+              },
+              "kev_transfer-v9_test": {
+                "mean": -2.198852772466541,
+                "descriptive_se": 0.28680688336520216
+              },
+              "mmlu_fewshot": {
+                "mean": -0.38099985757014565,
+                "descriptive_se": 0.9778966019492988
+              },
+              "mmlu": {
+                "mean": 0.45933627688363465,
+                "descriptive_se": 0.38523589340313896
+              },
+              "hellaswag": {
+                "mean": 4.212308305118501,
+                "descriptive_se": 1.398724942313276
+              },
+              "gsm8k_mc10": {
+                "mean": -0.6633813495072021,
+                "descriptive_se": 0.35068711363098126
+              },
+              "arc_easy": {
+                "mean": 0.9890572390572423,
+                "descriptive_se": 0.23464826997302998
+              },
+              "gsm8k_mc4": {
+                "mean": -1.8195602729340425,
+                "descriptive_se": 0.9802346400414204
+              },
+              "winogrande": {
+                "mean": 1.4601420678768822,
+                "descriptive_se": 0.7208581299037251
+              },
+              "arc_challenge": {
+                "mean": 1.7918088737201394,
+                "descriptive_se": 0.33411092504182766
+              },
+              "chess": {
+                "mean": 7.35,
+                "descriptive_se": 3.758878378807522
+              },
+              "gpqa_fewshot": {
+                "mean": -0.8838383838383894,
+                "descriptive_se": 1.4921799580164845
+              },
+              "gpqa": {
+                "mean": -2.5252525252525206,
+                "descriptive_se": 1.610364180951936
+              }
+            }
+          },
+          "pointer_noffn_minus_all": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": 0.40393057807918353,
+                "descriptive_se": 0.533062286014418
+              },
+              "Kev": {
+                "mean": -1.5924268432228033,
+                "descriptive_se": 0.32656184606841265
+              },
+              "MC-11": {
+                "mean": 2.21035053215679,
+                "descriptive_se": 0.6632045302309052
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": 0.40393057807918353,
+                "descriptive_se": 0.533062286014418
+              },
+              "kev_decision-v7_development": {
+                "mean": -0.3362341772151929,
+                "descriptive_se": 0.1720462598984674
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.9166666666666643,
+                "descriptive_se": 0.03402069087198955
+              },
+              "kev_transfer-v4_development": {
+                "mean": -2.705792682926827,
+                "descriptive_se": 1.0963870613477265
+              },
+              "kev_transfer-v4_test": {
+                "mean": -1.8673780487804912,
+                "descriptive_se": 0.7023646314420272
+              },
+              "kev_transfer-v9_development": {
+                "mean": -2.2466539196940722,
+                "descriptive_se": 0.5140938752358722
+              },
+              "kev_transfer-v9_test": {
+                "mean": -1.48183556405354,
+                "descriptive_se": 0.3277081548948851
+              },
+              "mmlu_fewshot": {
+                "mean": 1.3691069648198315,
+                "descriptive_se": 0.8224803772550814
+              },
+              "mmlu": {
+                "mean": 1.4438826378008827,
+                "descriptive_se": 0.36396767416724785
+              },
+              "hellaswag": {
+                "mean": 9.126667994423425,
+                "descriptive_se": 3.1709779946508165
+              },
+              "gsm8k_mc10": {
+                "mean": -1.1182714177407123,
+                "descriptive_se": 0.46568667453551654
+              },
+              "arc_easy": {
+                "mean": 2.3358585858585847,
+                "descriptive_se": 1.0142573718254104
+              },
+              "gsm8k_mc4": {
+                "mean": -1.7058377558756597,
+                "descriptive_se": 0.4719446398024535
+              },
+              "winogrande": {
+                "mean": 0.17758484609312752,
+                "descriptive_se": 0.6906077348066313
+              },
+              "arc_challenge": {
+                "mean": 3.263651877133107,
+                "descriptive_se": 1.7667044510860563
+              },
+              "chess": {
+                "mean": 9.799999999999999,
+                "descriptive_se": 2.2256085310164786
+              },
+              "gpqa_fewshot": {
+                "mean": -0.3787878787878771,
+                "descriptive_se": 1.0386332221593477
+              },
+              "gpqa": {
+                "mean": -1.7763568394002505e-15,
+                "descriptive_se": 1.9883858267706582
+              }
+            }
+          },
+          "pooling_noffn_minus_all": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -1.5750313283208008,
+                "descriptive_se": 1.3762460006737944
+              },
+              "Kev": {
+                "mean": -1.7885670694812283,
+                "descriptive_se": 0.13526437797434815
+              },
+              "MC-11": {
+                "mean": 2.3909588095392262,
+                "descriptive_se": 0.35172709470957386
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -1.5750313283208008,
+                "descriptive_se": 1.3762460006737944
+              },
+              "kev_decision-v7_development": {
+                "mean": -0.2966772151898738,
+                "descriptive_se": 0.3251941575722149
+              },
+              "kev_decision-v7_test": {
+                "mean": -1.75,
+                "descriptive_se": 0.42627803481174564
+              },
+              "kev_transfer-v4_development": {
+                "mean": -2.4009146341463357,
+                "descriptive_se": 0.2667682926829266
+              },
+              "kev_transfer-v4_test": {
+                "mean": -1.9817073170731696,
+                "descriptive_se": 0.4698486282750763
+              },
+              "kev_transfer-v9_development": {
+                "mean": -2.3183556405353727,
+                "descriptive_se": 0.36690818800731206
+              },
+              "kev_transfer-v9_test": {
+                "mean": -1.9837476099426432,
+                "descriptive_se": 0.3949022858952754
+              },
+              "mmlu_fewshot": {
+                "mean": 1.324597635664439,
+                "descriptive_se": 1.1022259453607135
+              },
+              "mmlu": {
+                "mean": 1.4171770403076493,
+                "descriptive_se": 0.23074442150319757
+              },
+              "hellaswag": {
+                "mean": 9.104262099183428,
+                "descriptive_se": 0.6525249267273876
+              },
+              "gsm8k_mc10": {
+                "mean": -0.3032600454890062,
+                "descriptive_se": 0.9113582471699238
+              },
+              "arc_easy": {
+                "mean": 1.7255892255892284,
+                "descriptive_se": 0.20690069028833563
+              },
+              "gsm8k_mc4": {
+                "mean": -2.1228203184230505,
+                "descriptive_se": 0.6057298364522066
+              },
+              "winogrande": {
+                "mean": 1.0655090765588007,
+                "descriptive_se": 0.6432235295131639
+              },
+              "arc_challenge": {
+                "mean": 1.9197952218430032,
+                "descriptive_se": 0.1326419091736159
+              },
+              "chess": {
+                "mean": 15.2,
+                "descriptive_se": 3.009983388658482
+              },
+              "gpqa_fewshot": {
+                "mean": -2.146464646464647,
+                "descriptive_se": 2.1265665145891886
+              },
+              "gpqa": {
+                "mean": -0.8838383838383841,
+                "descriptive_se": 0.975305574600713
+              }
+            }
+          },
+          "readout_by_scope_interaction": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -1.9789619063999844,
+                "descriptive_se": 1.8424563234104685
+              },
+              "Kev": {
+                "mean": -0.1961402262584251,
+                "descriptive_se": 0.19970965078317193
+              },
+              "MC-11": {
+                "mean": 0.18060827738243646,
+                "descriptive_se": 0.7397275561588257
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -1.9789619063999844,
+                "descriptive_se": 1.8424563234104685
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.03955696202531911,
+                "descriptive_se": 0.3560126582278433
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.8333333333333357,
+                "descriptive_se": 0.44487826050130597
+              },
+              "kev_transfer-v4_development": {
+                "mean": 0.3048780487804912,
+                "descriptive_se": 1.312805963695512
+              },
+              "kev_transfer-v4_test": {
+                "mean": -0.11432926829267842,
+                "descriptive_se": 0.49932022375593643
+              },
+              "kev_transfer-v9_development": {
+                "mean": -0.07170172084130044,
+                "descriptive_se": 0.6138617793210883
+              },
+              "kev_transfer-v9_test": {
+                "mean": -0.5019120458891031,
+                "descriptive_se": 0.3057654726321795
+              },
+              "mmlu_fewshot": {
+                "mean": -0.04450932915539241,
+                "descriptive_se": 1.294422715384217
+              },
+              "mmlu": {
+                "mean": -0.026705597493233313,
+                "descriptive_se": 0.3203665960229811
+              },
+              "hellaswag": {
+                "mean": -0.02240589523999681,
+                "descriptive_se": 3.5980915226513916
+              },
+              "gsm8k_mc10": {
+                "mean": 0.8150113722517061,
+                "descriptive_se": 0.838761564780879
+              },
+              "arc_easy": {
+                "mean": -0.6102693602693563,
+                "descriptive_se": 0.8991544772155909
+              },
+              "gsm8k_mc4": {
+                "mean": -0.41698256254739086,
+                "descriptive_se": 0.15933181972350965
+              },
+              "winogrande": {
+                "mean": 0.8879242304656731,
+                "descriptive_se": 0.5169290508584213
+              },
+              "arc_challenge": {
+                "mean": -1.3438566552901037,
+                "descriptive_se": 1.8164828982696994
+              },
+              "chess": {
+                "mean": 5.4,
+                "descriptive_se": 3.73184494140186
+              },
+              "gpqa_fewshot": {
+                "mean": -1.76767676767677,
+                "descriptive_se": 2.426521095185112
+              },
+              "gpqa": {
+                "mean": -0.8838383838383823,
+                "descriptive_se": 2.1563448581564804
+              }
+            }
+          }
+        }
+      },
+      "E5": {
+        "contrasts": {
+          "noffn64_minus_all64": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": 0.40393057807918353,
+                "descriptive_se": 0.533062286014418
+              },
+              "Kev": {
+                "mean": -1.5924268432228033,
+                "descriptive_se": 0.32656184606841265
+              },
+              "MC-11": {
+                "mean": 2.21035053215679,
+                "descriptive_se": 0.6632045302309052
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": 0.40393057807918353,
+                "descriptive_se": 0.533062286014418
+              },
+              "kev_decision-v7_development": {
+                "mean": -0.3362341772151929,
+                "descriptive_se": 0.1720462598984674
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.9166666666666643,
+                "descriptive_se": 0.03402069087198955
+              },
+              "kev_transfer-v4_development": {
+                "mean": -2.705792682926827,
+                "descriptive_se": 1.0963870613477265
+              },
+              "kev_transfer-v4_test": {
+                "mean": -1.8673780487804912,
+                "descriptive_se": 0.7023646314420272
+              },
+              "kev_transfer-v9_development": {
+                "mean": -2.2466539196940722,
+                "descriptive_se": 0.5140938752358722
+              },
+              "kev_transfer-v9_test": {
+                "mean": -1.48183556405354,
+                "descriptive_se": 0.3277081548948851
+              },
+              "mmlu_fewshot": {
+                "mean": 1.3691069648198315,
+                "descriptive_se": 0.8224803772550814
+              },
+              "mmlu": {
+                "mean": 1.4438826378008827,
+                "descriptive_se": 0.36396767416724785
+              },
+              "hellaswag": {
+                "mean": 9.126667994423425,
+                "descriptive_se": 3.1709779946508165
+              },
+              "gsm8k_mc10": {
+                "mean": -1.1182714177407123,
+                "descriptive_se": 0.46568667453551654
+              },
+              "arc_easy": {
+                "mean": 2.3358585858585847,
+                "descriptive_se": 1.0142573718254104
+              },
+              "gsm8k_mc4": {
+                "mean": -1.7058377558756597,
+                "descriptive_se": 0.4719446398024535
+              },
+              "winogrande": {
+                "mean": 0.17758484609312752,
+                "descriptive_se": 0.6906077348066313
+              },
+              "arc_challenge": {
+                "mean": 3.263651877133107,
+                "descriptive_se": 1.7667044510860563
+              },
+              "chess": {
+                "mean": 9.799999999999999,
+                "descriptive_se": 2.2256085310164786
+              },
+              "gpqa_fewshot": {
+                "mean": -0.3787878787878771,
+                "descriptive_se": 1.0386332221593477
+              },
+              "gpqa": {
+                "mean": -1.7763568394002505e-15,
+                "descriptive_se": 1.9883858267706582
+              }
+            }
+          },
+          "all28_minus_all64": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -1.5307945790401938,
+                "descriptive_se": 1.0262364838171394
+              },
+              "Kev": {
+                "mean": -0.9090496552761849,
+                "descriptive_se": 0.5086700960325605
+              },
+              "MC-11": {
+                "mean": 2.124147319626994,
+                "descriptive_se": 1.055587567952247
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -1.5307945790401938,
+                "descriptive_se": 1.0262364838171394
+              },
+              "kev_decision-v7_development": {
+                "mean": -0.17800632911392356,
+                "descriptive_se": 0.2822623236894469
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.6041666666666679,
+                "descriptive_se": 0.1572882174014741
+              },
+              "kev_transfer-v4_development": {
+                "mean": -1.1051829268292686,
+                "descriptive_se": 1.108681733925745
+              },
+              "kev_transfer-v4_test": {
+                "mean": -1.1051829268292686,
+                "descriptive_se": 0.5948866602626096
+              },
+              "kev_transfer-v9_development": {
+                "mean": -1.6969407265774414,
+                "descriptive_se": 0.8678025874606743
+              },
+              "kev_transfer-v9_test": {
+                "mean": -0.7648183556405357,
+                "descriptive_se": 0.41854447216582596
+              },
+              "mmlu_fewshot": {
+                "mean": 1.9049992878507371,
+                "descriptive_se": 1.8073830678845046
+              },
+              "mmlu": {
+                "mean": 1.1020509898874788,
+                "descriptive_se": 0.653047575575008
+              },
+              "hellaswag": {
+                "mean": 6.201453893646686,
+                "descriptive_se": 1.985278206365693
+              },
+              "gsm8k_mc10": {
+                "mean": -0.18953752843062865,
+                "descriptive_se": 0.5794601712306349
+              },
+              "arc_easy": {
+                "mean": 2.3253367003367025,
+                "descriptive_se": 1.1117240544413143
+              },
+              "gsm8k_mc4": {
+                "mean": 1.042456406368462,
+                "descriptive_se": 0.33245696530004853
+              },
+              "winogrande": {
+                "mean": -0.11838989739542605,
+                "descriptive_se": 0.250625610145459
+              },
+              "arc_challenge": {
+                "mean": 2.858361774744033,
+                "descriptive_se": 1.756415430907758
+              },
+              "chess": {
+                "mean": 6.849999999999999,
+                "descriptive_se": 5.372383083883724
+              },
+              "gpqa_fewshot": {
+                "mean": 0.7575757575757542,
+                "descriptive_se": 0.7289776126131641
+              },
+              "gpqa": {
+                "mean": 0.6313131313131297,
+                "descriptive_se": 2.185717537474541
+              }
+            }
+          },
+          "noffn64_minus_all28": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": 1.9347251571193773,
+                "descriptive_se": 1.4071863823731523
+              },
+              "Kev": {
+                "mean": -0.6833771879466184,
+                "descriptive_se": 0.22444592849834885
+              },
+              "MC-11": {
+                "mean": 0.08620321252979579,
+                "descriptive_se": 0.4226408937853223
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": 1.9347251571193773,
+                "descriptive_se": 1.4071863823731523
+              },
+              "kev_decision-v7_development": {
+                "mean": -0.15822784810126933,
+                "descriptive_se": 0.2563584137028459
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.31249999999999645,
+                "descriptive_se": 0.13766824723332435
+              },
+              "kev_transfer-v4_development": {
+                "mean": -1.6006097560975583,
+                "descriptive_se": 0.3203638265477267
+              },
+              "kev_transfer-v4_test": {
+                "mean": -0.7621951219512226,
+                "descriptive_se": 0.5600967399656659
+              },
+              "kev_transfer-v9_development": {
+                "mean": -0.5497131931166308,
+                "descriptive_se": 0.48493237073082407
+              },
+              "kev_transfer-v9_test": {
+                "mean": -0.7170172084130044,
+                "descriptive_se": 0.20091651072209174
+              },
+              "mmlu_fewshot": {
+                "mean": -0.5358923230309056,
+                "descriptive_se": 1.1158509236361336
+              },
+              "mmlu": {
+                "mean": 0.3418316479134038,
+                "descriptive_se": 0.3657356249852959
+              },
+              "hellaswag": {
+                "mean": 2.9252141007767385,
+                "descriptive_se": 1.2265840801546555
+              },
+              "gsm8k_mc10": {
+                "mean": -0.9287338893100836,
+                "descriptive_se": 0.2014811564202936
+              },
+              "arc_easy": {
+                "mean": 0.010521885521882268,
+                "descriptive_se": 0.22361585478808807
+              },
+              "gsm8k_mc4": {
+                "mean": -2.7482941622441217,
+                "descriptive_se": 0.20384465257646783
+              },
+              "winogrande": {
+                "mean": 0.29597474348855357,
+                "descriptive_se": 0.8447819506159328
+              },
+              "arc_challenge": {
+                "mean": 0.40529010238907404,
+                "descriptive_se": 0.3161509396390186
+              },
+              "chess": {
+                "mean": 2.95,
+                "descriptive_se": 3.479822792423009
+              },
+              "gpqa_fewshot": {
+                "mean": -1.1363636363636314,
+                "descriptive_se": 0.31775397454843113
+              },
+              "gpqa": {
+                "mean": -0.6313131313131315,
+                "descriptive_se": 0.8084752825041452
+              }
+            }
+          }
+        }
+      },
+      "E8": {
+        "contrasts": {
+          "last_content_minus_end": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -0.5411097187412999,
+                "descriptive_se": 0.7750350115286043
+              },
+              "Kev": {
+                "mean": -0.9691545822460803,
+                "descriptive_se": 0.39178421214546333
+              },
+              "MC-11": {
+                "mean": -1.1669028239233992,
+                "descriptive_se": 0.9325653696961308
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -0.5411097187412999,
+                "descriptive_se": 0.7750350115286043
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.6724683544303751,
+                "descriptive_se": 0.3949097872329111
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.020833333333328596,
+                "descriptive_se": 0.2390543677508123
+              },
+              "kev_transfer-v4_development": {
+                "mean": -2.6295731707317067,
+                "descriptive_se": 1.058646679369954
+              },
+              "kev_transfer-v4_test": {
+                "mean": -0.41920731707317316,
+                "descriptive_se": 0.44606325879266967
+              },
+              "kev_transfer-v9_development": {
+                "mean": -2.8441682600382414,
+                "descriptive_se": 0.7983173223761609
+              },
+              "kev_transfer-v9_test": {
+                "mean": -0.5736137667304071,
+                "descriptive_se": 0.3170769398045287
+              },
+              "mmlu_fewshot": {
+                "mean": -1.280088306509036,
+                "descriptive_se": 1.5498762821063172
+              },
+              "mmlu": {
+                "mean": -1.2676256943455364,
+                "descriptive_se": 1.0179292984410955
+              },
+              "hellaswag": {
+                "mean": -3.8662617008563966,
+                "descriptive_se": 2.1514898168232204
+              },
+              "gsm8k_mc10": {
+                "mean": -0.9287338893100827,
+                "descriptive_se": 0.7437184695019782
+              },
+              "arc_easy": {
+                "mean": -2.4831649831649862,
+                "descriptive_se": 0.9727292054404534
+              },
+              "gsm8k_mc4": {
+                "mean": -1.5352539802880933,
+                "descriptive_se": 0.990140855694389
+              },
+              "winogrande": {
+                "mean": 0.1775848460931364,
+                "descriptive_se": 1.3519180174643084
+              },
+              "arc_challenge": {
+                "mean": -2.2397610921501716,
+                "descriptive_se": 0.7065057662832454
+              },
+              "chess": {
+                "mean": 1.8499999999999988,
+                "descriptive_se": 2.944344862047697
+              },
+              "gpqa_fewshot": {
+                "mean": -0.1262626262626263,
+                "descriptive_se": 1.9923906361186217
+              },
+              "gpqa": {
+                "mean": -1.1363636363636331,
+                "descriptive_se": 1.4921799580164832
+              }
+            }
+          },
+          "mean_content_minus_end": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -1.7491355704074998,
+                "descriptive_se": 1.0551683775145633
+              },
+              "Kev": {
+                "mean": -1.4649596240922165,
+                "descriptive_se": 0.2537592206006487
+              },
+              "MC-11": {
+                "mean": 0.7275390293043031,
+                "descriptive_se": 1.0675733320166694
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -1.7491355704074998,
+                "descriptive_se": 1.0551683775145633
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.19778481012657778,
+                "descriptive_se": 0.2384380448315546
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.06249999999999645,
+                "descriptive_se": 0.24384791480665793
+              },
+              "kev_transfer-v4_development": {
+                "mean": -2.4390243902439046,
+                "descriptive_se": 0.6901970379677909
+              },
+              "kev_transfer-v4_test": {
+                "mean": -1.5625000000000036,
+                "descriptive_se": 0.20045393595095848
+              },
+              "kev_transfer-v9_development": {
+                "mean": -3.226577437858513,
+                "descriptive_se": 0.5256315233654143
+              },
+              "kev_transfer-v9_test": {
+                "mean": -1.6969407265774379,
+                "descriptive_se": 0.060148457897313226
+              },
+              "mmlu_fewshot": {
+                "mean": -0.33649052841475324,
+                "descriptive_se": 2.1417080137997266
+              },
+              "mmlu": {
+                "mean": 0.48604187437686797,
+                "descriptive_se": 0.6647725222711345
+              },
+              "hellaswag": {
+                "mean": 4.234714200358498,
+                "descriptive_se": 3.2046387522235498
+              },
+              "gsm8k_mc10": {
+                "mean": -1.4783927217589081,
+                "descriptive_se": 0.747011941059259
+              },
+              "arc_easy": {
+                "mean": 1.5993265993265986,
+                "descriptive_se": 1.1016703899812184
+              },
+              "gsm8k_mc4": {
+                "mean": -1.4025777103866517,
+                "descriptive_se": 1.0958263733016849
+              },
+              "winogrande": {
+                "mean": 0.572217837411209,
+                "descriptive_se": 0.5337280512672521
+              },
+              "arc_challenge": {
+                "mean": 3.135665529010243,
+                "descriptive_se": 1.51970377928604
+              },
+              "chess": {
+                "mean": 1.9499999999999993,
+                "descriptive_se": 2.0451161336217556
+              },
+              "gpqa_fewshot": {
+                "mean": 0.8838383838383805,
+                "descriptive_se": 1.7540964633143683
+              },
+              "gpqa": {
+                "mean": -1.6414141414141383,
+                "descriptive_se": 1.477866150343386
+              }
+            }
+          },
+          "mean_content_minus_last_content": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -1.2080258516662,
+                "descriptive_se": 1.3768269881165027
+              },
+              "Kev": {
+                "mean": -0.49580504184613616,
+                "descriptive_se": 0.14082232980793838
+              },
+              "MC-11": {
+                "mean": 1.8944418532277023,
+                "descriptive_se": 0.9749393863003004
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -1.2080258516662,
+                "descriptive_se": 1.3768269881165027
+              },
+              "kev_decision-v7_development": {
+                "mean": -0.47468354430379733,
+                "descriptive_se": 0.386229391241477
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.04166666666666785,
+                "descriptive_se": 0.2975595178559519
+              },
+              "kev_transfer-v4_development": {
+                "mean": 0.1905487804878021,
+                "descriptive_se": 0.4372945751539265
+              },
+              "kev_transfer-v4_test": {
+                "mean": -1.1432926829268304,
+                "descriptive_se": 0.40090787190191945
+              },
+              "kev_transfer-v9_development": {
+                "mean": -0.3824091778202714,
+                "descriptive_se": 0.48434302592640704
+              },
+              "kev_transfer-v9_test": {
+                "mean": -1.1233269598470308,
+                "descriptive_se": 0.3057654726321773
+              },
+              "mmlu_fewshot": {
+                "mean": 0.9435977780942828,
+                "descriptive_se": 1.9527060598487815
+              },
+              "mmlu": {
+                "mean": 1.7536675687224044,
+                "descriptive_se": 1.0355605986110132
+              },
+              "hellaswag": {
+                "mean": 8.100975901214895,
+                "descriptive_se": 1.4383589983639773
+              },
+              "gsm8k_mc10": {
+                "mean": -0.5496588324488254,
+                "descriptive_se": 1.3552927324279562
+              },
+              "arc_easy": {
+                "mean": 4.082491582491585,
+                "descriptive_se": 1.9382367956857602
+              },
+              "gsm8k_mc4": {
+                "mean": 0.13267626990144166,
+                "descriptive_se": 2.0088295699754743
+              },
+              "winogrande": {
+                "mean": 0.3946329913180726,
+                "descriptive_se": 1.0275624756346908
+              },
+              "arc_challenge": {
+                "mean": 5.375426621160415,
+                "descriptive_se": 2.1967192642712665
+              },
+              "chess": {
+                "mean": 0.10000000000000053,
+                "descriptive_se": 3.0391884881768467
+              },
+              "gpqa_fewshot": {
+                "mean": 1.0101010101010068,
+                "descriptive_se": 2.2302426430120814
+              },
+              "gpqa": {
+                "mean": -0.5050505050505052,
+                "descriptive_se": 0.6520173983514171
+              }
+            }
+          }
+        }
+      },
+      "E11": {
+        "contrasts": {
+          "delta1_pool_minus_pointer_one_epoch": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -1.7491355704074998,
+                "descriptive_se": 1.0551683775145633
+              },
+              "Kev": {
+                "mean": -1.4649596240922165,
+                "descriptive_se": 0.2537592206006487
+              },
+              "MC-11": {
+                "mean": 0.7275390293043031,
+                "descriptive_se": 1.0675733320166694
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -1.7491355704074998,
+                "descriptive_se": 1.0551683775145633
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.19778481012657778,
+                "descriptive_se": 0.2384380448315546
+              },
+              "kev_decision-v7_test": {
+                "mean": -0.06249999999999645,
+                "descriptive_se": 0.24384791480665793
+              },
+              "kev_transfer-v4_development": {
+                "mean": -2.4390243902439046,
+                "descriptive_se": 0.6901970379677909
+              },
+              "kev_transfer-v4_test": {
+                "mean": -1.5625000000000036,
+                "descriptive_se": 0.20045393595095848
+              },
+              "kev_transfer-v9_development": {
+                "mean": -3.226577437858513,
+                "descriptive_se": 0.5256315233654143
+              },
+              "kev_transfer-v9_test": {
+                "mean": -1.6969407265774379,
+                "descriptive_se": 0.060148457897313226
+              },
+              "mmlu_fewshot": {
+                "mean": -0.33649052841475324,
+                "descriptive_se": 2.1417080137997266
+              },
+              "mmlu": {
+                "mean": 0.48604187437686797,
+                "descriptive_se": 0.6647725222711345
+              },
+              "hellaswag": {
+                "mean": 4.234714200358498,
+                "descriptive_se": 3.2046387522235498
+              },
+              "gsm8k_mc10": {
+                "mean": -1.4783927217589081,
+                "descriptive_se": 0.747011941059259
+              },
+              "arc_easy": {
+                "mean": 1.5993265993265986,
+                "descriptive_se": 1.1016703899812184
+              },
+              "gsm8k_mc4": {
+                "mean": -1.4025777103866517,
+                "descriptive_se": 1.0958263733016849
+              },
+              "winogrande": {
+                "mean": 0.572217837411209,
+                "descriptive_se": 0.5337280512672521
+              },
+              "arc_challenge": {
+                "mean": 3.135665529010243,
+                "descriptive_se": 1.51970377928604
+              },
+              "chess": {
+                "mean": 1.9499999999999993,
+                "descriptive_se": 2.0451161336217556
+              },
+              "gpqa_fewshot": {
+                "mean": 0.8838383838383805,
+                "descriptive_se": 1.7540964633143683
+              },
+              "gpqa": {
+                "mean": -1.6414141414141383,
+                "descriptive_se": 1.477866150343386
+              }
+            }
+          },
+          "delta2_pool_minus_pointer_two_epochs": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": -1.1818165375311906,
+                "descriptive_se": 1.1767402442080162
+              },
+              "Kev": {
+                "mean": -1.257400868248947,
+                "descriptive_se": 0.21078703400948826
+              },
+              "MC-11": {
+                "mean": 4.611080787571199,
+                "descriptive_se": 1.0411801944552124
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": -1.1818165375311906,
+                "descriptive_se": 1.1767402442080162
+              },
+              "kev_decision-v7_development": {
+                "mean": -0.4746835443037938,
+                "descriptive_se": 0.5385173485406681
+              },
+              "kev_decision-v7_test": {
+                "mean": 0.10416666666666785,
+                "descriptive_se": 0.1905614268612825
+              },
+              "kev_transfer-v4_development": {
+                "mean": -1.7149390243902474,
+                "descriptive_se": 0.7347049665102262
+              },
+              "kev_transfer-v4_test": {
+                "mean": -1.3719512195121943,
+                "descriptive_se": 0.4487683367036489
+              },
+              "kev_transfer-v9_development": {
+                "mean": -2.509560229445505,
+                "descriptive_se": 0.516864295197854
+              },
+              "kev_transfer-v9_test": {
+                "mean": -1.5774378585086026,
+                "descriptive_se": 0.497530114595157
+              },
+              "mmlu_fewshot": {
+                "mean": 2.1667141432844303,
+                "descriptive_se": 0.6006475288599973
+              },
+              "mmlu": {
+                "mean": 4.929853297251103,
+                "descriptive_se": 1.332132818355048
+              },
+              "hellaswag": {
+                "mean": 11.006273650667193,
+                "descriptive_se": 3.3878595030450973
+              },
+              "gsm8k_mc10": {
+                "mean": 0.03790750568612733,
+                "descriptive_se": 0.947182073889823
+              },
+              "arc_easy": {
+                "mean": 12.268518518518526,
+                "descriptive_se": 2.159594041355086
+              },
+              "gsm8k_mc4": {
+                "mean": -1.1751326762699037,
+                "descriptive_se": 0.5609798554567367
+              },
+              "winogrande": {
+                "mean": -0.3749013417521727,
+                "descriptive_se": 0.6267711197422461
+              },
+              "arc_challenge": {
+                "mean": 12.414675767918093,
+                "descriptive_se": 1.9623027589118092
+              },
+              "chess": {
+                "mean": 4.65,
+                "descriptive_se": 3.2958306995353994
+              },
+              "gpqa_fewshot": {
+                "mean": 2.6515151515151523,
+                "descriptive_se": 0.5599383289415014
+              },
+              "gpqa": {
+                "mean": 2.1464646464646453,
+                "descriptive_se": 0.7540603058572763
+              }
+            }
+          },
+          "delta2_minus_delta1": {
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": 0.5673190328763091,
+                "descriptive_se": 1.9453352038572576
+              },
+              "Kev": {
+                "mean": 0.20755875584326944,
+                "descriptive_se": 0.3165296246840145
+              },
+              "MC-11": {
+                "mean": 3.8835417582668956,
+                "descriptive_se": 1.129445866781097
+              }
+            },
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": 0.5673190328763091,
+                "descriptive_se": 1.9453352038572576
+              },
+              "kev_decision-v7_development": {
+                "mean": -0.6724683544303716,
+                "descriptive_se": 0.6607315303991305
+              },
+              "kev_decision-v7_test": {
+                "mean": 0.1666666666666643,
+                "descriptive_se": 0.40966336677090637
+              },
+              "kev_transfer-v4_development": {
+                "mean": 0.7240853658536572,
+                "descriptive_se": 0.7656805470487618
+              },
+              "kev_transfer-v4_test": {
+                "mean": 0.1905487804878092,
+                "descriptive_se": 0.5070173283403172
+              },
+              "kev_transfer-v9_development": {
+                "mean": 0.717017208413008,
+                "descriptive_se": 0.6442819190298211
+              },
+              "kev_transfer-v9_test": {
+                "mean": 0.11950286806883526,
+                "descriptive_se": 0.4456458340008615
+              },
+              "mmlu_fewshot": {
+                "mean": 2.5032046716991836,
+                "descriptive_se": 1.7627204900462317
+              },
+              "mmlu": {
+                "mean": 4.443811422874235,
+                "descriptive_se": 1.8798335179223304
+              },
+              "hellaswag": {
+                "mean": 6.771559450308696,
+                "descriptive_se": 2.354324180849632
+              },
+              "gsm8k_mc10": {
+                "mean": 1.5163002274450355,
+                "descriptive_se": 1.6569815484241088
+              },
+              "arc_easy": {
+                "mean": 10.669191919191928,
+                "descriptive_se": 1.9793453796200597
+              },
+              "gsm8k_mc4": {
+                "mean": 0.227445034116748,
+                "descriptive_se": 1.5447793062382864
+              },
+              "winogrande": {
+                "mean": -0.9471191791633817,
+                "descriptive_se": 0.9096554390750028
+              },
+              "arc_challenge": {
+                "mean": 9.27901023890785,
+                "descriptive_se": 1.4498321200179694
+              },
+              "chess": {
+                "mean": 2.7000000000000006,
+                "descriptive_se": 5.094768558694954
+              },
+              "gpqa_fewshot": {
+                "mean": 1.7676767676767717,
+                "descriptive_se": 1.7556105736207228
+              },
+              "gpqa": {
+                "mean": 3.7878787878787836,
+                "descriptive_se": 2.127815599286957
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "qwen8": {
+    "models": 8,
+    "tasks": 144,
+    "results": {
+      "Q000": {
+        "tasks_percent": {
+          "jevbench_public": 72.17101850486783,
+          "kev_decision-v7_development": 83.62341772151899,
+          "kev_decision-v7_test": 82.33333333333333,
+          "kev_transfer-v4_development": 76.82926829268293,
+          "kev_transfer-v4_test": 80.03048780487805,
+          "kev_transfer-v9_development": 69.78967495219885,
+          "kev_transfer-v9_test": 71.51051625239006,
+          "mmlu_fewshot": 59.00156672838627,
+          "mmlu": 59.39324882495371,
+          "hellaswag": 55.7558255327624,
+          "gsm8k_mc10": 23.654283548142534,
+          "arc_easy": 92.76094276094275,
+          "gsm8k_mc4": 40.56103108415466,
+          "winogrande": 62.7466456195738,
+          "arc_challenge": 82.67918088737201,
+          "chess": 40.8,
+          "gpqa_fewshot": 33.83838383838384,
+          "gpqa": 30.80808080808081
+        },
+        "endpoints_percent": {
+          "JevBench": 72.17101850486783,
+          "Kev": 77.35278305950037,
+          "MC-11": 52.90901723934116
+        }
+      },
+      "Q001": {
+        "tasks_percent": {
+          "jevbench_public": 71.11090635084443,
+          "kev_decision-v7_development": 84.01898734177215,
+          "kev_decision-v7_test": 83.75,
+          "kev_transfer-v4_development": 75.3048780487805,
+          "kev_transfer-v4_test": 79.42073170731707,
+          "kev_transfer-v9_development": 67.59082217973231,
+          "kev_transfer-v9_test": 70.93690248565966,
+          "mmlu_fewshot": 59.870388833499504,
+          "mmlu": 59.72795898020225,
+          "hellaswag": 57.81716789484167,
+          "gsm8k_mc10": 21.834723275208493,
+          "arc_easy": 92.12962962962963,
+          "gsm8k_mc4": 35.936315390447305,
+          "winogrande": 61.957379636937645,
+          "arc_challenge": 81.8259385665529,
+          "chess": 36.6,
+          "gpqa_fewshot": 28.78787878787879,
+          "gpqa": 28.78787878787879
+        },
+        "endpoints_percent": {
+          "JevBench": 71.11090635084443,
+          "Kev": 76.83705362721028,
+          "MC-11": 51.388659980279726
+        }
+      },
+      "Q002": {
+        "tasks_percent": {
+          "jevbench_public": 73.25126541844809,
+          "kev_decision-v7_development": 82.75316455696202,
+          "kev_decision-v7_test": 82.41666666666667,
+          "kev_transfer-v4_development": 77.13414634146342,
+          "kev_transfer-v4_test": 79.72560975609755,
+          "kev_transfer-v9_development": 69.78967495219885,
+          "kev_transfer-v9_test": 71.89292543021033,
+          "mmlu_fewshot": 59.05141717704031,
+          "mmlu": 59.82053838484546,
+          "hellaswag": 57.30930093606851,
+          "gsm8k_mc10": 21.076573161485975,
+          "arc_easy": 93.0976430976431,
+          "gsm8k_mc4": 39.42380591357089,
+          "winogrande": 62.35201262825572,
+          "arc_challenge": 82.16723549488054,
+          "chess": 40.0,
+          "gpqa_fewshot": 34.84848484848485,
+          "gpqa": 28.282828282828284
+        },
+        "endpoints_percent": {
+          "JevBench": 73.25126541844809,
+          "Kev": 77.28536461726648,
+          "MC-11": 52.49362181137306
+        }
+      },
+      "Q003": {
+        "tasks_percent": {
+          "jevbench_public": 74.46657220393031,
+          "kev_decision-v7_development": 83.62341772151899,
+          "kev_decision-v7_test": 82.41666666666667,
+          "kev_transfer-v4_development": 73.32317073170732,
+          "kev_transfer-v4_test": 76.98170731707317,
+          "kev_transfer-v9_development": 65.77437858508604,
+          "kev_transfer-v9_test": 68.54684512428298,
+          "mmlu_fewshot": 58.63837060247828,
+          "mmlu": 59.67810853154821,
+          "hellaswag": 59.95817566221868,
+          "gsm8k_mc10": 20.0909780136467,
+          "arc_easy": 93.05555555555556,
+          "gsm8k_mc4": 37.14935557240334,
+          "winogrande": 62.036306235201266,
+          "arc_challenge": 81.48464163822526,
+          "chess": 41.2,
+          "gpqa_fewshot": 30.80808080808081,
+          "gpqa": 31.31313131313131
+        },
+        "endpoints_percent": {
+          "JevBench": 74.46657220393031,
+          "Kev": 75.11103102438919,
+          "MC-11": 52.31024581204449
+        }
+      },
+      "Q004": {
+        "tasks_percent": {
+          "jevbench_public": 71.17512599581742,
+          "kev_decision-v7_development": 83.14873417721519,
+          "kev_decision-v7_test": 82.25,
+          "kev_transfer-v4_development": 76.0670731707317,
+          "kev_transfer-v4_test": 79.57317073170732,
+          "kev_transfer-v9_development": 69.59847036328871,
+          "kev_transfer-v9_test": 71.98852772466539,
+          "mmlu_fewshot": 58.802164933770115,
+          "mmlu": 59.471585244267196,
+          "hellaswag": 49.96016729735113,
+          "gsm8k_mc10": 22.66868840030326,
+          "arc_easy": 91.87710437710437,
+          "gsm8k_mc4": 39.49962092494314,
+          "winogrande": 61.40489344909234,
+          "arc_challenge": 80.2901023890785,
+          "chess": 39.4,
+          "gpqa_fewshot": 30.80808080808081,
+          "gpqa": 29.292929292929294
+        },
+        "endpoints_percent": {
+          "JevBench": 71.17512599581742,
+          "Kev": 77.10432936126806,
+          "MC-11": 51.22503064699274
+        }
+      },
+      "Q005": {
+        "tasks_percent": {
+          "jevbench_public": 73.99861991580258,
+          "kev_decision-v7_development": 83.54430379746836,
+          "kev_decision-v7_test": 81.75,
+          "kev_transfer-v4_development": 76.0670731707317,
+          "kev_transfer-v4_test": 77.4390243902439,
+          "kev_transfer-v9_development": 68.35564053537284,
+          "kev_transfer-v9_test": 69.78967495219885,
+          "mmlu_fewshot": 59.20809001566728,
+          "mmlu": 59.51431420025637,
+          "hellaswag": 58.44453296156144,
+          "gsm8k_mc10": 19.48445792266869,
+          "arc_easy": 92.8030303030303,
+          "gsm8k_mc4": 32.82789992418499,
+          "winogrande": 61.089187056037886,
+          "arc_challenge": 82.16723549488054,
+          "chess": 42.6,
+          "gpqa_fewshot": 35.85858585858586,
+          "gpqa": 31.31313131313131
+        },
+        "endpoints_percent": {
+          "JevBench": 73.99861991580258,
+          "Kev": 76.15761947433595,
+          "MC-11": 52.30095136818225
+        }
+      },
+      "Q006": {
+        "tasks_percent": {
+          "jevbench_public": 73.83606074008551,
+          "kev_decision-v7_development": 84.09810126582279,
+          "kev_decision-v7_test": 81.66666666666667,
+          "kev_transfer-v4_development": 77.7439024390244,
+          "kev_transfer-v4_test": 80.79268292682927,
+          "kev_transfer-v9_development": 70.17208413001912,
+          "kev_transfer-v9_test": 72.94455066921606,
+          "mmlu_fewshot": 59.37188434695912,
+          "mmlu": 59.36476285429426,
+          "hellaswag": 51.58334993029277,
+          "gsm8k_mc10": 21.910538286580742,
+          "arc_easy": 92.29797979797979,
+          "gsm8k_mc4": 38.05913570887036,
+          "winogrande": 62.430939226519335,
+          "arc_challenge": 80.03412969283276,
+          "chess": 42.2,
+          "gpqa_fewshot": 33.333333333333336,
+          "gpqa": 31.818181818181817
+        },
+        "endpoints_percent": {
+          "JevBench": 73.83606074008551,
+          "Kev": 77.90299801626306,
+          "MC-11": 52.036748635985845
+        }
+      },
+      "Q007": {
+        "tasks_percent": {
+          "jevbench_public": 71.54138068482754,
+          "kev_decision-v7_development": 83.38607594936708,
+          "kev_decision-v7_test": 82.25,
+          "kev_transfer-v4_development": 74.6951219512195,
+          "kev_transfer-v4_test": 77.7439024390244,
+          "kev_transfer-v9_development": 67.30401529636711,
+          "kev_transfer-v9_test": 69.21606118546845,
+          "mmlu_fewshot": 59.15823956701325,
+          "mmlu": 59.179604045007835,
+          "hellaswag": 54.023102967536346,
+          "gsm8k_mc10": 20.54586808188021,
+          "arc_easy": 92.17171717171718,
+          "gsm8k_mc4": 34.495830174374525,
+          "winogrande": 62.430939226519335,
+          "arc_challenge": 80.71672354948805,
+          "chess": 37.4,
+          "gpqa_fewshot": 31.818181818181817,
+          "gpqa": 26.767676767676768
+        },
+        "endpoints_percent": {
+          "JevBench": 71.54138068482754,
+          "Kev": 75.76586280357442,
+          "MC-11": 50.79162576085412
+        }
+      }
+    },
+    "derived": {
+      "Qwen": {
+        "contrasts": {
+          "pooling_minus_pointer": {
+            "tasks_pp": {
+              "jevbench_public": {
+                "mean": 0.1710021240464997,
+                "descriptive_se": 1.1446074992628636,
+                "per_setting": [
+                  -1.0601121540234026,
+                  1.2153067854822242,
+                  2.823493919985148,
+                  -2.2946800552579707
+                ]
+              },
+              "kev_decision-v7_development": {
+                "mean": 0.23734177215189872,
+                "descriptive_se": 0.33565195309488016,
+                "per_setting": [
+                  0.39556962025316456,
+                  0.870253164556962,
+                  0.39556962025316456,
+                  -0.7120253164556962
+                ]
+              },
+              "kev_decision-v7_test": {
+                "mean": 0.375,
+                "descriptive_se": 0.41177686334371094,
+                "per_setting": [
+                  1.4166666666666667,
+                  0.0,
+                  -0.5,
+                  0.5833333333333334
+                ]
+              },
+              "kev_transfer-v4_development": {
+                "mean": -2.096036585365854,
+                "descriptive_se": 0.8450288805672047,
+                "per_setting": [
+                  -1.524390243902439,
+                  -3.8109756097560976,
+                  0.0,
+                  -3.048780487804878
+                ]
+              },
+              "kev_transfer-v4_test": {
+                "mean": -2.1341463414634148,
+                "descriptive_se": 0.5425344640259813,
+                "per_setting": [
+                  -0.6097560975609756,
+                  -2.7439024390243905,
+                  -2.1341463414634148,
+                  -3.048780487804878
+                ]
+              },
+              "kev_transfer-v9_development": {
+                "mean": -2.581261950286807,
+                "descriptive_se": 0.582834326264241,
+                "per_setting": [
+                  -2.198852772466539,
+                  -4.015296367112811,
+                  -1.24282982791587,
+                  -2.8680688336520075
+                ]
+              },
+              "kev_transfer-v9_test": {
+                "mean": -2.461759082217973,
+                "descriptive_se": 0.7083338664880572,
+                "per_setting": [
+                  -0.5736137667304015,
+                  -3.3460803059273423,
+                  -2.198852772466539,
+                  -3.72848948374761
+                ]
+              },
+              "mmlu_fewshot": {
+                "mean": 0.16201395812562314,
+                "descriptive_se": 0.29309903000692883,
+                "per_setting": [
+                  0.8688221051132318,
+                  -0.4130465745620282,
+                  0.40592508189716564,
+                  -0.21364477994587666
+                ]
+              },
+              "mmlu": {
+                "mean": 0.012462612163509471,
+                "descriptive_se": 0.11825305939147275,
+                "per_setting": [
+                  0.3347101552485401,
+                  -0.1424298532972511,
+                  0.04272895598917533,
+                  -0.18515880928642645
+                ]
+              },
+              "hellaswag": {
+                "mean": 3.9085839474208326,
+                "descriptive_se": 1.5300983454004577,
+                "per_setting": [
+                  2.0613423620792672,
+                  2.6488747261501695,
+                  8.484365664210317,
+                  2.439753037243577
+                ]
+              },
+              "gsm8k_mc10": {
+                "mean": -1.8385140257771038,
+                "descriptive_se": 0.4798706937517878,
+                "per_setting": [
+                  -1.819560272934041,
+                  -0.9855951478392722,
+                  -3.184230477634572,
+                  -1.3646702047005308
+                ]
+              },
+              "arc_easy": {
+                "mean": 0.03156565656565657,
+                "descriptive_se": 0.32527208346272674,
+                "per_setting": [
+                  -0.6313131313131313,
+                  -0.04208754208754209,
+                  0.9259259259259259,
+                  -0.12626262626262627
+                ]
+              },
+              "gsm8k_mc4": {
+                "mean": -4.283548142532221,
+                "descriptive_se": 0.9298292087179798,
+                "per_setting": [
+                  -4.624715693707354,
+                  -2.274450341167551,
+                  -6.67172100075815,
+                  -3.56330553449583
+                ]
+              },
+              "winogrande": {
+                "mean": -0.35516969218626676,
+                "descriptive_se": 0.1627113506557877,
+                "per_setting": [
+                  -0.7892659826361483,
+                  -0.31570639305445936,
+                  -0.31570639305445936,
+                  0.0
+                ]
+              },
+              "arc_challenge": {
+                "mean": 0.25597269624573377,
+                "descriptive_se": 0.6404055886915644,
+                "per_setting": [
+                  -0.8532423208191127,
+                  -0.6825938566552902,
+                  1.8771331058020477,
+                  0.6825938566552902
+                ]
+              },
+              "chess": {
+                "mean": -1.15,
+                "descriptive_se": 1.9805302320338358,
+                "per_setting": [
+                  -4.2,
+                  1.2,
+                  3.2,
+                  -4.8
+                ]
+              },
+              "gpqa_fewshot": {
+                "mean": -1.3888888888888888,
+                "descriptive_se": 2.271557873487144,
+                "per_setting": [
+                  -5.05050505050505,
+                  -4.040404040404041,
+                  5.05050505050505,
+                  -1.5151515151515151
+                ]
+              },
+              "gpqa": {
+                "mean": -0.5050505050505051,
+                "descriptive_se": 1.8670936879477134,
+                "per_setting": [
+                  -2.0202020202020203,
+                  3.0303030303030303,
+                  2.0202020202020203,
+                  -5.05050505050505
+                ]
+              }
+            },
+            "endpoints_pp": {
+              "JevBench": {
+                "mean": 0.1710021240464997,
+                "descriptive_se": 1.1446074992628636,
+                "per_setting": [
+                  -1.0601121540234026,
+                  1.2153067854822242,
+                  2.823493919985148,
+                  -2.2946800552579707
+                ]
+              },
+              "Kev": {
+                "mean": -1.4434770311970249,
+                "descriptive_se": 0.4205954300552196,
+                "per_setting": [
+                  -0.5157294322900874,
+                  -2.17433359287728,
+                  -0.9467098869321099,
+                  -2.137135212688623
+                ]
+              },
+              "MC-11": {
+                "mean": -0.4682338530830573,
+                "descriptive_se": 0.5899207263183595,
+                "per_setting": [
+                  -1.520357259061438,
+                  -0.18337599932856682,
+                  1.0759207211895019,
+                  -1.2451228751317263
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "auxiliary": {
+    "model_modules": 32,
+    "scored_question_occurrences": 358192,
+    "derived": {
+      "socialiqa_epoch1": {
+        "conditions": {
+          "direct": {
+            "pointer": {
+              "mean": 73.7589559877175,
+              "sample_sd": 0.5855620332424071,
+              "descriptive_se": 0.29278101662120354
+            },
+            "pooling": {
+              "mean": 71.43039918116683,
+              "sample_sd": 0.8916910409897137,
+              "descriptive_se": 0.4458455204948569
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": -2.3285568065506634,
+              "sample_sd": 1.2705251573773766,
+              "descriptive_se": 0.6352625786886883
+            }
+          },
+          "nli": {
+            "pointer": {
+              "mean": 61.118219037871036,
+              "sample_sd": 0.7776838506082021,
+              "descriptive_se": 0.38884192530410105
+            },
+            "pooling": {
+              "mean": 61.39969293756398,
+              "sample_sd": 1.2813871028362969,
+              "descriptive_se": 0.6406935514181484
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 0.28147389969293835,
+              "sample_sd": 1.4381273431723485,
+              "descriptive_se": 0.7190636715861742
+            }
+          }
+        },
+        "interaction_nli_minus_direct_pp": {
+          "mean": 2.610030706243602,
+          "sample_sd": 2.405866790899316,
+          "descriptive_se": 1.202933395449658
+        }
+      },
+      "socialiqa_epoch2": {
+        "conditions": {
+          "direct": {
+            "pointer": {
+              "mean": 73.66939611054248,
+              "sample_sd": 0.42715742154721614,
+              "descriptive_se": 0.21357871077360807
+            },
+            "pooling": {
+              "mean": 71.81422722620266,
+              "sample_sd": 0.40161232913659245,
+              "descriptive_se": 0.20080616456829622
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": -1.855168884339814,
+              "sample_sd": 0.4697430847156029,
+              "descriptive_se": 0.23487154235780144
+            }
+          },
+          "nli": {
+            "pointer": {
+              "mean": 56.81934493346981,
+              "sample_sd": 2.2265947881492534,
+              "descriptive_se": 1.1132973940746267
+            },
+            "pooling": {
+              "mean": 58.84083930399181,
+              "sample_sd": 2.783824211488218,
+              "descriptive_se": 1.391912105744109
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 2.0214943705220065,
+              "sample_sd": 2.405685346139387,
+              "descriptive_se": 1.2028426730696935
+            }
+          }
+        },
+        "interaction_nli_minus_direct_pp": {
+          "mean": 3.8766632548618203,
+          "sample_sd": 2.0714074263396833,
+          "descriptive_se": 1.0357037131698417
+        }
+      },
+      "fixed_interfaces": {
+        "conditions": {
+          "piqa_direct": {
+            "pointer": {
+              "mean": 79.32535364526659,
+              "sample_sd": 1.7438542446493481,
+              "descriptive_se": 0.8719271223246741
+            },
+            "pooling": {
+              "mean": 79.20293797606094,
+              "sample_sd": 1.3300064011538937,
+              "descriptive_se": 0.6650032005769468
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": -0.12241566920565827,
+              "sample_sd": 2.8265015669935107,
+              "descriptive_se": 1.4132507834967554
+            }
+          },
+          "piqa_nli_P0D0": {
+            "pointer": {
+              "mean": 65.15233949945592,
+              "sample_sd": 6.863404915535544,
+              "descriptive_se": 3.431702457767772
+            },
+            "pooling": {
+              "mean": 73.21817192600652,
+              "sample_sd": 3.8738306064848924,
+              "descriptive_se": 1.9369153032424462
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 8.065832426550601,
+              "sample_sd": 7.526717303646039,
+              "descriptive_se": 3.7633586518230193
+            }
+          },
+          "piqa_nli_P1D0": {
+            "pointer": {
+              "mean": 63.18008705114254,
+              "sample_sd": 4.900126706302405,
+              "descriptive_se": 2.4500633531512026
+            },
+            "pooling": {
+              "mean": 73.25897714907508,
+              "sample_sd": 4.908601808159075,
+              "descriptive_se": 2.4543009040795374
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 10.078890097932534,
+              "sample_sd": 5.637950366862154,
+              "descriptive_se": 2.818975183431077
+            }
+          },
+          "piqa_nli_P2D0": {
+            "pointer": {
+              "mean": 67.54624591947768,
+              "sample_sd": 7.374836722195272,
+              "descriptive_se": 3.687418361097636
+            },
+            "pooling": {
+              "mean": 69.94015233949946,
+              "sample_sd": 6.541895413621712,
+              "descriptive_se": 3.270947706810856
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 2.393906420021766,
+              "sample_sd": 5.128704149416524,
+              "descriptive_se": 2.564352074708262
+            }
+          },
+          "piqa_nli_P3D0": {
+            "pointer": {
+              "mean": 64.60826985854189,
+              "sample_sd": 8.637351876740691,
+              "descriptive_se": 4.318675938370346
+            },
+            "pooling": {
+              "mean": 69.0968443960827,
+              "sample_sd": 6.8741069395060865,
+              "descriptive_se": 3.4370534697530433
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 4.488574537540807,
+              "sample_sd": 6.249384511880168,
+              "descriptive_se": 3.124692255940084
+            }
+          },
+          "piqa_nli_P4D0": {
+            "pointer": {
+              "mean": 62.173558215451585,
+              "sample_sd": 7.621815007153557,
+              "descriptive_se": 3.8109075035767783
+            },
+            "pooling": {
+              "mean": 71.46354733405875,
+              "sample_sd": 3.4356895738351536,
+              "descriptive_se": 1.7178447869175768
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 9.289989118607178,
+              "sample_sd": 7.407393771667301,
+              "descriptive_se": 3.7036968858336503
+            }
+          },
+          "piqa_nli_P5D0": {
+            "pointer": {
+              "mean": 67.66866158868335,
+              "sample_sd": 4.56400064323674,
+              "descriptive_se": 2.28200032161837
+            },
+            "pooling": {
+              "mean": 71.21871599564744,
+              "sample_sd": 5.064233418158912,
+              "descriptive_se": 2.532116709079456
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 3.55005440696409,
+              "sample_sd": 4.256598879401268,
+              "descriptive_se": 2.128299439700634
+            }
+          },
+          "piqa_nli_P0D1": {
+            "pointer": {
+              "mean": 72.21164309031556,
+              "sample_sd": 8.608387048322905,
+              "descriptive_se": 4.304193524161453
+            },
+            "pooling": {
+              "mean": 73.83025027203483,
+              "sample_sd": 4.030769105017821,
+              "descriptive_se": 2.0153845525089107
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 1.6186071817192587,
+              "sample_sd": 7.198375816181545,
+              "descriptive_se": 3.5991879080907725
+            }
+          },
+          "piqa_nli_P1D1": {
+            "pointer": {
+              "mean": 71.72198041349293,
+              "sample_sd": 7.556808723885372,
+              "descriptive_se": 3.778404361942686
+            },
+            "pooling": {
+              "mean": 73.55821545157781,
+              "sample_sd": 4.420712310287674,
+              "descriptive_se": 2.210356155143837
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 1.8362350380848769,
+              "sample_sd": 6.056283700440691,
+              "descriptive_se": 3.0281418502203454
+            }
+          },
+          "piqa_nli_P2D1": {
+            "pointer": {
+              "mean": 72.7557127312296,
+              "sample_sd": 8.10978643450406,
+              "descriptive_se": 4.05489321725203
+            },
+            "pooling": {
+              "mean": 71.61316648531012,
+              "sample_sd": 6.617606961682316,
+              "descriptive_se": 3.308803480841158
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": -1.1425462459194764,
+              "sample_sd": 7.296891428879268,
+              "descriptive_se": 3.648445714439634
+            }
+          },
+          "piqa_nli_P3D1": {
+            "pointer": {
+              "mean": 69.69532100108815,
+              "sample_sd": 10.321370582344509,
+              "descriptive_se": 5.160685291172254
+            },
+            "pooling": {
+              "mean": 64.18661588683351,
+              "sample_sd": 7.267947056985627,
+              "descriptive_se": 3.6339735284928136
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": -5.508705114254628,
+              "sample_sd": 10.010622660705348,
+              "descriptive_se": 5.005311330352674
+            }
+          },
+          "piqa_nli_P4D1": {
+            "pointer": {
+              "mean": 71.13710554951034,
+              "sample_sd": 9.890451839843218,
+              "descriptive_se": 4.945225919921609
+            },
+            "pooling": {
+              "mean": 67.69586507072906,
+              "sample_sd": 4.495164483519208,
+              "descriptive_se": 2.247582241759604
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": -3.441240478781282,
+              "sample_sd": 10.079676312756488,
+              "descriptive_se": 5.039838156378244
+            }
+          },
+          "piqa_nli_P5D1": {
+            "pointer": {
+              "mean": 74.74156692056584,
+              "sample_sd": 6.58457271851187,
+              "descriptive_se": 3.292286359255935
+            },
+            "pooling": {
+              "mean": 70.5930359085963,
+              "sample_sd": 6.158089670359809,
+              "descriptive_se": 3.0790448351799045
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": -4.1485310119695304,
+              "sample_sd": 7.865319701456807,
+              "descriptive_se": 3.9326598507284034
+            }
+          },
+          "piqa_nli_P0D2": {
+            "pointer": {
+              "mean": 62.187159956474424,
+              "sample_sd": 7.549574849581115,
+              "descriptive_se": 3.7747874247905573
+            },
+            "pooling": {
+              "mean": 71.53155603917301,
+              "sample_sd": 4.466979630571307,
+              "descriptive_se": 2.2334898152856537
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 9.344396082698585,
+              "sample_sd": 7.020870363657163,
+              "descriptive_se": 3.5104351818285817
+            }
+          },
+          "piqa_nli_P1D2": {
+            "pointer": {
+              "mean": 59.33079434167574,
+              "sample_sd": 6.186225737061198,
+              "descriptive_se": 3.093112868530599
+            },
+            "pooling": {
+              "mean": 69.8449401523395,
+              "sample_sd": 5.616734060647864,
+              "descriptive_se": 2.808367030323932
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 10.514145810663766,
+              "sample_sd": 8.339527544377479,
+              "descriptive_se": 4.169763772188739
+            }
+          },
+          "piqa_nli_P2D2": {
+            "pointer": {
+              "mean": 65.66920565832427,
+              "sample_sd": 10.518804797075127,
+              "descriptive_se": 5.2594023985375635
+            },
+            "pooling": {
+              "mean": 68.14472252448314,
+              "sample_sd": 7.284508037102541,
+              "descriptive_se": 3.6422540185512706
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 2.475516866158864,
+              "sample_sd": 5.858041053020258,
+              "descriptive_se": 2.929020526510129
+            }
+          },
+          "piqa_nli_P3D2": {
+            "pointer": {
+              "mean": 65.80522306855278,
+              "sample_sd": 10.790745024843947,
+              "descriptive_se": 5.395372512421973
+            },
+            "pooling": {
+              "mean": 67.23340587595213,
+              "sample_sd": 8.670516917003058,
+              "descriptive_se": 4.335258458501529
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 1.4281828073993474,
+              "sample_sd": 4.143838358671133,
+              "descriptive_se": 2.0719191793355667
+            }
+          },
+          "piqa_nli_P4D2": {
+            "pointer": {
+              "mean": 63.805767138193694,
+              "sample_sd": 9.10580097436199,
+              "descriptive_se": 4.552900487180995
+            },
+            "pooling": {
+              "mean": 68.75680087051143,
+              "sample_sd": 4.391909292549552,
+              "descriptive_se": 2.195954646274776
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 4.951033732317736,
+              "sample_sd": 8.612469469908014,
+              "descriptive_se": 4.306234734954007
+            }
+          },
+          "piqa_nli_P5D2": {
+            "pointer": {
+              "mean": 68.19912948857454,
+              "sample_sd": 7.409141888152421,
+              "descriptive_se": 3.7045709440762105
+            },
+            "pooling": {
+              "mean": 69.66811751904244,
+              "sample_sd": 6.585640321536215,
+              "descriptive_se": 3.2928201607681076
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 1.468988030467902,
+              "sample_sd": 4.853719233724283,
+              "descriptive_se": 2.4268596168621417
+            }
+          },
+          "gpqa_disjoint5_rerank": {
+            "pointer": {
+              "mean": 33.45959595959596,
+              "sample_sd": 3.532346003090451,
+              "descriptive_se": 1.7661730015452255
+            },
+            "pooling": {
+              "mean": 36.868686868686865,
+              "sample_sd": 2.766275542955386,
+              "descriptive_se": 1.383137771477693
+            },
+            "pooling_minus_pointer_pp": {
+              "mean": 3.4090909090909087,
+              "sample_sd": 5.492061406800895,
+              "descriptive_se": 2.7460307034004474
+            }
+          }
+        },
+        "nli_P0D0_minus_direct_interaction_pp": {
+          "mean": 8.18824809575626,
+          "sample_sd": 7.949314866243947,
+          "descriptive_se": 3.9746574331219735
+        },
+        "template_sensitivity": {
+          "D0": {
+            "mean_template_paired_delta_pp_across_settings": {
+              "mean": 6.31120783460283,
+              "sample_sd": 5.924907564773036,
+              "descriptive_se": 2.962453782386518
+            },
+            "settingwise_worst_paired_delta_pp": {
+              "mean": 1.90424374319913,
+              "sample_sd": 4.987865566812921,
+              "descriptive_se": 2.4939327834064606
+            },
+            "worst_template_of_four_setting_mean_paired_delta_pp": 2.393906420021766
+          },
+          "D1": {
+            "mean_template_paired_delta_pp_across_settings": {
+              "mean": -1.7976967718534635,
+              "sample_sd": 7.9326591115558305,
+              "descriptive_se": 3.9663295557779152
+            },
+            "settingwise_worst_paired_delta_pp": {
+              "mean": -6.052774755168666,
+              "sample_sd": 9.382782906885069,
+              "descriptive_se": 4.6913914534425345
+            },
+            "worst_template_of_four_setting_mean_paired_delta_pp": -5.508705114254628
+          },
+          "D2": {
+            "mean_template_paired_delta_pp_across_settings": {
+              "mean": 5.030377221617701,
+              "sample_sd": 6.3225080738158645,
+              "descriptive_se": 3.1612540369079323
+            },
+            "settingwise_worst_paired_delta_pp": {
+              "mean": 0.39445048966267604,
+              "sample_sd": 5.305980886159588,
+              "descriptive_se": 2.652990443079794
+            },
+            "worst_template_of_four_setting_mean_paired_delta_pp": 1.4281828073993474
+          },
+          "all_18": {
+            "mean_template_paired_delta_pp_across_settings": {
+              "mean": 3.1812960947890225,
+              "sample_sd": 6.546799466821455,
+              "descriptive_se": 3.2733997334107277
+            },
+            "settingwise_worst_paired_delta_pp": {
+              "mean": -6.052774755168666,
+              "sample_sd": 9.382782906885069,
+              "descriptive_se": 4.6913914534425345
+            },
+            "worst_template_of_four_setting_mean_paired_delta_pp": -5.508705114254628
+          }
+        }
+      },
+      "piqa_original": {
+        "conditions": {
+          "piqa_original_nli": {
+            "pooling_minus_pointer_pp": {
+              "mean": 7.84820457018499
+            }
+          }
+        }
+      }
+    }
+  }
+}

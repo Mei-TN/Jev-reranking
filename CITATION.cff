@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this research code, please cite the accompanying manuscript. Publication identifiers will be added when available."
+title: "JEV Reranking"
+repository-code: "https://github.com/Mei-TN/Jev-reranking"
+type: software
+version: 0.1.0
+license: Apache-2.0
+authors:
+  - family-names: Mei
+    given-names: Haocheng
+  - family-names: Tian
+    given-names: Yuchuan
+  - family-names: Yuan
+    given-names: Ye
+  - family-names: Wu
+    given-names: Enhua
+  - family-names: Xu
+    given-names: Chao
+  - family-names: Chen
+    given-names: Allen
+  - family-names: Han
+    given-names: Kai
+  - family-names: Wang
+    given-names: Yunhe
+preferred-citation:
+  type: unpublished
+  title: "Improving JEV Entailment Reranking with Span Readouts and Selective Adaptation"
+  year: 2026
+  authors:
+    - family-names: Mei
+      given-names: Haocheng
+    - family-names: Tian
+      given-names: Yuchuan
+    - family-names: Yuan
+      given-names: Ye
+    - family-names: Wu
+      given-names: Enhua
+    - family-names: Xu
+      given-names: Chao
+    - family-names: Chen
+      given-names: Allen
+    - family-names: Han
+      given-names: Kai
+    - family-names: Wang
+      given-names: Yunhe

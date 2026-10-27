@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jev-research"
+version = "0.1.0"
+description = "Paper-focused JEV training, inference and evaluation workflows"
+requires-python = ">=3.12"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pydantic==2.13.5"]
+
+[project.scripts]
+jev = "jev.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jev"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"LICENSE" = "jev/_resources/LICENSE"
+"NOTICE" = "jev/_resources/NOTICE"
+"THIRD_PARTY_NOTICES.md" = "jev/_resources/THIRD_PARTY_NOTICES.md"
+
+[tool.hatch.build.hooks.custom]
+path = "scripts/hatch_build.py"
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src", "configs", "provenance", "docs", "requirements", "third_party", "scripts", "tests", "examples", ".github", ".gitattributes", ".gitignore", "README.md", "README.zh-CN.md", "CONTRIBUTING.md", "CITATION.cff", "pyproject.toml", "NOTICE", "LICENSE", "THIRD_PARTY_NOTICES.md"]

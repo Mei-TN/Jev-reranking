@@ -1,0 +1,214 @@
+{
+  "description": "Source-side byte counts and SHA-256 of the eight historical checkpoints and their training RESULT.json, as recorded before transfer. Each output file also equals its RESULT.json checkpoint.artifacts pin.",
+  "derived_from": "revision_20261013/inference_checkpoint_transfer_v2.json: source_manifest",
+  "runs": {
+    "SUPP_WINH4_H0_f2_s44": {
+      "RESULT.json": {
+        "bytes": 5839,
+        "sha256": "5a07a028cf7435f48b630be0575b11c0e34857b86bc4dabed5aca74bcfaa6195"
+      },
+      "output/head.pt": {
+        "bytes": 5261631,
+        "sha256": "3520419d601f0601d8f0c58bf13938f367912352aa3b538c21d093543a5515a4"
+      },
+      "output/adapter_model.safetensors": {
+        "bytes": 519503416,
+        "sha256": "b57e6be0dc578f2f0ddc2b34981ac0e190f644c7435d54505d0e98fef1838ce3"
+      },
+      "output/adapter_config.json": {
+        "bytes": 1302,
+        "sha256": "9a560d4c23c0f84e1eeb6aaffd7705ef729cb21162d36f8c92c046259ac10559"
+      },
+      "output/training_config.json": {
+        "bytes": 15465,
+        "sha256": "db334e0289c5ba4e10eb33127ee1e93082863805bc887db37a6df3525dce4ed6"
+      },
+      "output/training_metrics.json": {
+        "bytes": 15208,
+        "sha256": "127486066bdb04eb0079de5286846827217665fd357bc30d64ea321d4084273a"
+      }
+    },
+    "SUPP_WINH4_H0_f2_s45": {
+      "RESULT.json": {
+        "bytes": 5789,
+        "sha256": "6dc5b26cb084e3dd286a775089bfb1388fd929da10ba900bf6a83d174a1f57ca"
+      },
+      "output/head.pt": {
+        "bytes": 5261631,
+        "sha256": "783d92efe5e375fd2e1824154437416c960a3f6d262a269cda11102e981a9b38"
+      },
+      "output/adapter_model.safetensors": {
+        "bytes": 519503416,
+        "sha256": "c63025ec1eda35f3c985965bdaf87453117a54b8708aa40a48ac74f83f9272ae"
+      },
+      "output/adapter_config.json": {
+        "bytes": 1302,
+        "sha256": "f083ee346409c4425c1d09b306b5ee5067cf035c65341b8973b24e6f077690d1"
+      },
+      "output/training_config.json": {
+        "bytes": 15465,
+        "sha256": "8589eb7f91185b7f0cddd416117bd1695add830a16c86a6a25eb9519ca314279"
+      },
+      "output/training_metrics.json": {
+        "bytes": 15208,
+        "sha256": "93e41f71966471a999a22eac2a288d21ebdaf6a846efb1b58e9870d6f06f2de9"
+      }
+    },
+    "SUPP_WINH4_H0_f3_s44": {
+      "RESULT.json": {
+        "bytes": 5893,
+        "sha256": "56269f865e39338fd9c4a469691f8426592e518eb142c14c7cccdfb77c96a34a"
+      },
+      "output/head.pt": {
+        "bytes": 5261567,
+        "sha256": "b26bfa356fdabf47d47ceb1a273525d2f882f0d3d6a4aa571fb282d1529776ff"
+      },
+      "output/adapter_model.safetensors": {
+        "bytes": 519503416,
+        "sha256": "199e3fba6a491fd44fb0628719622725dcbd85482eb2ad850813494ae8c25d0a"
+      },
+      "output/adapter_config.json": {
+        "bytes": 1302,
+        "sha256": "39377802ca95b4d19ca57a66f35bfd7a32356dc390cf15be158a048b866cdd9f"
+      },
+      "output/training_config.json": {
+        "bytes": 15437,
+        "sha256": "bae5a3a48c697a31104af5ce6b7e2356ce132ce778ff9ddc7b793b73effd1150"
+      },
+      "output/training_metrics.json": {
+        "bytes": 15179,
+        "sha256": "fe3fedb27bbb2710a84347d76b22e34cd6b9865a14cfbb18d514afbdd7fcebbd"
+      }
+    },
+    "SUPP_WINH4_H0_f3_s45": {
+      "RESULT.json": {
+        "bytes": 5793,
+        "sha256": "ea98f58cc1db4b2befdfe2156de4f89a386bdfaf1ac7b03d437f66070be7877b"
+      },
+      "output/head.pt": {
+        "bytes": 5261567,
+        "sha256": "3e07805f610338760a473b161fbbe752e5344357c1f15557515e4b6f65d94acd"
+      },
+      "output/adapter_model.safetensors": {
+        "bytes": 519503416,
+        "sha256": "ab825d64b5ecb8d29b92f02e4983f1622f429256c418a08720d469f12eb507de"
+      },
+      "output/adapter_config.json": {
+        "bytes": 1302,
+        "sha256": "43673f459263e7fc9025bb41e619d8c10e731cb35798628a7f1516982299f276"
+      },
+      "output/training_config.json": {
+        "bytes": 15437,
+        "sha256": "378fa07ecca7abd2c911e6863a53c5c13f8a02880f8b689f432693341bd1918e"
+      },
+      "output/training_metrics.json": {
+        "bytes": 15180,
+        "sha256": "1479ee1bc3b95744ca11533cd785d56ee08072600b49160a5afa2ac974fe536d"
+      }
+    },
+    "SUPP_WINH4_H5_f2_s44": {
+      "RESULT.json": {
+        "bytes": 5754,
+        "sha256": "2e2f2980aa70d1352ce60078943dc1555b249748f3e882427c61f3fbcb12e234"
+      },
+      "output/head.pt": {
+        "bytes": 5261631,
+        "sha256": "2744af49511220ce2a27ddee51d77f0b867cd9bbd023706a5131c5699b1b255c"
+      },
+      "output/adapter_model.safetensors": {
+        "bytes": 519503416,
+        "sha256": "e507aac096317cf946f30cd4833dcd48c7bc57465b2852cd868e07a60bf39850"
+      },
+      "output/adapter_config.json": {
+        "bytes": 1302,
+        "sha256": "482ad7f0fc68b15fa2e4c1578d3e3ecc2053cd3659b395c1ed3e38afc2e90a74"
+      },
+      "output/training_config.json": {
+        "bytes": 15477,
+        "sha256": "c6e7cff7023c95ba855f1816bcd2768aa0ff21d3935384bd1800bc73877fbe69"
+      },
+      "output/training_metrics.json": {
+        "bytes": 15209,
+        "sha256": "c22ea32da70f000092dc8a85a028f94985ace1345753e26d15ed17cf34f74fef"
+      }
+    },
+    "SUPP_WINH4_H5_f2_s45": {
+      "RESULT.json": {
+        "bytes": 6008,
+        "sha256": "e1365f6ac32a97662dc8212c123058fc9045a663165efffbf5abdfbfd5871776"
+      },
+      "output/head.pt": {
+        "bytes": 5261631,
+        "sha256": "b859ac84cd107d22cc5cbc5abe07d70b4611a25d7380e1992404ed8c40d22655"
+      },
+      "output/adapter_model.safetensors": {
+        "bytes": 519503416,
+        "sha256": "eaf720e43f17364229e1b8ffbff994c4ed178a5e6180855ac42c32a6f5729696"
+      },
+      "output/adapter_config.json": {
+        "bytes": 1302,
+        "sha256": "04a68fb2da947248dd843e9c6556fb61a8a86ae0ebc87d4d904e76e464df8c7b"
+      },
+      "output/training_config.json": {
+        "bytes": 15477,
+        "sha256": "90374ce28727734bdcc75d32cb2fc6a5811d93cdc2b5a1ed84b0bda822f811fe"
+      },
+      "output/training_metrics.json": {
+        "bytes": 15208,
+        "sha256": "6a5d3aa6710f4277ab86c546aded8e4200ef231a6a41a359317f375e59a96d6d"
+      }
+    },
+    "SUPP_WINH4_H5_f3_s44": {
+      "RESULT.json": {
+        "bytes": 5806,
+        "sha256": "b1d5d7ff7d7816ba715726bde71600790641ebced18471c36bad991eb06298cc"
+      },
+      "output/head.pt": {
+        "bytes": 5261631,
+        "sha256": "afd1fe41b20042dd58a70652f7e35bfc46f969f7f2c5679f3434a5bca4b89231"
+      },
+      "output/adapter_model.safetensors": {
+        "bytes": 519503416,
+        "sha256": "357dc8a7ae6071ebff760e7a72fc69120c6417dbba1724af0ead18d089b22316"
+      },
+      "output/adapter_config.json": {
+        "bytes": 1302,
+        "sha256": "b17cfbfe4dd6300d2f0f845dc517684eb656a0996d6df5559609d721bf746b77"
+      },
+      "output/training_config.json": {
+        "bytes": 15449,
+        "sha256": "e0f7dd2f387abbd178a4dc6080d3160fe1dd335b8527190d99c5ca747325c0dd"
+      },
+      "output/training_metrics.json": {
+        "bytes": 15180,
+        "sha256": "15951bdf61f02174f5b5b7cbd5b097ef6d12d8515a176284e8a5b51f1c3bc127"
+      }
+    },
+    "SUPP_WINH4_H5_f3_s45": {
+      "RESULT.json": {
+        "bytes": 5957,
+        "sha256": "9d74d5479ce33ec2eb652c2f22782e6e8c2813912a437a06469b505e163d4923"
+      },
+      "output/head.pt": {
+        "bytes": 5261631,
+        "sha256": "a35873839858dcedfe96c792a2d348ae18be4f31c9c1013e8d69323280f95ac2"
+      },
+      "output/adapter_model.safetensors": {
+        "bytes": 519503416,
+        "sha256": "dbc2a5e348f5926b2abeff2f1797e53cbd53df1c7064c21db1efb70cdafccda3"
+      },
+      "output/adapter_config.json": {
+        "bytes": 1302,
+        "sha256": "ff79bd1e34a50e0d155fb46084995ae9a6f192b00c18431c75c11ead4c396001"
+      },
+      "output/training_config.json": {
+        "bytes": 15449,
+        "sha256": "7129ab7f03f042ed14618027fe34d5c2a592a291d0ed53660bfcdb0881875920"
+      },
+      "output/training_metrics.json": {
+        "bytes": 15180,
+        "sha256": "51719e4f5f90203bab33303db11f2afce5e7b650ec7ab10f7288b17e8458e5cd"
+      }
+    }
+  }
+}

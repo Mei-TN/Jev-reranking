@@ -1,0 +1,17 @@
+{
+  "schema": "jev.recipe.v1",
+  "id": "my_domain_pointer",
+  "tree": "e11",
+  "description": "Community extension: native labelled JSONL, pointer/end head. This is a new experiment.",
+  "trainer_args": {
+    "base": "{base_model}", "data": "{data_root}/custom.train.jsonl",
+    "base_revision": "56f0584bb40578a2c33b1b40a08ccd17243ad710",
+    "out": "{output}", "epochs": "1", "lora": "64", "lora_targets": "all",
+    "lr": "1.25e-5", "head_lr": "1.25e-5", "weight_decay": "0.01",
+    "batch": "1", "accum": "8", "dtype": "bf16", "weights_dtype": "fp32",
+    "checkpointing": "1", "device": "cuda", "seed": "44",
+    "head_config": "{\"version\":1,\"kind\":\"pointer\",\"dim\":256,\"readout\":\"end\",\"rng_anchor_dim\":256}"
+  },
+  "input_pins": {},
+  "expected": {}
+}

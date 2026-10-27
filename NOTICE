@@ -1,0 +1,10 @@
+JEV
+Code accompanying Improving JEV Entailment Reranking with Span Readouts and Selective Adaptation.
+
+This distribution includes kev/NeoHorse-derived research implementations originally
+distributed under Apache-2.0. Original attribution and applicable license text are
+retained in third_party and with the corresponding implementations.
+
+Project code is licensed under the repository's Apache-2.0 LICENSE. External
+libraries, model weights, datasets and benchmark assets retain their respective
+terms. See THIRD_PARTY_NOTICES.md for attribution and dependency information.

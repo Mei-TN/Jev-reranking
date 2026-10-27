@@ -1,0 +1,40 @@
+{
+  "schema": "jev.public-training-requirements.v1",
+  "python": "3.12.13",
+  "recorded_distributions": 79,
+  "external_media_files": 86,
+  "external_media_bytes": 4222803808,
+  "Pillow": "11.3.0",
+  "declared_metadata_conflict": "torch 2.8.0+cu128 has requirement triton==3.4.0; platform_system == \"Linux\" and platform_machine == \"x86_64\", but you have triton 3.7.1.",
+  "source_scope": "Recorded training version inventory, exact external artifact identities, and project-authored CPU installer controls. No third-party binaries or source libraries are included.",
+  "files": {
+    "environment/configure_media.py": {
+      "bytes": 998,
+      "sha256": "cfbde26979e69b0682aed48c0c8edca6b0a72ee26b13f818add34350b633ed8b"
+    },
+    "environment/cpu_import_probe.py": {
+      "bytes": 2154,
+      "sha256": "cbb4f3f3c80faf2339ae5570f7f5078073ccff623f54b2b864decccfb7465a1e"
+    },
+    "environment/rebuild_training.py": {
+      "bytes": 7411,
+      "sha256": "b3103e9c851a9642687fe478b91cb78c79966d7a71d37bb6f5f18ebf310b4aa3"
+    },
+    "environment/SPEC.template.json": {
+      "bytes": 50219,
+      "sha256": "35c5661a4474b13bfd48f770e80daaf795ed8bda16ce526e032ec0c8cfa84d1f"
+    },
+    "training-lock.txt": {
+      "bytes": 1598,
+      "sha256": "7fae539192d2a4edfecdb496a7f5849e4adfdb29c2b4ea755bb23ca796a75173"
+    },
+    "training-media.json": {
+      "bytes": 31142,
+      "sha256": "38139b39a7fcfb6d3aed01e9c73192fdc7f69fc096e71ff69362309721b9d88e"
+    },
+    "environment/model-python": {
+      "bytes": 738,
+      "sha256": "05f4ce6791c03c08618792fcf1edd00fa7ff92f783df301b8490e14c1631caba"
+    }
+  }
+}

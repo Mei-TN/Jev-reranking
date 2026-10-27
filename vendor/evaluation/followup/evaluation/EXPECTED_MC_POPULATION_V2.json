@@ -1,0 +1,168 @@
+{
+  "schema": "jev-paper-supplement-mc-population-reference-v1",
+  "normalization": "Only model field removed; question/option order, all content, duplicates and actual encoder token counts retained",
+  "tasks": {
+    "mmlu_fewshot": {
+      "questions": 14042,
+      "calls": 112336,
+      "request_occurrence_sha256": "eea0a4c0682b3d04c5014069dcf8ae889672c4a2807d04250744ac22c4be3bd1",
+      "request_encoder_tokens_occurrence_sha256": "bd9d0fef99adec97c74dbce10902b676ee1a0f3ac56b13066028678cb382ff39",
+      "dataset_identity": {
+        "kind": "native_dataset_loader",
+        "identity_sha256": "f5e2d258f80e8445f591b3daa7a76e5ce7576c8197f218996103dbd6aa27d41a"
+      },
+      "historical_response_completion_order_sha256": "618f95fb1df4e80f63b721ce21f6014673d68e1bc05023c843f5e1d2329867b8",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "43232cc1ab8e3ac7af5330aff903f20042cf9777fb40eb0e1f8c4e51e87d5d19",
+      "reference_dataset_inventory_sha256": "e26e7a0e3630e0842ca8b079473fb467645dc16d8cde0167cbeb4b4ea6e51b11"
+    },
+    "mmlu": {
+      "questions": 14042,
+      "calls": 112336,
+      "request_occurrence_sha256": "67c9c25e2d4416c00699a57239beaa4b74d090bcf8aa27b2c6cd1757de399412",
+      "request_encoder_tokens_occurrence_sha256": "d93456a606d8f33f918308cd316f65d7147560cde31288f68051c409317b2924",
+      "dataset_identity": {
+        "kind": "native_dataset_loader",
+        "identity_sha256": "a35fea690dcac36728c7f9375652251b30171707a8511e6604322d5a28109fc4"
+      },
+      "historical_response_completion_order_sha256": "8c495243cc4b3576b9e5d6ab4f65b969f873b8d400f7f49286174d3bc79885fe",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "0647e5427f5f2704830a2c2e959aa9d4d49e8e73b4c73f4c53a93930d660568d",
+      "reference_dataset_inventory_sha256": "ee5939486d5804dcee96f7993e4f872b7fba9e4e32bbaeb071eceac1e17489b4"
+    },
+    "hellaswag": {
+      "questions": 10042,
+      "calls": 80336,
+      "request_occurrence_sha256": "a13eed3bc7faac992692ec3cdb66bbe053fb981f64bd4460099ff815918d8034",
+      "request_encoder_tokens_occurrence_sha256": "125bafd1a6304d22a9d9e254e7d7a27cee8cab27faa2a20e77cca45396f5a149",
+      "dataset_identity": {
+        "kind": "native_dataset_loader",
+        "identity_sha256": "cec5a5f0d7bce6c614ceb66c31ed6403ba71308f020a12ceb3747d6d8e5c8a49"
+      },
+      "historical_response_completion_order_sha256": "ccb39ea2feac5d2f445cc3b6c7bb16800c07d42c2d434e171db46aa3540eb473",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "a442682f05f8d7d602f888d4fe6598dad0f62d9c5b8a6be9da92bcd37f098001",
+      "reference_dataset_inventory_sha256": "996316825848a4c7db9f28c8ce4025a1a0a97694f518b5aa2d5d5c22c008b8b5"
+    },
+    "gsm8k_mc10": {
+      "questions": 1319,
+      "calls": 26380,
+      "request_occurrence_sha256": "6ffc6628d95b4f780daa35120e23186d43c9a4a7c85d9595667094ba55f076b9",
+      "request_encoder_tokens_occurrence_sha256": "5fb5e2d5a0f18abbdb1f96eeb1bd05d08436677d4386cf9d9dcf9eb91df8093b",
+      "dataset_identity": {
+        "kind": "native_dataset_loader",
+        "identity_sha256": "4075ed7e56e391ee064cbca9443c1c08011bf7c546479c4399c05d0f600e0347"
+      },
+      "historical_response_completion_order_sha256": "407c59ced328f4c2361f3b0d9fef831a922ea3335949629f8d56269cc7485d76",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "8a5543c1efa86ead749cf5b230bd8a8d7d6aff36ffb93f4b61a74fcf14e4a03f",
+      "reference_dataset_inventory_sha256": "4a15d20eb5c8a81f552e44db11b01d1900209d683867284e1493bafc3927ea95"
+    },
+    "arc_easy": {
+      "questions": 2376,
+      "calls": 19002,
+      "request_occurrence_sha256": "05ba8cdc56da98e850f769b1b47b482d0aed29dc76839613ccdd7af980a43f59",
+      "request_encoder_tokens_occurrence_sha256": "f8039aee0f7e5b80d7824a2bb1528a17a685fec44bbb84a9d79a5316f77e106d",
+      "dataset_identity": {
+        "kind": "native_dataset_loader",
+        "identity_sha256": "2db31e523a76f53bf9e714283b5b23742c4e661879c59a4d189c2135735c981e"
+      },
+      "historical_response_completion_order_sha256": "b9b85bd8762d72725b8d6733b571006e5d17bade9efaba47dadeda19727d111c",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "960026e6ba2b5ba2a8782c651855f8ff9c583fcb547f86cefc896c3ca58c85b8",
+      "reference_dataset_inventory_sha256": "e808f82b6fa3a0b3f162272b2f07b6891a6aa2d2e55fdd5c8b67b99495d67455"
+    },
+    "gsm8k_mc4": {
+      "questions": 1319,
+      "calls": 10552,
+      "request_occurrence_sha256": "0bf7f1c1d3841e88de898e714e766a60cbe5a742d0953b82593fdfd550cd9c89",
+      "request_encoder_tokens_occurrence_sha256": "9697263a502bb0e6f50edb408ae71d4ce41d913abbbac1e8b8f2a191d4619959",
+      "dataset_identity": {
+        "kind": "native_dataset_loader",
+        "identity_sha256": "4075ed7e56e391ee064cbca9443c1c08011bf7c546479c4399c05d0f600e0347"
+      },
+      "historical_response_completion_order_sha256": "489fa85900998ee829fe9bcdb35c39a15879b138536f6bb062dc47653c85695d",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "7cff2cd4df20dbf983100420fc7d07bda07176029a0a7f6754b289b331705e89",
+      "reference_dataset_inventory_sha256": "4a15d20eb5c8a81f552e44db11b01d1900209d683867284e1493bafc3927ea95"
+    },
+    "winogrande": {
+      "questions": 1267,
+      "calls": 5068,
+      "request_occurrence_sha256": "988507c216501a2199601e0c187af2220ec2cc5dca63cbec40c444881dabc7b5",
+      "request_encoder_tokens_occurrence_sha256": "c6d2b4847209b3815e92fcfa41e4ba3b9bb0a565d6f55149747230776574ae49",
+      "dataset_identity": {
+        "kind": "native_dataset_loader",
+        "identity_sha256": "57936c506d0aaf7adb1e3710f2bd327ba809d6963d7c02e41c55ae9dc52e774b"
+      },
+      "historical_response_completion_order_sha256": "3cfe0eb47103c43318cd6c822e3c6902c228b169015c0f4a817de0eaa26e5797",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "40c25155105ded6ea1429d10bf526f3f4e93ea978ff5078f779dc791518b0360",
+      "reference_dataset_inventory_sha256": "e1b4aa66bb41576014c17c37d2c7949c1c864e5a261926c39bf2df3b4c615234"
+    },
+    "arc_challenge": {
+      "questions": 1172,
+      "calls": 9374,
+      "request_occurrence_sha256": "05c865a7f9b905012af9ed67f72e5772939ae4b9a18bc511b0e8cea2ca1ba06b",
+      "request_encoder_tokens_occurrence_sha256": "d0ab5cf0203a25222fa13ebe7464f2f7950e94310077ce630c0f22d1949d9749",
+      "dataset_identity": {
+        "kind": "native_dataset_loader",
+        "identity_sha256": "61bec78f497c60e8bd01f654b3c38c1cdf764c748fd2da90027c04064dcee7b7"
+      },
+      "historical_response_completion_order_sha256": "5bbe055e1dffd2c188d04a3edcd7fe005f95def9093afbb11c601300c1ae5a05",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "225ba97304fbdceb61af3ebf5666bcb82e3078efdb4bc5ec19ce54f7e08a8cda",
+      "reference_dataset_inventory_sha256": "4611cce090b7948f0e2a7f86cbe86743d867b24c0ec926c08fafd2c5c80257f5"
+    },
+    "chess": {
+      "questions": 500,
+      "calls": 4000,
+      "request_occurrence_sha256": "57de5689db0b1832608f2e8d02672a085383420fa8d5886dd92eeca047985362",
+      "request_encoder_tokens_occurrence_sha256": "f8abb766cd556b14d126acf90c90b236edd1016417728fd678cd9a47f6a77bf4",
+      "dataset_identity": {
+        "kind": "native_synthetic_chess_no_dataset_loader",
+        "questions": 500,
+        "seed": 0,
+        "source_revision": "f004f37e52695d6ddfb914a64dbf93942839ba1e",
+        "source_sha256": "0217e9565a033ddb85cb725ce9cef707fe41d4ce6edb38052340b13601514380",
+        "historical_source_binding_sha256": "997a0a53a30d029047123a03b19663590781d1133e4ffda49262fce3202175e4",
+        "request_order_definition": "Native load_chess(500,seed=0) and frozen scorer/options; accepted raw occurrence identity retains all bodies/options/duplicates/tokens"
+      },
+      "historical_response_completion_order_sha256": "d53be189518c19b7cc614e5bc9708dc242ff8f99c3ca0f9d287df66e86f0c012",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "ffe64d383e113d529e19704a7c73163973735830f8b617f8e4659e0f8828970c",
+      "reference_dataset_inventory_sha256": null
+    },
+    "gpqa_fewshot": {
+      "questions": 198,
+      "calls": 1584,
+      "request_occurrence_sha256": "6a1eaba6ce8efc22be9072fd732d16d2104e239d74b38c1d3b53cc344f72bd77",
+      "request_encoder_tokens_occurrence_sha256": "59e7e033f6073d866ee26fa4f8fe92b949d374e0553d336b0d1c8b8b6ba2f986",
+      "dataset_identity": {
+        "kind": "native_dataset_loader",
+        "identity_sha256": "14a1c7010957f3c83a81431aa43d09429649c6648a13b08a67294a509d7817ab"
+      },
+      "historical_response_completion_order_sha256": "dc40a1bd4c01d3a3cd14788b3d20b4f486b9c5152912f80225faf401f951c1bc",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "02dde2841a9f5d7a7fed464777771599da358c8f6d5410a1673b91e66b11774d",
+      "reference_dataset_inventory_sha256": "cb5f4ab4138041d0a39e9bbd9771cc9c8821733c15053bb6fb14bc64c6898ab7"
+    },
+    "gpqa": {
+      "questions": 198,
+      "calls": 1584,
+      "request_occurrence_sha256": "5feb13bcd08cf958eb5501c38a0ca7a1780d9ea20c1836a70588fcf2bdd0741e",
+      "request_encoder_tokens_occurrence_sha256": "63adaf4c88bda62eaa2b971b819db9d33b186fc97b4972a2c2cc50d47674fa45",
+      "dataset_identity": {
+        "kind": "native_dataset_loader",
+        "identity_sha256": "14a1c7010957f3c83a81431aa43d09429649c6648a13b08a67294a509d7817ab"
+      },
+      "historical_response_completion_order_sha256": "9c02260ce7c33c3803c032cdb4579d7a33bd706dbb41569a3d12228bbc98397a",
+      "historical_order_scope": "Original asynchronous completion log; not claimed native submission order",
+      "reference_call_sha256": "0631547c7bc539e5c6c0c7909524ad2db356a1e1cc7d73675ca107254d4617a1",
+      "reference_dataset_inventory_sha256": "cb5f4ab4138041d0a39e9bbd9771cc9c8821733c15053bb6fb14bc64c6898ab7"
+    }
+  },
+  "total_calls": 382552,
+  "historical_comparison_sha256": "96f8512b3bbeaf77d8a14470a60b129fc491317578f031c8a3995169f738b078",
+  "new_order_rule": "Each fresh native submission/probability record is indexed; within new cohort native planned request order must agree. Historical occurrence reference is not invented historical submission order."
+}

@@ -1,0 +1,140 @@
+{
+  "schema": "jev.opencompass-plugin.v1",
+  "upstream": {
+    "repository": "https://github.com/open-compass/opencompass.git",
+    "tag": "0.5.3",
+    "revision": "a25fdd25dbe6a6e1da355332fa52e82dcfc3a1ee"
+  },
+  "paper_fork_revision": "605996a616035bc729b1be2a70af042ebc1fe5d8",
+  "paper_fork_source_archive_sha256": "af824b130204912992e49ef46678bb2c21b8bbb017db7b61c675c0234a44cea6",
+  "scope": "Selected paper decision dataset/scorer payloads plus explicit compatibility changes against the publicly obtainable OpenCompass revision. This does not assert complete paper-fork identity or runtime benchmark equivalence.",
+  "overlay_files": {
+    "opencompass/datasets/decision_native.py": {
+      "bytes": 1670,
+      "sha256": "b2f21740d857ac2fb8ef7988d3d731c9501deb95cc1c1ce1a8c96a81c96ee9d0"
+    },
+    "opencompass/datasets/decision_benchmarks.py": {
+      "bytes": 10038,
+      "sha256": "446101561e4191cf390d98bd34a58b1c8438c9a4da1db6ada4b5561da07a6787"
+    },
+    "opencompass/datasets/_decision_upstream/__init__.py": {
+      "bytes": 68,
+      "sha256": "ed788d63a71c37b300ab2c9e9e9454b0868e1b7b1f02b221664f303d31421c76"
+    },
+    "opencompass/datasets/_decision_upstream/jevbench/__init__.py": {
+      "bytes": 433,
+      "sha256": "64c28dc1534502c429a3b67eee79ab7909fab995b7d116c9b089f0f3bb8652f7"
+    },
+    "opencompass/datasets/_decision_upstream/jevbench/adapters/__init__.py": {
+      "bytes": 63,
+      "sha256": "0bc7a83e7918a6d9b599de74280ff1b004795b2f1a52b793dc5d39614b7df2c2"
+    },
+    "opencompass/datasets/_decision_upstream/jevbench/adapters/base.py": {
+      "bytes": 2894,
+      "sha256": "fdddc42e4f71d774096f806c4ee844cc4c4b428385f01a017cb64153d7c089f4"
+    },
+    "opencompass/datasets/_decision_upstream/jevbench/adapters/openai_compat.py": {
+      "bytes": 7643,
+      "sha256": "5f0450ef2db2743db05bdf756cd50db951654533e33cdfd23002709ca485c95e"
+    },
+    "opencompass/datasets/_decision_upstream/jevbench/metrics.py": {
+      "bytes": 5604,
+      "sha256": "4038c8423ad1cf28601afb6babe777b71f08e379b9ca125b09b52c0ac7d60515"
+    },
+    "opencompass/datasets/_decision_upstream/jevbench/scoring.py": {
+      "bytes": 5743,
+      "sha256": "6aa17d212ea20a3eeb6876149367842e8462c11dcb54d73df062fb406368331e"
+    },
+    "opencompass/datasets/_decision_upstream/jevbench/summarize.py": {
+      "bytes": 3940,
+      "sha256": "aa5f24da407d004cd80bad1cd957b6987aba152591084c096d1de51dd9775cbe"
+    },
+    "opencompass/datasets/_decision_upstream/jevbench/tasks.py": {
+      "bytes": 4339,
+      "sha256": "b9c2f8ba9a7301519656d79d47c31b8ab0542a5545498ce3b339d5e93b976812"
+    },
+    "opencompass/datasets/_decision_upstream/JEVBENCH_LICENSE": {
+      "bytes": 1096,
+      "sha256": "3e5beed774bb0bcbfb2fcf24ba9554212c6ae112937d308040989465ab0c5784"
+    },
+    "opencompass/datasets/_decision_upstream/KEV_LICENSE": {
+      "bytes": 11343,
+      "sha256": "6b08bb37982c233aa12bcbdf19106da12f3f4fcf800773ea42e28ebeddd34fb8"
+    },
+    "opencompass/datasets/_decision_upstream/kev_metrics.py": {
+      "bytes": 14978,
+      "sha256": "cbba1235d8abad018a02910a59f14c148c9e6ef48ff3d936ce9b4fdd4c399237"
+    },
+    "opencompass/datasets/_decision_upstream/kev_scoring.py": {
+      "bytes": 7011,
+      "sha256": "3faa355955f3ab8647538bebac0bcbf126c10dedd21b4196ec71c51b3ee76d54"
+    },
+    "opencompass/datasets/_decision_upstream/SOURCES.json": {
+      "bytes": 3041,
+      "sha256": "bf15140aba60dc310502c76bd647220b5a8005f9cb1c5c903638a26653974a06"
+    }
+  },
+  "patched_files": {
+    "opencompass/models/base.py": {
+      "upstream": {
+        "bytes": 20624,
+        "sha256": "6d855f2ba5638cc1f8ea9700c29b312b9ddd4ca70e4bd797dab31a0ebd03bf96"
+      },
+      "paper": {
+        "bytes": 21273,
+        "sha256": "08d32eb45bd5ca187d638cd1b953b8016f1e4ffe030bef7234f081e26f2d5e17"
+      }
+    },
+    "opencompass/openicl/icl_inferencer/icl_gen_inferencer_parallel.py": {
+      "upstream": {
+        "bytes": 8605,
+        "sha256": "93e211ee18a52309980ffd6dfdb3634422213f4c4c805bffb42c9314cb03f539"
+      },
+      "paper": {
+        "bytes": 10175,
+        "sha256": "dfb03b518b53cdec4a97871099da59c44b4b5c8770c9e291f4595bbfd460472f"
+      }
+    },
+    "opencompass/openicl/icl_inferencer/icl_gen_inferencer.py": {
+      "upstream": {
+        "bytes": 16190,
+        "sha256": "05be1ae9b08f6c91ac4dc06cf85b2cf7e9d1f7f6fe2d2661ceac8186f198020e"
+      },
+      "paper": {
+        "bytes": 16715,
+        "sha256": "57ea74e57629d4f5076ab5b388e87c3a8ba49a27e3d98a0011bea14d59ed2d3a"
+      }
+    },
+    "opencompass/openicl/icl_inferencer/icl_base_inferencer.py": {
+      "upstream": {
+        "bytes": 12590,
+        "sha256": "f6e0f418958ca5506c14863af530b3982ba842d089452197378fb64414690948"
+      },
+      "paper": {
+        "bytes": 17868,
+        "sha256": "89da9970d12db4d26479abeb274a84f868468154dba39013b9ef625da26a462f"
+      }
+    },
+    "opencompass/tasks/openicl_eval.py": {
+      "upstream": {
+        "bytes": 22068,
+        "sha256": "d16cdfca4d95b86bdd6df0045835363864e5099788c659ec3e8847c1b1e832e9"
+      },
+      "paper": {
+        "bytes": 22644,
+        "sha256": "987c3985a39b9a5a79ac7e908db5b7a9edebc48784a3fb5abb3b1f82b086005e"
+      }
+    }
+  },
+  "patch": {
+    "path": "upstream-to-paper.patch",
+    "bytes": 23058,
+    "sha256": "854e018060e99a027daadd6570fcf3533795516ec36c6f7f80c5a86fb5bcbea8"
+  },
+  "licenses": {
+    "LICENSE": {
+      "bytes": 11408,
+      "sha256": "ba92da766daca067645bd126edb60c63ff55079316bacc91d4831e61fed6d7b0"
+    }
+  }
+}

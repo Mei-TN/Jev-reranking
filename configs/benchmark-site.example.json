@@ -1,0 +1,32 @@
+{
+  "schema": "jev.benchmark-site.v1",
+  "label": "my-authorized-H20-site",
+  "controller_python": "/usr/bin/python3",
+  "native_options": {
+    "base": "/srv/models/NeoHorse-1-4B-hf",
+    "base_revision": "56f0584bb40578a2c33b1b40a08ccd17243ad710",
+    "serve_python": "/srv/jev/envs/model-001/model-python",
+    "oc_python": "/srv/jev-eval/envs/opencompass/bin/python",
+    "mc_python": "/srv/jev-eval/envs/openjev-runtime/.venv/bin/python",
+    "runtime_cache": "/srv/jev-eval/envs/openjev-runtime",
+    "oc_root": "/srv/jev-eval/code/OpenCompass",
+    "rw_root": "/srv/jev-eval/code/RunWeaver",
+    "selection_root": "/srv/jev-eval/materials/selections",
+    "decision_cache": "/srv/jev-eval/srv/decision-cache",
+    "hf_cache": "/srv/jev-eval/srv/hf-cache",
+    "verification_examples": "/srv/jev-eval/verification_examples.json"
+  },
+  "guard": {
+    "hostnames": [
+      "my-exact-authorized-H20-hostname"
+    ],
+    "accounts": [
+      "user"
+    ],
+    "uids": [
+      1000
+    ],
+    "gpu_name_contains": "H20",
+    "idle_memory_mib_below": 500
+  }
+}

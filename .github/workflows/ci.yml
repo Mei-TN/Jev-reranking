@@ -1,0 +1,87 @@
+name: CPU reproducibility checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cpu:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    env:
+      CUDA_VISIBLE_DEVICES: ""
+      HF_HUB_OFFLINE: "1"
+      HF_DATASETS_OFFLINE: "1"
+      TRANSFORMERS_OFFLINE: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUTF8: "1"
+    steps:
+      - name: Allow original deep paths in the Windows source checkout
+        if: runner.os == 'Windows'
+        run: git config --global core.longpaths true
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install the control package and pinned contract-test dependencies
+        run: python -m pip install -e ".[test]" build==1.6.1 hatchling==1.32.4
+      - name: Check dependencies in the test interpreter
+        run: python scripts/check.py --check-test-dependencies
+      - name: Audit literal credentials without printing matched values
+        run: python scripts/audit_release.py --summary
+      - name: Verify all preserved source bytes
+        run: python scripts/verify_sources.py
+      - name: Run control, recipe, scoring and validation tests
+        run: python -m unittest discover -s tests -v
+      - name: Build the wheel through the complete source distribution
+        run: python -m build --no-isolation --outdir dist/ci
+      - name: Verify the installed wheel outside the source checkout
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          import subprocess
+          import tempfile
+          import venv
+          wheel, = Path("dist/ci").resolve().glob("*.whl")
+          with tempfile.TemporaryDirectory(prefix="jev-wheel-check-") as temporary:
+              task = Path(temporary)
+              environment_root = task / "environment"
+              venv.EnvBuilder(with_pip=True).create(environment_root)
+              python = environment_root / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
+              environment = dict(os.environ, JEV_RESOURCE_CACHE=str(task / "resources"))
+              environment.pop("PYTHONPATH", None)
+              environment.pop("PYTHONHOME", None)
+              subprocess.run([str(python), "-I", "-m", "pip", "install", "--no-deps", "--no-index", str(wheel)],
+                             cwd=task, env=environment, check=True)
+              subprocess.run([str(python), "-I", "-B", "-m", "jev", "verify"],
+                             cwd=task, env=environment, check=True)
+              subprocess.run([str(python), "-I", "-B", "-m", "jev", "benchmark", "--protocol", "e11", "--help"],
+                             cwd=task, env=environment, check=True, stdout=subprocess.DEVNULL)
+          PY
+      - name: Run head arithmetic tests when Torch is already installed
+        shell: bash
+        run: |
+          python - <<'PY'
+          import importlib.util
+          import os
+          from pathlib import Path
+          import subprocess
+          import sys
+          if importlib.util.find_spec("torch") is None:
+              print("SKIP optional head arithmetic: Torch is not installed; CI does not install model dependencies.")
+          else:
+              source = Path("vendor/head1_v1").resolve()
+              environment = dict(os.environ, PYTHONPATH=str(source), CUDA_VISIBLE_DEVICES="")
+              subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", str(source / "tests"),
+                              "-p", "test_heads.py", "-v"], env=environment, check=True)
+          PY
