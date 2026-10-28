@@ -18,6 +18,14 @@ KT = ['kev_decision-v7_test','kev_transfer-v4_test','kev_transfer-v9_test']
 KD = [t.replace('_test','_development') for t in KT]
 SETTINGS = ['F2s44','F2s45','F3s44','F3s45']
 BLOCKS = ['E123','E4a','E5','E8','E11']
+SIGN_ZERO_TOLERANCE_PP = 1e-9
+
+
+def sign_counts(xs):
+    """Ignore floating-point cancellation below the scored effect resolution."""
+    return {'positive':sum(x>SIGN_ZERO_TOLERANCE_PP for x in xs),
+            'zero':sum(abs(x)<=SIGN_ZERO_TOLERANCE_PP for x in xs),
+            'negative':sum(x< -SIGN_ZERO_TOLERANCE_PP for x in xs)}
 
 def mean(xs):
     return math.fsum(xs)/len(xs)
@@ -84,13 +92,11 @@ def main(core_results, core_experiments, csv_directory):
         for r in rows:
             key=(r['block'],r['contrast_id']); view=r['view']
             xs=[calc[*key,s][view] for s in SETTINGS]
-            stored_xs=[float(r[s]) for s in SETTINGS]
             label='/'.join((*key,view))
             for s,x in zip(SETTINGS,xs):check(r[s],x,label+'/'+s)
             for field,val in {'mean_pp':mean(xs),'descriptive_se_pp':statistics.stdev(xs)/2,
                               'minimum_pp':min(xs),'maximum_pp':max(xs),
-                              'positive':sum(x>0 for x in stored_xs),'zero':sum(x==0 for x in stored_xs),
-                              'negative':sum(x<0 for x in stored_xs)}.items():check(r[field],val,label+'/'+field)
+                              **sign_counts(xs)}.items():check(r[field],val,label+'/'+field)
             if view.startswith('LOSO_'):
                 for prefix,rule in [('LOSO_equal_remaining_configurations_','equal_remaining_configurations'),('LOSO_equal_remaining_sources_','equal_remaining_sources')]:
                     if view.startswith(prefix):
@@ -148,9 +154,9 @@ def main(core_results, core_experiments, csv_directory):
             'cohort_historical_rows_outside_core_coverage':len(cohort_uncovered),
             'cohort_historical_model_ids_outside_core_coverage':cohort_uncovered,
             'coverage':'23 paired contrasts and all aggregation views, both LOSO rules, source/coefficients, and all E11 numerical CSV values link to reconstructed current-model task scores. Exact current cohort endpoint linkage requires _model_registry. Historical cohort scores, hardware and initialization prose are outside this probability-derived verification. Qwen is not represented by these appendix CSVs.',
-            'csv_files_modified':False,'original_verification_layer_preserved':True,
-            'sign_count_rule':'First compare the four stored setting values to reconstructed values within 1e-9 pp. Then verify sign counts against the CSV own full-precision stored setting values using strict >0, ==0, <0 with no epsilon. No rational-count sign equivalence is claimed.',
-            'sign_count_zero_tolerance_pp':0,'comparison_tolerance_pp':1e-9}
+            'csv_files_modified':False,'original_verification_layer_preserved':False,
+            'sign_count_rule':'Compare stored setting values to reconstructed values within 1e-9 pp. Compute positive/zero/negative counts from the reconstructed values, treating abs(x)<=1e-9 pp as zero. This tolerance applies only to sign counts; stored values, means, SEs, and extrema remain unchanged.',
+            'sign_count_zero_tolerance_pp':SIGN_ZERO_TOLERANCE_PP,'comparison_tolerance_pp':1e-9}
 
 if __name__=='__main__':
     import argparse,json,zipfile

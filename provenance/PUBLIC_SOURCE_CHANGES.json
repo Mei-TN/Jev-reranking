@@ -2701,9 +2701,9 @@
         "sha256": "c9bbe109ee12c86349ed89afb1db50945ee365e6d03501932b9edd12ae865f53",
         "bytes": 4125
       },
-      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved. Correct four public positive/zero/negative counts for floating-point cancellation at mathematically zero effects; the public verifier uses reconstructed values with a 1e-9 pp sign-only tolerance. Task scores, setting effects, means, SEs, extrema, predictions, and the pinned historical archive are unchanged.",
       "public": {
-        "sha256": "328969fb0273e37057c369c5e9d21d39589be7938bd8e81bc4331faa25c5b750",
+        "sha256": "7ead46c81c8e14c08bff8ca25162edadce5d0471858647950a0bbd24bc5b4b8d",
         "bytes": 4125
       }
     },
@@ -2712,10 +2712,10 @@
         "sha256": "53f61ce4d1a3b61159f97bdb6201f430bf9972fb7bf5a70b2909f55526477455",
         "bytes": 3943
       },
-      "reason": "Comments and documentation simplified; computation and experiment settings preserved.",
+      "reason": "Comments and documentation simplified; computation and experiment settings preserved. Correct four public positive/zero/negative counts for floating-point cancellation at mathematically zero effects; the public verifier uses reconstructed values with a 1e-9 pp sign-only tolerance. Task scores, setting effects, means, SEs, extrema, predictions, and the pinned historical archive are unchanged.",
       "public": {
-        "sha256": "dac8afa18efd1021ef4631ddfd2fcb6173c7428010c5bdd682a59f973833f8a3",
-        "bytes": 3158
+        "sha256": "5cfde7567404133cf294846783ca7aa2d64ac683cdb660ba19c526b78967a2b7",
+        "bytes": 4547
       }
     },
     "vendor/e11/kev/evaluate.py": {
@@ -2981,6 +2981,28 @@
         "sha256": "8c17dfacf7e860fab77f7183ac46a5cd3b50320fd07dfe8ac422776988370e74",
         "bytes": 10485
       }
+    },
+    "vendor/stored_scoring/summary_views/appendix_paired_contrasts.csv": {
+      "original": {
+        "sha256": "19d6b4b5e2dd701c69478cbdee87e146e3210b5d9bac80098bbd81578d4e2884",
+        "bytes": 161486
+      },
+      "public": {
+        "sha256": "edfa94c4f8f7208a692b9b8b390b96bc35a0ff91d42a57f8b49f69aa11dede1c",
+        "bytes": 161486
+      },
+      "reason": "Correct four public positive/zero/negative counts for floating-point cancellation at mathematically zero effects; the public verifier uses reconstructed values with a 1e-9 pp sign-only tolerance. Task scores, setting effects, means, SEs, extrema, predictions, and the pinned historical archive are unchanged."
+    },
+    "vendor/stored_scoring/scorers/verify_appendix_from_reconstructed.py": {
+      "original": {
+        "sha256": "3939c13befb9d4b5d6b9f9f875e6d25541598910d3055694040225d133b04749",
+        "bytes": 10603
+      },
+      "public": {
+        "sha256": "3f095bb562865e44e911b0e9f462e2a1185bd9c727d92f6f295d9196d722d742",
+        "bytes": 10799
+      },
+      "reason": "Correct four public positive/zero/negative counts for floating-point cancellation at mathematically zero effects; the public verifier uses reconstructed values with a 1e-9 pp sign-only tolerance. Task scores, setting effects, means, SEs, extrema, predictions, and the pinned historical archive are unchanged."
     }
   },
   "research_modifications_notice": "The selected kev/runtime files are JEV research versions of the upstream project. Original selected scientific source bytes are retained unless explicitly listed here. Each listed record states the original and public file identity and the public-deployment-only change."

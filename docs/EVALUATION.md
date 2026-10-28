@@ -35,6 +35,8 @@ The evaluator checks question coverage, candidate identity/order and probability
 
 The JevBench endpoint reports family-macro accuracy, separate from the upstream leaderboard composite. The [source manifest](../third_party/opencompass_jev/overlay/opencompass/datasets/_decision_upstream/SOURCES.json#L2-L20) records the pinned upstream revision and hashes of the three public data files.
 
+The native JevBench scorer counts invalid probability outputs as incorrect. The strict reproduction runner additionally validates every output and aborts if validation fails, before reporting an aggregate.
+
 After filtering, Kev retains 1,264/1,200, 656/656 and 1,046/1,046 development/test questions for the three suites, respectively. The [paper scorer](../vendor/evaluation/scores.py#L32-L55) implements both endpoint definitions.
 
 MC11 evaluates candidates through entailment requests. It selects the maximal raw entailment probability, with the first maximal candidate in loaded order winning a tie. Candidate construction, demonstrations and semantic option keys are part of the protocol. These are reranking scores rather than conventional generation or likelihood scores for the same datasets.
@@ -85,3 +87,5 @@ jev reproduce-scores --archive /path/to/SCORING_SUPPLEMENT_REVISED.zip --output 
 ```
 
 This CPU-only command runs the original numerical-supplement scorer in a fresh output directory. The separate archive and its supported model roster are described in [DATA.md](DATA.md). New training and new inference need their own results.
+
+The public appendix verifier treats reconstructed differences within `1e-9` percentage points of zero as ties when counting positive/zero/negative settings. This corrects four source-specific sign-count rows; it does not change scores, means, standard errors or the manuscript's four-setting claims. The command above preserves the original archive's strict floating-point sign counts; see the [summary notes](../vendor/stored_scoring/summary_views/README.md) for the distinction.

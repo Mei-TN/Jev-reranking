@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "configs/catalog.json",
-      "sha256": "7bc92867eff9fb8cc5a04c757f1e66f8606a9cc9ac9e462a4b1b0cce14962566",
-      "bytes": 46390
+      "sha256": "11994700bb4e75c2687e1e2d65c998918d08ae186b3a4cff01e5d7af70372403",
+      "bytes": 46435
     },
     {
       "path": "configs/studies/head1/HEAD1_win0_H0_f1_s44.json",

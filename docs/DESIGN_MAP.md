@@ -12,6 +12,8 @@ The main experiments use [NeoHorse-1-4B weights](https://huggingface.co/TokenRhy
 
 The encoder uses explicit state, instruction, option and decision delimiters. Mean-span pooling excludes option delimiters and falls back to the option-ending state for empty content. NeoHorse's hybrid recurrent backbone uses separate causal question rows; the Qwen3 study uses its own dense-backbone implementation and adapter roster.
 
+For the main training recipes, the packed record must contain at most 4,096 tokens, and each state-plus-question sequence must fit within 2,048 tokens, including delimiters. In the encoder, `max_branch` limits this combined sequence, not the branch alone. NeoHorse processes each question as a separate causal row. The public prediction entry point uses strict 8,192-token state, combined-sequence and packed-request limits.
+
 ## Training studies
 
 | Paper study | Implementation / configuration | Relevant manuscript section |
@@ -30,7 +32,7 @@ The encoder uses explicit state, instruction, option and decision delimiters. Me
 
 The main recipe sets contain 56 training runs: 28 learning-rate/residual controls (`e1e2`), 20 scope/rank/readout controls (`e458`), and eight two-epoch controls (`e11`). Dependent comparisons reuse the specified reference initialization.
 
-The four-setting studies cross folds F2/F3 with seeds 44/45. Rate letters are **head then adapter**, L = `1.25e-5`, H = `2.5e-5`. E458 and E11 require the corresponding genuine reference initialization. E11 restarts from step-zero tensors with the complete two-epoch schedule.
+The four-setting studies cross folds F2/F3 with seeds 44/45. Rate letters are **head then adapter**, L = `1.25e-5`, H = `2.5e-5`. E1/E2 constructs matched initial parameters from the same seed and records them before training. E458 and E11 instead copy the corresponding genuine reference's saved step-zero tensors. E11 restarts with the complete two-epoch schedule.
 
 The main recipes use [PyTorch 2.8's two-phase cosine OneCycleLR](https://github.com/pytorch/pytorch/blob/v2.8.0/torch/optim/lr_scheduler.py#L1966-L2048), based on [Smith's 1cycle policy](https://arxiv.org/abs/1803.09820v2). The implementation uses `pct_start=0.1`, `div_factor=25` and `final_div_factor=1e4`, with AdamW's `beta1` cycling inversely from 0.95 to 0.85 and back.
 

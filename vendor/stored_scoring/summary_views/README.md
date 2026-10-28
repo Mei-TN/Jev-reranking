@@ -1,6 +1,6 @@
 # Supporting data: paired contrasts, sensitivity, and training duration
 
-These CSV files contain paired contrasts, source-weighting sensitivity checks, and training-duration comparisons computed from the recorded task summaries. Values retain their original precision.
+These CSV files contain paired contrasts, source-weighting sensitivity checks, and training-duration comparisons computed from the recorded task summaries. Task scores, effects, means, SEs, and setting values retain their original precision.
 
 The tables are computed from task summaries. Recomputing the underlying task scores requires the separate scoring supplement described in [DATA.md](../../../docs/DATA.md).
 
@@ -15,8 +15,12 @@ The tables are computed from task summaries. Recomputing the underlying task sco
 | `appendix_budget_task_settings.csv` | Five budget/readout contrasts × eleven configurations × four settings = 220 rows, each retaining the task-level effect and its original MC11 contribution. |
 | `appendix_budget_absolute_settings.csv` | Eleven configurations × four settings = 44 rows, each containing pointer and pooling accuracies at both budgets. |
 
-Setting order is F2/s44, F2/s45, F3/s44, F3/s45. Effects are calculated within each setting before averaging. Descriptive SE is sample SD divided by two. Sign counts use exact recorded values, not display rounding. LOSO ranges are ranges of seven omission-specific cohort means, not confidence intervals.
+Setting order is F2/s44, F2/s45, F3/s44, F3/s45. Effects are calculated within each setting before averaging. Descriptive SE is sample SD divided by two. Sign counts are computed from reconstructed setting effects, treating absolute changes of at most 1e-9 percentage points as zero to remove floating-point cancellation; this tolerance affects sign counts only, not the stored setting values, means, SEs, or extrema. LOSO ranges are ranges of seven omission-specific cohort means, not confidence intervals.
 
 The primary JevBench family macro, Kev six-subset macro, and eleven-configuration MC11 macro remain unchanged. Seven-source weighting and Kev test-only are sensitivity views of the same retained populations. These tables are computed without additional inference or training.
 
 Model accounting: E123 has 28 unique trainings, E458 adds 20 and reuses 4 A references, and E11 adds 8 two-epoch trainings. Thus E123/E458 has 48 unique trainings; inclusion of E11 gives 56. The E11 one-epoch pointer and pooling references reuse 8 of the original 48 models.
+
+Four public sign-count rows correct floating-point cancellation at mathematically zero effects: `E1_head_main_effect/source_chess` (F2/s45), `E1_interaction/source_GPQA` (F2/s45), `last_content_minus_end/source_GPQA` (F3/s45), and `mean_content_minus_last_content/source_GPQA` (F2/s45). Their positive/zero/negative counts are respectively 2/1/1, 3/1/0, 1/1/2, and 2/1/1. The current public verifier checks these counts from reconstructed task scores. No task accuracy, mean effect, SE, model prediction, or main-paper four-setting conclusion changes. Current public file identities and their original identities are recorded in `vendor/SOURCES.json` and `provenance/PUBLIC_SOURCE_CHANGES.json`.
+
+The separate, hash-pinned `SCORING_SUPPLEMENT_REVISED.zip` remains unchanged. `jev reproduce-scores` extracts and executes that archive's own unchanged scorer and verifier, so it reproduces the historical strict floating-point sign counts, including these four rows. It does not run the corrected public verifier or replace the archived CSVs. The public sign-count correction is therefore separate from exact historical archive reproduction.

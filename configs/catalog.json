@@ -1308,7 +1308,7 @@
       "demo_pool": "GPQA Main excluding Diamond IDs, normalized current-question matches and aliases",
       "eligible_demo_rows": 249,
       "demonstrations": 5,
-      "demo_selection": "deterministic_source_ID_order",
+      "demo_selection": "SHA256(UTF8 compact JSON [namespace, RecordID]), then RecordID; first five",
       "candidate_order": "deterministic_shared_permutation",
       "primary_identity": "source_slot",
       "tie": "first_exact_maximum",

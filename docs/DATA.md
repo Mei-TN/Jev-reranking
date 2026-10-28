@@ -28,7 +28,7 @@ Dependent scope/readout/budget experiments additionally require saved step-zero 
 
 JevBench and Kev use the frozen selections and decision caches of the paper. MC11 requires the exact benchmark source revisions, candidate inventories and demonstrations. The configurations cover ARC, WinoGrande, GSM8K, GPQA, HellaSwag, MMLU and generated chess. Follow the original access conditions for each source, including gated datasets.
 
-The fixed-interface studies have their own populations: PIQA, disjoint-demonstration GPQA, SocialIQA, CommonsenseQA and CLINC150. Their request construction and candidate ordering must match the corresponding protocol. See [EVALUATION.md](EVALUATION.md).
+The additional evaluations have their own populations: PIQA and SocialIQA compare direct selection with entailment reranking; GPQA tests disjoint demonstrations; and the additional-source comparisons use PIQA, CommonsenseQA and CLINC150. Their request construction and candidate ordering must match the corresponding protocol. See [EVALUATION.md](EVALUATION.md).
 
 The exact RunWeaver/OpenJev evaluation fork is an external dependency. Its source and binary are not redistributed here while their distribution permission remains unresolved. Package version numbers alone do not identify that fork. External evaluator setup and available source identities are documented in [ENVIRONMENT.md](ENVIRONMENT.md).
 
@@ -41,3 +41,5 @@ jev reproduce-scores --archive /path/to/SCORING_SUPPLEMENT_REVISED.zip --output 
 ```
 
 The required archive is 200,841,481 bytes, SHA-256 `3125ccce2f8127efcf956bf2025367081cb7f0ab3b97e3a33e03826e357d2d45`. This route reproduces scoring for its registered 72-checkpoint roster; it does not retrain models or generate new predictions. Obtain the numerical supplement separately; it is not embedded in the code release.
+
+The public [appendix summaries](../vendor/stored_scoring/summary_views/README.md) correct four floating-point sign counts using a `1e-9` percentage-point zero tolerance. Their recorded score values, means and standard errors are unchanged. The pinned historical archive is unchanged and its original scorer retains its strict floating-point sign counts.

@@ -45,8 +45,8 @@
       "sha256": "4d7d3c23aacb977bbe615ea8f90ba74b6647c067d34100021d988d72fb947271"
     },
     "summary_views/appendix_paired_contrasts.csv": {
-      "bytes": 161486,
-      "sha256": "19d6b4b5e2dd701c69478cbdee87e146e3210b5d9bac80098bbd81578d4e2884"
+      "sha256": "edfa94c4f8f7208a692b9b8b390b96bc35a0ff91d42a57f8b49f69aa11dede1c",
+      "bytes": 161486
     },
     "summary_views/appendix_loso_complete.csv": {
       "bytes": 93039,
@@ -77,8 +77,8 @@
       "sha256": "219dd83fca772bde5be8e62378f025ef1a9195851813a5d8e13c48713b73533f"
     },
     "summary_views/README.md": {
-      "bytes": 3158,
-      "sha256": "dac8afa18efd1021ef4631ddfd2fcb6173c7428010c5bdd682a59f973833f8a3"
+      "sha256": "5cfde7567404133cf294846783ca7aa2d64ac683cdb660ba19c526b78967a2b7",
+      "bytes": 4547
     },
     "coverage.csv": {
       "bytes": 232042,
@@ -97,8 +97,8 @@
       "sha256": "d167176291a0e4f667fad0e5b437417e9951bfd3becf1e614d0d65bb4d49ba98"
     },
     "scorers/verify_appendix_from_reconstructed.py": {
-      "bytes": 10603,
-      "sha256": "3939c13befb9d4b5d6b9f9f875e6d25541598910d3055694040225d133b04749"
+      "sha256": "3f095bb562865e44e911b0e9f462e2a1185bd9c727d92f6f295d9196d722d742",
+      "bytes": 10799
     },
     "score_all.py": {
       "bytes": 4318,
