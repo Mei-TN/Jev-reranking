@@ -1,6 +1,6 @@
 # JEV Reranking
 
-论文 **Improving JEV Entailment Reranking with Span Readouts and Selective Adaptation** 的代码。
+论文 **[Improving JEV Entailment Reranking with Span Readouts and Selective Adaptation](https://arxiv.org/abs/2610.35654)** 的代码。
 
 [English](README.md) · [上手指南](docs/QUICKSTART.zh-CN.md) · [论文与代码对照](docs/DESIGN_MAP.md)
 

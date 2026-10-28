@@ -6,6 +6,10 @@ This map follows **Improving JEV Entailment Reranking with Span Readouts and Sel
 
 `kev/model.py`, `kev/heads.py` and the native decision API implement the shared backbone/head interface. Choice, binary and ordered Score questions use named candidates. The loss accepts native soft targets and averages question losses within a record.
 
+The baseline head follows the [released NeoHorse-Jev implementation](https://github.com/TokenRhythm/NeoHorse/blob/c494069accfc2d08839675961c1fdfcc54ba0b92/jev/package/src/neohorse_decision/_vendor/model.py#L122-L130), with the [study implementation](../vendor/e12/kev/heads.py#L66-L85) preserved in this release. Its affine query/key projections produce scaled dot-product logits; mean-span pooling changes the option readout supplied to that head.
+
+The main experiments use [NeoHorse-1-4B weights](https://huggingface.co/TokenRhythm/NeoHorse-1-4B) at revision `56f0584bb40578a2c33b1b40a08ccd17243ad710`. The [official Qwen3.5-4B model card](https://huggingface.co/Qwen/Qwen3.5-4B) describes the underlying attention/Gated DeltaNet hybrid architecture; [Gated Delta Networks](https://arxiv.org/abs/2412.06464v3) is the source for the gated delta-rule mechanism.
+
 The encoder uses explicit state, instruction, option and decision delimiters. Mean-span pooling excludes option delimiters and falls back to the option-ending state for empty content. NeoHorse's hybrid recurrent backbone uses separate causal question rows; the Qwen3 study uses its own dense-backbone implementation and adapter roster.
 
 ## Training studies
@@ -27,6 +31,8 @@ The encoder uses explicit state, instruction, option and decision delimiters. Me
 The main recipe sets contain 56 training runs: 28 learning-rate/residual controls (`e1e2`), 20 scope/rank/readout controls (`e458`), and eight two-epoch controls (`e11`). Dependent comparisons reuse the specified reference initialization.
 
 The four-setting studies cross folds F2/F3 with seeds 44/45. Rate letters are **head then adapter**, L = `1.25e-5`, H = `2.5e-5`. E458 and E11 require the corresponding genuine reference initialization. E11 restarts from step-zero tensors with the complete two-epoch schedule.
+
+The main recipes use [PyTorch 2.8's two-phase cosine OneCycleLR](https://github.com/pytorch/pytorch/blob/v2.8.0/torch/optim/lr_scheduler.py#L1966-L2048), based on [Smith's 1cycle policy](https://arxiv.org/abs/1803.09820v2). The implementation uses `pct_start=0.1`, `div_factor=25` and `final_div_factor=1e4`, with AdamW's `beta1` cycling inversely from 0.95 to 0.85 and back.
 
 Additional study recipes are under `configs/studies`; the catalog selects their source and training entry point. Some implementations use their native checkpoint loader. The release-retraining exporter is provided separately under `vendor/release_runtime` and requires its external official bundle template. The portable pipeline selects checkpoint inference for implementations without a native exporter.
 

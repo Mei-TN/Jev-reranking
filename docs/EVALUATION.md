@@ -29,9 +29,13 @@ The evaluator checks question coverage, candidate identity/order and probability
 
 | Endpoint | Population and aggregation |
 | --- | --- |
-| JevBench | 231 public questions; mean over 18 equally weighted families |
-| Kev | Six development/test selections from decision-v7, transfer-v4 and transfer-v9; exclude `unknowable`, score questions, then average the six accuracies |
+| JevBench | The paper's frozen public selection of 231 questions; mean over 18 equally weighted family accuracies |
+| Kev | Development/test partitions of decision-v7, transfer-v4 and transfer-v9; retain `variant == 'clean'` and `source != 'unknowable'`, compute question-level accuracy in each partition, then average the six accuracies equally |
 | MC11 | Eleven configurations from seven sources, 46,475 question occurrences; arithmetic mean of configuration accuracies |
+
+The JevBench endpoint reports family-macro accuracy, separate from the upstream leaderboard composite. The [source manifest](../third_party/opencompass_jev/overlay/opencompass/datasets/_decision_upstream/SOURCES.json#L2-L20) records the pinned upstream revision and hashes of the three public data files.
+
+After filtering, Kev retains 1,264/1,200, 656/656 and 1,046/1,046 development/test questions for the three suites, respectively. The [paper scorer](../vendor/evaluation/scores.py#L32-L55) implements both endpoint definitions.
 
 MC11 evaluates candidates through entailment requests. It selects the maximal raw entailment probability, with the first maximal candidate in loaded order winning a tie. Candidate construction, demonstrations and semantic option keys are part of the protocol. These are reranking scores rather than conventional generation or likelihood scores for the same datasets.
 

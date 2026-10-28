@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this research code, please cite the accompanying manuscript. Publication identifiers will be added when available."
+message: "If you use this research code, please cite the accompanying paper, arXiv:2610.35654."
 title: "JEV Reranking"
 repository-code: "https://github.com/Mei-TN/Jev-reranking"
 type: software
@@ -26,6 +26,11 @@ preferred-citation:
   type: unpublished
   title: "Improving JEV Entailment Reranking with Span Readouts and Selective Adaptation"
   year: 2026
+  url: "https://arxiv.org/abs/2610.35654"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.35654"
+      description: "arXiv preprint"
   authors:
     - family-names: Mei
       given-names: Haocheng

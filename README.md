@@ -1,6 +1,6 @@
 # JEV Reranking
 
-Code for **Improving JEV Entailment Reranking with Span Readouts and Selective Adaptation**.
+Code for **[Improving JEV Entailment Reranking with Span Readouts and Selective Adaptation](https://arxiv.org/abs/2610.35654)**.
 
 [简体中文](README.zh-CN.md) · [Quick start](docs/QUICKSTART.md) · [Paper-to-code map](docs/DESIGN_MAP.md)
 
